@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_dateTime: 2017-12-04 15:00:40
+  end_dateTime: 2017-12-04 15:00:40
+  training: one
+  pool: one
+  program: one
+
+two:
+  start_dateTime: 2017-12-04 15:00:40
+  end_dateTime: 2017-12-04 15:00:40
+  training: two
+  pool: two
+  program: two
