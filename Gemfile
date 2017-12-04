@@ -23,6 +23,8 @@ gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
+gem 'omniauth-google-oauth2'
+
 gem 'simple_form'
 gem 'uglifier'
 
