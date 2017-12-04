@@ -23,6 +23,7 @@ gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
+# Strategy to authenticate with Google via OAuth2 in OmniAuth.
 gem 'omniauth-google-oauth2'
 
 gem 'simple_form'

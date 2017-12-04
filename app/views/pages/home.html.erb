@@ -1,6 +1,6 @@
 <h1>Homepage</h1>
 
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 <a href="#" onclick="signOut();">Sign out</a>
 <script>
@@ -11,3 +11,6 @@
     });
   }
 </script>
+ -->
+
+<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
