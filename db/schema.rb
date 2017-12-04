@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204103638) do
+ActiveRecord::Schema.define(version: 20171204140914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.datetime "start_dateTime"
+    t.datetime "end_dateTime"
+    t.bigint "training_id"
+    t.bigint "pool_id"
+    t.bigint "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pool_id"], name: "index_cards_on_pool_id"
+    t.index ["program_id"], name: "index_cards_on_program_id"
+    t.index ["training_id"], name: "index_cards_on_training_id"
+  end
+
+  create_table "pools", force: :cascade do |t|
+    t.string "address"
+    t.string "opening_times"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "swimming_level"
+    t.jsonb "cards_builder"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_programs_on_user_id"
+  end
+
+  create_table "trainings", force: :cascade do |t|
+    t.integer "duration"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +64,13 @@ ActiveRecord::Schema.define(version: 20171204103638) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cards", "pools"
+  add_foreign_key "cards", "programs"
+  add_foreign_key "cards", "trainings"
+  add_foreign_key "programs", "users"
 end
