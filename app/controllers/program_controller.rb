@@ -17,6 +17,6 @@ class ProgramController < ApplicationController
   private
 
   def program_params
-    params.require(:program).permit(:swimming_level, :cards_builder, :user_id )
+    params.require(:program).permit(:swimming_level , :user_id, :cards_builder)
   end
 end
