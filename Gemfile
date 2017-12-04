@@ -26,6 +26,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+gem 'webpacker', '~> 3.0'
+
 
 
 group :development, :test do

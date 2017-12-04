@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <meta name="google-signin-client_id" content="596950036240-446mv897rd3k37p3vbqgnsj5h64ple18.apps.googleusercontent.com">
+    <title>DORI BALBOA</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,6 +13,8 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
