@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  swimming_level: MyString
+  cards_builder: 
+  user: one
+
+two:
+  swimming_level: MyString
+  cards_builder: 
+  user: two
