@@ -1,0 +1,8 @@
+<h1>Program#new</h1>
+<p>Find me in app/views/program/new.html.erb</p>
+
+
+<%= simple_form_for @program do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
