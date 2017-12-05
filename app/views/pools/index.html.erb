@@ -1,0 +1,64 @@
+
+
+<div class="display-pools">
+    <div class="col-xs-12 col-md-6">
+      <ul>
+        <% @pools.each do |pool| %>
+          <li>
+            <h4><em><%= pool.name %> :</em></h4>
+            <p>
+              <strong>Adresse</strong> : <%= pool.address %>
+            </p>
+            <p>
+              <strong>Téléphone</strong> : <%= pool.phone %>
+            </p>
+            <p>
+              <strong>Métro</strong> : <%= pool.metro %>
+            </p>
+            <% if pool.open == true %>
+            <p>
+              <strong>Piscine ouverte</strong> : <%= image_tag 'open.png' %>
+            </p>
+            <% else %>
+              <p>
+                <strong>Piscine fermée</strong> : <%= image_tag 'close.png' %>
+              </p>
+            <% end %>
+
+            <em>Détails :</em>
+            <p>
+              <strong>Longueur bassin</strong> : <%= pool.size %>m
+            </p>
+            <p>
+              <strong>Prix</strong> : <%= pool.price %>€
+            </p>
+            <p>
+              <strong>Traitement de l'eau</strong> : <%= pool.treatment %>
+            </p>
+            <p>
+              <strong>Nombre de couloirs de nage</strong> : <%= pool.lane %>
+            </p>
+            <%= link_to 'Edit', edit_pool_path(pool.id) %> |
+            <%= link_to 'Supprimer', pool_path(pool.id),
+              data: { confirm: 'Tu es certian de vouloir faire ça jeune inconscient ?' }, method: :delete %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= simple_form_for @pool do |p| %>
+        <%= p.input :name %>
+        <%= p.input :address %>
+        <%= p.input :open, as: :select %>
+        <%= p.input :opening_times %>
+        <%= p.input :price %>
+        <%= p.input :phone %>
+        <%= p.input :metro %>
+        <%= p.input :size %>
+        <%= p.input :lane %>
+        <%= p.input :treatment %>
+        <%= p.button :submit %>
+      <% end %>
+    </div>
+</div>
+
