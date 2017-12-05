@@ -1,0 +1,17 @@
+<h1>Vos créneaux</h1>
+
+<%= simple_form_for @program do |f| %>
+  <% @program.cards_builder.keys.each do |day| %>
+  <%= day %>
+    <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: 'Début'  %>
+    <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: 'Fin'  %>
+    <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: 'adresse'  %>
+  <% end %>
+<%= f.submit "créer programme", class: "btn btn-primary" %>
+<% end %>
+
+
+
+
+
+
