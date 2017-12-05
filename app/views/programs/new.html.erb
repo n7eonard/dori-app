@@ -1,0 +1,14 @@
+<h1>Program#new</h1>
+
+<h2>Niveau de natation</h2>
+
+<%= simple_form_for @program do |f| %>
+  <%= f.input :swimming_level, label: 'Niveau', collection: [:debutant, :intermediaire, :expert] %>
+
+  <h2>Jours de Nage</h2>
+
+<%= f.input :cards_builder, label: 'Jours de Nage', collection: [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche], input_html: { multiple: true } %>
+
+
+  <%= f.submit "créer programme", class: "btn btn-primary" %>
+<% end %>
