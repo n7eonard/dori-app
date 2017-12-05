@@ -1,0 +1,22 @@
+<h1 class="text-center" >Update</h1>
+<div class="container">
+  <%= link_to 'Retour', pools_path %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <%= simple_form_for @pool do |p| %>
+        <%= p.input :name %>
+        <%= p.input :address %>
+        <%= p.input :open, as: :select %>
+        <%= p.input :opening_times %>
+        <%= p.input :price %>
+        <%= p.input :phone %>
+        <%= p.input :metro %>
+        <%= p.input :size %>
+        <%= p.input :lane %>
+        <%= p.input :treatment %>
+        <%= p.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

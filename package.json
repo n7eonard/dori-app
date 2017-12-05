@@ -1,5 +1,12 @@
 {
   "name": "dori-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "coffeescript": "1.12.7",
+    "gmaps": "^0.4.24"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.5"
+  }
 }
