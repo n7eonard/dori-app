@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Homepage</h1>
+
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+ -->
+
+<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+
