@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :cards, only: [:index, :show, :new, :create, :edit, :update]
-  resources :pools, only: [:index, :show]
+  resources :pools, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :programs, only: [:new, :create]
   resources :trainings, only: [:new, :create]
 end
