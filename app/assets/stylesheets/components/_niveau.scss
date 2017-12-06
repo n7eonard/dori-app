@@ -1,0 +1,36 @@
+#div-niveau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+#vingnettes-niveau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.label-niveau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#day-container {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.day {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.row {
+  border: 2px, solid, black;
+}
