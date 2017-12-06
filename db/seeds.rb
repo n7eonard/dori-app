@@ -1,15 +1,4 @@
 
-Pool.create(name: 'PISCINE SUZANNE BERLIOUX (LES HALLES)',
-            address: 'forum des Halles 75001 PARIS',
-            opening_times: '',
-            price: '',
-            phone: '',
-            metro: '',
-            open: true,
-            size:,
-            lane:,
-            treatment: '')
-=======
 puts "Cleaning database..."
 Pool.destroy_all
 Training.destroy_all
