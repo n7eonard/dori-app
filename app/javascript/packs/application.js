@@ -10,4 +10,5 @@
 console.log('Hello World from Webpacker')
 
 import 'google_id.js'
+import 'form1.js'
 import 'bootstrap';
