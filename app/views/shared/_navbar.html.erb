@@ -34,8 +34,11 @@
       <!-- Avatar with dropdown menu -->
      <div class="navbar-wagon-right">
         <div>
-         <% avatar_url = current_user.image || image_tag("placeholder-avatar.jpg", size: "30x30") %>
-          <%= image_tag avatar_url, class: "avatar" %>
+        <% if current_user.image %>
+          <%= image_tag current_user.image, class: "avatar" %>
+        <% else %>
+          <%= image_tag "placeholder-avatar.jpg", width: 100 %>
+        <% end %>
       </div>
     </div>
 
