@@ -1,8 +1,35 @@
-<%= link_to 'Créer mon programme', new_program_path, class: 'btn btn-success' %>
+<div class="container">
+  <div class="row"></div>
+
+  <div class="row">
+    <div class="col-xs-4">
+    </div>
+     <div class="col-xs-6">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to 'Et plouf!', new_program_path, class: 'btn btn-light' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+    </div>
+  </div>
+</div>
 
 
 
 
 
 
-<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+
+
+
+
+
+
+
