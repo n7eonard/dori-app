@@ -1,15 +1,4 @@
 
-Pool.create(name: 'PISCINE SUZANNE BERLIOUX (LES HALLES)',
-            address: 'forum des Halles 75001 PARIS',
-            opening_times: '',
-            price: '',
-            phone: '',
-            metro: '',
-            open: true,
-            size:,
-            lane:,
-            treatment: '')
-=======
 puts "Cleaning database..."
 Pool.destroy_all
 Training.destroy_all
@@ -18,7 +7,7 @@ puts "Creating pools..."
 
 training_attributes = [
 {
-  level: "débutant",
+  level: "debutant",
   description: "Echauffement:
 100 mètres nage libre
 300 (50 dos à deux bras - 50 dos normal)
@@ -38,7 +27,7 @@ Fin de séance:
 (1500 mètres) "
 },
 {
-  level: "débutant",
+  level: "debutant",
   description: "Echauffement:
 200 mètres nage libre
 300 (50 brasse avec 1 fois les bras, 2 fois les jambes - 50 brasse normal)
@@ -57,7 +46,7 @@ Fin de séance:
 (1500 mètres)"
 },
 {
-  level: "débutant",
+  level: "debutant",
   description: "Echauffement:
 200 mètres nage libre
 300 (50 crawl rattrapé - 50 crawl normal)
@@ -82,7 +71,7 @@ Fin de séance:
 (1500 mètres)"
 },
 {
-  level: "intermédiaire",
+  level: "intermediaire",
   description: "Echauffement:
 100 crawl
 400 (50 dos à deux bras - 50 dos normal)
@@ -109,7 +98,7 @@ Fin de séance:
 (2500 mètres)"
 },
 {
-  level: "intermédiaire",
+  level: "intermediaire",
   description: "Echauffement:
 100 mètres nage libre
 300 (50 brasse 25 coulées - 25 brasse normal)
@@ -137,7 +126,7 @@ Fin de séance:
 (2500 mètres)"
 },
 {
-  level: "intermédiaire",
+  level: "intermediaire",
   description: "Echauffement:
 100 crawl/dos
 300 (50 brasse 25 coulées - 25 brasse normal)
