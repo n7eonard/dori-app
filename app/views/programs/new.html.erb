@@ -1,25 +1,24 @@
-<h1>Program#new</h1>
+<div class="container">
 
+<div id= "div-niveau" class="background-form"  style="background-image: url(<%= image_path 'background-form.png'%>)">
 
-<div id= "div-niveau">
-
-  <h2>Votre niveau :</h2>
+  <h2 class ="form-title">Votre niveau :</h2>
 
   <div id= "vingnettes-niveau">
 
     <div class='label-niveau'>
       <%= image_tag "Image debutant.png", id: "debutant" %>
-      <p>Débutant</p>
+      <p>debutant</p>
     </div>
 
     <div class='label-niveau'>
       <%= image_tag "Image intermediaire.png", id: "intermediaire" %>
-      <p>Intermédiaire</p>
+      <p>intermediaire</p>
     </div>
 
     <div class='label-niveau'>
       <%= image_tag "image expert.png", id: "expert" %>
-      <p>Expert</p>
+      <p>expert</p>
     </div>
 
     <%= simple_form_for @program do |f| %>
@@ -27,17 +26,13 @@
 
     <%= image_tag "Path 2.png", id: "flèche-bas" %>
   </div>
-
-
 </div>
 
-<div id= "div-jours" class="hidden">
+<div id= "div-jours" class="hidden background-form"  style="background-image: url(<%= image_path 'background-form.png'%>)">
 
-  <h2>Jours de Nage</h2>
+  <h2 class="form-title">Quels jours ?</h2>
 
   <div class="form-group program_cards_builder">
-
-    <label class="control-label check_boxes optional">Jours de Nage</label>
     <input type="hidden" name="program[cards_builder][]" value="">
 
     <div class="category-choices">
@@ -53,7 +48,8 @@
 </div>
 
   <%= f.submit "créer programme", class: "btn btn-primary" %>
+
   <% end %>
 
 </div>
-
+</div>
