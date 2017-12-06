@@ -1,14 +1,59 @@
 <h1>Program#new</h1>
 
-<h2>Niveau de natation</h2>
 
-<%= simple_form_for @program do |f| %>
-  <%= f.input :swimming_level, label: 'Niveau', collection: [:debutant, :intermediaire, :expert] %>
+<div id= "div-niveau">
+
+  <h2>Votre niveau :</h2>
+
+  <div id= "vingnettes-niveau">
+
+    <div class='label-niveau'>
+      <%= image_tag "Image debutant.png", id: "debutant" %>
+      <p>Débutant</p>
+    </div>
+
+    <div class='label-niveau'>
+      <%= image_tag "Image intermediaire.png", id: "intermediaire" %>
+      <p>Intermédiaire</p>
+    </div>
+
+    <div class='label-niveau'>
+      <%= image_tag "image expert.png", id: "expert" %>
+      <p>Expert</p>
+    </div>
+
+    <%= simple_form_for @program do |f| %>
+    <%= f.input :swimming_level, label: 'Niveau', input_html: {id: "swimming_level"}, as: :hidden %>
+
+    <%= image_tag "Path 2.png", id: "flèche-bas" %>
+  </div>
+
+
+</div>
+
+<div id= "div-jours" class="hidden">
 
   <h2>Jours de Nage</h2>
 
-<%= f.input :cards_builder, label: 'Jours de Nage', collection: [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche], input_html: { multiple: true } %>
+  <div class="form-group program_cards_builder">
 
+    <label class="control-label check_boxes optional">Jours de Nage</label>
+    <input type="hidden" name="program[cards_builder][]" value="">
+
+    <div class="category-choices">
+    <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
+
+    <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
+
+    <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day %></label>
+
+    <% end %>
+    </div>
+
+</div>
 
   <%= f.submit "créer programme", class: "btn btn-primary" %>
-<% end %>
+  <% end %>
+
+</div>
+
