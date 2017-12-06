@@ -24,18 +24,36 @@
   </div>
 </div>
 
+<div class="proposition">
+ <div class="proposition-container">
 
-<div class="value-proposition-block">
-  <%= image_tag("value-proposition-head.png") %>
-  <%= image_tag("vertical-wave.png") %>
-  vertical-wave.png
+      <div class="proposition-wave">
+      <%= image_tag("vertical-wave.png") %>
+      </div>
+
+      <div class="proposition-text-one">
+        <p>Propose des <strong>programmes adaptés à ton niveau</strong></p>
+      </div>
+
+      <div class="proposition-text-two">
+        <p>Permet de <strong>trouver les meilleures piscines</strong> à proximité</p>
+      </div>
+
+      <div class="proposition-text-three">
+        <p>Génère un suivi d'entraînement dans <strong>Google Calendar</strong></p>
+      </div>
+
+  </div>
 </div>
 
 
-
-<div class="row">
-  <div class="col-xs-12 text-center">
-      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+<div class="btn-google">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+      </div>
+    </div>
   </div>
 </div>
 
