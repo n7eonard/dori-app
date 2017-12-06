@@ -5,9 +5,12 @@ body {
   // height: 100vh;
 }
 
-.container {
+.header-container {
+  display: grid;
+  // grid-template-rows:;
+  grid-template-columns: 40% 60%;
   width: 100%;
-  padding: 0;
+  padding-top: 0;
   margin: 0;
   background-image: asset-url('backgroundImage.png');
   background-size: cover;
@@ -17,6 +20,19 @@ body {
 
 /* HEADER */
 
-.header {
+
+.baseline {
+  h2 {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+
+  p {
+    color: #EBEBF3;
+    font-weight: lighter;
+  }
+}
+
+#image-header {
 
 }
