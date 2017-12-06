@@ -15,6 +15,7 @@ gem 'redis'
 # Client for accessing Google APIs
 gem 'google-api-client', '~> 0.17.3'
 
+# Rugy gems provided by Wagon template
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
