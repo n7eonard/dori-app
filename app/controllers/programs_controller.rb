@@ -7,8 +7,11 @@ class ProgramsController < ApplicationController
   def create
     @program = Program.new(program_params)
     @cards_builder = {}
+    @trainings = Training.where(level: params[:program][:swimming_level])
+    @training = @trainings.sample.description
     params[:program][:cards_builder].reject(&:empty?).each do |day|
       @cards_builder[day.to_sym] = []
+      @cards_builder[:training] = @training
     end
     @program.cards_builder = @cards_builder
     @program.user = current_user
@@ -30,7 +33,9 @@ class ProgramsController < ApplicationController
       @program.cards_builder[day] << {key.split('_').last.to_sym => value}
     end
     @program.cards_builder.each do |key, value|
-      @program.cards_builder[key] = @program.cards_builder[key].reduce({}, :merge)
+      if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? key
+        @program.cards_builder[key] = @program.cards_builder[key].reduce({}, :merge)
+      end
     end
     @program.save
     redirect_to program_cards_path(@program)
