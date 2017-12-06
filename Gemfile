@@ -15,6 +15,7 @@ gem 'redis'
 # Client for accessing Google APIs
 gem 'google-api-client', '~> 0.17.3'
 
+# Rugy gems provided by Wagon template
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -35,10 +36,11 @@ gem 'nokogiri'
 
 
 
+
 group :development, :test do
   gem 'web-console', '>= 3.3.0'
-  gem 'pry-byebug'
-  gem 'pry-rails'
+  # gem 'pry-byebug'
+  # gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

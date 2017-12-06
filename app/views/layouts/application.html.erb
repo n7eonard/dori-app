@@ -8,7 +8,8 @@
 
     <meta name="google-signin-client_id" content="GOOGLE_CLIENT_ID">
 
-    <title>🐠</title>
+
+    <title>Dori 🐠 Nagez à Paris? Générez automatiquement vos séances de natation dans votre calendrier Google Calendar</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -18,13 +19,11 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_include_tag 'application' %>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "https://maps.google.com/maps/api/js" %>
     <%= javascript_pack_tag "map" %>
     <script src="https://smartlock.google.com/client" async defer></script>
-
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
 
