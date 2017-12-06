@@ -1,38 +1,43 @@
 <div class="header-container">
 
-  <div class="row">
-    <div class="col-xs-5">
       <div class="image-dori">
       <%= image_tag("doriWhite.png") %>
       </div>
-    </div>
-     <div class="col-sm-offset-4 col-xs-7">
-        <div class="baseline">
-          <h2> Nager à Paris?</h2>
-          <h2>Jamais sans Dori !</h2>
-          <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
+
+      <div class="baseline-header">
+        <h4> Nager à Paris? Jamais sans Dori !</h4>
       </div>
-    </div>
-  </div>
 
+      <div class="baseline-body">
+        <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
+      </div>
+
+</div>
+
+<div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <%= link_to 'Et plouf!', new_program_path, class: 'btn btn-light plouf' %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+      <div class="btn-start text-center">
+      <%= link_to 'Et plouf!', new_program_path, type: 'button', class: 'btn btn-default btn-lg btn-block' %>
+      </div>
     </div>
   </div>
 </div>
 
 
+<div class="value-proposition-block">
+  <%= image_tag("value-proposition-head.png") %>
+  <%= image_tag("vertical-wave.png") %>
+  vertical-wave.png
+</div>
 
 
 
-
+<div class="row">
+  <div class="col-xs-12 text-center">
+      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+  </div>
+</div>
 
 
 
