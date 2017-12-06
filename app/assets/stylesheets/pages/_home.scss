@@ -4,6 +4,7 @@ body {
   // background-color: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   // height: 100vh;
   background-image: asset-url('backgroundImage.png');
+  background-size: contain;
 }
 
 /* HEADER */
@@ -57,20 +58,67 @@ p {
 
 .btn-start {
   margin-top: 30px;
+  padding-bottom: 50px;
 }
 
 /* VALUE PROPOSITION */
 
-.value-proposition-block {
-  z-index: 10;
-  margin-top: 40px;
+.proposition {
+  background-image: asset-url('value-proposition-head.png');
+  background-size: contain;
 
-img {
-  width: 100%;
+  p {
+    color: #666E88;
+  }
+
+  p.strong {
+    color: #394A7D;
+  }
+
+
+ // img {
+ //  height: 100%;
+ //  padding-left: 40px;
+ //  //width: 100vw;
+ // }
 }
+
+.proposition-container {
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 30% 70%;
+  padding-top: 6px;
+}
+
+.proposition-wave {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 1;
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+.proposition-text-one {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  padding-top: 32px;
+}
+
+.proposition-text-two {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.proposition-text-three {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
 }
 
 
+/* SIGNIN ZONE */
+
+.btn-google {
+  padding-top: 20px;
+}
 
 
 
