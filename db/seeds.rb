@@ -1,7 +1,245 @@
 puts "Cleaning database..."
 Pool.destroy_all
+Training.destroy_all
 
 puts "Creating pools..."
+
+training_attributes = [
+{
+  level: "débutant",
+  description: "Echauffement:
+100 mètres nage libre
+300 (50 dos à deux bras - 50 dos normal)
+200 (50 crawl - 50 au choix progressif)
+(600 mètres)
+
+Corps de séance:
+200 (50 crawl - 50 dos ou brasse)
+2 x 100 (50 dos - 50 brasse)
+200 comme le premier
+2 x 100 (25 crawl - 50 brasse - 25 dos)
+Récupération : 60 secondes après les 200 et 30 secondes après chaque 100 mètres.
+(1400 mètres)
+
+Fin de séance:
+100 tranquille
+(1500 mètres) "
+},
+{
+  level: "débutant",
+  description: "Echauffement:
+200 mètres nage libre
+300 (50 brasse avec 1 fois les bras, 2 fois les jambes - 50 brasse normal)
+100 au choix (50 jambes - 50 nage complète progressif)
+(600 mètres)
+
+Corps de séance:
+16 x 50 avec
+1 en crawl
+1 avec 25 dos - 25 brasse
+15 secondes de repos entre chaque 50 mètres.
+(1400 mètres)
+
+Fin de séance:
+100 tranquille
+(1500 mètres)"
+},
+{
+  level: "débutant",
+  description: "Echauffement:
+200 mètres nage libre
+300 (50 crawl rattrapé - 50 crawl normal)
+100 au choix (50 jambes - 50 nage complète progressif)
+(600 mètres)
+
+Corps de séance:
+Pyramide:
+50 jambes nage au choix
+100 brasse
+150 dos
+200 crawl
+150 dos
+100 brasse
+50 jambes nage au choix
+Récupération :
+20 secondes de repos après un 50 ou un 100. 40 secondes de repos après un 150 ou un 200.
+(1400 mètres)
+
+Fin de séance:
+100 tranquille
+(1500 mètres)"
+},
+{
+  level: "intermédiaire",
+  description: "Echauffement:
+100 crawl
+400 (50 dos à deux bras - 50 dos normal)
+2 x 50 au choix avec 25 jambes - 25 nage complète progressif
+10 secondes de repos entre les 50 mètres
+(600 mètres)
+
+Corps de séance:
+3 x 300 en alternant dans chaque 300 :
+50 jambes au choix moyen
+50 nage complète au choix moyen
+50 nage complète en nage préférée vite
+Récupération : 30 secondes après chaque 300
+(1500 mètres)
+100 tranquille
+(1600 mètres)
+300 (25 crawl moyen - 25 crawl vite - 25 dos moyen - 25 dos vite) avec plaquettes
+3 x 100 (25 crawl moyen - 25 crawl vite - 25 dos moyen - 25 dos vite) sans matériel
+30 secondes de repos après le 300 et 20 secondes de repos après chaque 100 mètres.
+(2200 mètres)
+
+Fin de séance:
+300 tranquille
+(2500 mètres)"
+},
+{
+  level: "intermédiaire",
+  description: "Echauffement:
+100 mètres nage libre
+300 (50 brasse 25 coulées - 25 brasse normal)
+4 x 50 (1 crawl -1 dos) avec la première coulée la plus longue possible
+20 secondes de repos entre les 50 mètres
+(600 mètres)
+
+Corps de séance:
+24 x 50 :
+1 crawl moyen
+1 avec 25 dos - 25 brasse moyen
+1 nage préférée rapide
+Récupération : 10 secondes après chaque 50
+(1800 mètres)
+150 tranquille
+(1950 mètres)
+8 x 50 au choix
+4 en jambes. Chaque 50 un peu plus vite que le précédent
+4 en nage complète à vitesse moyenne
+Récupération : 10 secondes de récupération après chaque 50.
+(2350 mètres)
+
+Fin de séance:
+150 tranquille
+(2500 mètres)"
+},
+{
+  level: "intermédiaire",
+  description: "Echauffement:
+100 crawl/dos
+300 (50 brasse 25 coulées - 25 brasse normal)
+200 (50 crawl - 50 au choix progressif)
+(600 mètres)
+
+Corps de séance:
+(100 + 50) x 8 :
+100 (25 dos - 25 brasse) moyen
+50 nage préférée vite
+Récupération : 20 secondes après chaque 100 ; 10 secondes après chaque 50
+(1800 mètres)
+100 tranquille
+(1900 mètres)
+4 x 100 au choix
+2 en jambes. Chaque 100 un peu plus vite que le précédent
+2 en nage complète à vitesse moyenne
+Récupération : 20 secondes de récupération après chaque 100.
+(2300 mètres)
+
+Fin de séance:
+200 tranquille
+(2500 mètres)"
+},
+{
+  level: "expert",
+  description: "Echauffement:
+200 4 nages avec papillon à un bras
+400 (50 dos à un bras - 50 dos normal)
+200 (50 crawl - 50 au choix progressif)
+(800 mètres)
+
+Corps de séance:
+(50 + 25) x 20 :
+50 pull crawl respiration 5 temps moyen
+25 nage préférée vite
+Récupération : 5 secondes après chaque 50 et chaque 25
+(2300 mètres)
+100 tranquille
+(2400 mètres)
+16 x 50 (2 crawl moyen - 1 brasse moyen - 1 brasse vite) :
+Les 8 premiers avec plaquettes
+Les 8 derniers sans matériel
+5 secondes de repos entre chaque 50 mètres.
+(3200 mètres)
+
+Fin de séance:
+300 tranquille
+(3500 mètres)"
+},
+{
+  level: "expert",
+  description: "Echauffement:
+100 crawl
+400 (50 dos à deux bras - 50 dos normal)
+400 (50 brasse avec 2 fois les bras et 1 fois les jambes - 50 brasse normal)
+2 x 50 crawl avec la première coulée la plus longue possible
+20 secondes de repos entre les 50 mètres
+(1000 mètres)
+
+Corps de séance:
+5 x 300 en alternant dans chaque 300 :
+25 crawl moyen
+25 brasse moyen
+25 nage préférée vite
+Récupération : 20 secondes après chaque 300
+(2500 mètres)
+200 tranquille
+(2700 mètres)
+12 x 50 (25 moyen - 25 progressif) :
+1 en jambes brasse
+1 en jambes dos
+1 en jambes crawl
+Récupération : 5 secondes de récupération après chaque 50.
+(3300 mètres)
+
+Fin de séance:
+200 tranquille
+(3500 mètres)"
+},
+{
+  level: "expert",
+  description: "Echauffement:
+200 en alternant librement crawl, dos et brasse
+300 (50 dos avec une pause tous les 3 mouvements - 50 dos normal)
+300 (50 brasse avec pull - 50 brasse normal)
+4 x 50 au choix progressif du 1er au 4ème
+10 secondes de repos entre les 50 mètres
+(1000 mètres)
+
+Corps de séance:
+5 x 300 en alternant dans chaque 300 :
+25 crawl moyen
+25 dos moyen
+25 nage préférée vite
+Récupération : 20 secondes après chaque 300
+(2500 mètres)
+100 tranquille
+(2600 mètres)
+12 x 50 au choix
+8 en jambes. Chaque 50 un peu plus vite que le précédent
+4 en nage complète à vitesse moyenne
+Récupération : 5 secondes de récupération après chaque 50.
+(3200 mètres)
+
+Fin de séance:
+300 tranquille
+(3500 mètres)"
+},
+]
+
+Training.create!(training_attributes)
+
+
 pools_attributes = [
 {
   address: "forum des Halles 75001 PARIS",
