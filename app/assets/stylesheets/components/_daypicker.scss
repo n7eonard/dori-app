@@ -1,18 +1,33 @@
 
 .category-choices {
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  // margin: 20px 0;
+  // padding: 0px 0px 0px 77px;
+  background-image: asset-url('grille-semainier.png');
+  background-size: cover;
+  background-position: center;
+  width: 253px;
+  height: 217px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  flex-direction: column;
 }
 
 .category-choice {
-  background: #aec2e9;
-  padding: 20px;
-  border-radius: 5px;
-  opacity: .4;
-  flex: 0 0 30%;
-  text-align: center;
+    /* padding: 20px; */
+    width: 83px;
+    height: 50px;
+    /* border-radius: 5px; */
+    /* text-align: center; */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    /* display: flex; */
+    text-align: center;
+    margin: 0px -1px;
+    width: 83px;
+    height: 56px;
   &:hover {
     opacity: 1;
     cursor: pointer;
@@ -22,4 +37,31 @@
   color: white;
   opacity: 1;
   }
+}
+
+
+.pickable-week {
+  position: relative;
+  top: 36px;
+
+}
+
+.fake-endweek {
+  word-spacing: 31px;
+  width: 263px;
+  top: 15px;
+  position: relative;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+}
+
+.fake-beginweek {
+  position: relative;
+  left: 113px;
+  bottom: 15px;
+  word-spacing: 45px;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  height: 25px;
 }

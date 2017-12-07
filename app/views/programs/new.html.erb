@@ -26,6 +26,14 @@
 
     <%= image_tag "Path 2.png", id: "flèche-bas" %>
   </div>
+
+  <div class="ariane-container">
+    <div class="ariane-item-active">1</div>
+    <div class="ariane-item">2</div>
+    <div class="ariane-item">3</div>
+    <div class="ariane-item">4</div>
+    <div class="ariane-item ariane-last-item">5</div>
+  </div>
 </div>
 
 <div id= "div-jours" class="hidden background-form"  style="background-image: url(<%= image_path 'background-form.png'%>)">
@@ -36,14 +44,30 @@
     <input type="hidden" name="program[cards_builder][]" value="">
 
     <div class="category-choices">
-    <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
+      <div class="fake-endweek">
+        <p>vendredi samedi dimanche</p>
+      </div>
+      <div class="pickable-week">
+        <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
 
-    <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
+          <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
 
-    <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day %></label>
+          <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day %></label>
 
-    <% end %>
+        <% end %>
+      </div>
+      <div class="fake-beginweek">
+       <p>lundi mardi</p>
+      </div>
     </div>
+
+  <div class="ariane-container">
+    <div class="ariane-item">1</div>
+    <div class="ariane-item-active">2</div>
+    <div class="ariane-item">3</div>
+    <div class="ariane-item">4</div>
+    <div class="ariane-item ariane-last-item">5</div>
+  </div>
 
 </div>
 
