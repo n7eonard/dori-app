@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  height: 540px;
+  margin-top: 30px;
 }
 
 #div-jours {
@@ -33,41 +35,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  // justify-content: space-around;
+  p {
+    text-align: center;
+  }
 }
 
 .label-niveau {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .form-title {
   color: rgb(4, 23, 94);
   font-size: 20px;
   font-weight: bold;
-  padding: 15px;
+  text-align: center;
+  position: relative;
+  bottom: 113px;
+}
+
+#casedebutant {
+  position: absolute;
+  top: 160px;
+}
+
+#caseintermediaire {
+  position: absolute;
+  top: 300px;
+}
+
+#caseexpert {
+  position: absolute;
+  top: 440px;
 }
 
 
+#new_program {
+  position: relative;
+  top: 81px;
+}
+
 #fleche-bas2 {
-    position: relative;
-    left: 100px;
+
 }
 
 .niveau-actif-debutant {
-  position:relative;
-  top: -8px;
-  left: 11%;
+  position: relative;
+  top: -9px;
+  left: 3.5%;
+  width: 114px;
 }
 
 .niveau-actif-intermediaire {
-  position:relative;
-  left: 10%;
+  position: relative;
+  left: 4%;
+  top: -9px;
+  width: 114px;
 }
 
 .niveau-actif-expert {
-  position:relative;
-  left: 10%;
+  position: relative;
+  left: 2%;
+  top: -7px;
+  width: 114px;
 }
