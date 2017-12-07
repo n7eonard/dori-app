@@ -9,8 +9,10 @@
     <div class="jours">
     <%= day.capitalize %>
     </div>
-      <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: 'Début'  %>
-      <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: 'Fin'  %>
+      <div class="container-form-heures">
+        <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
+        <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
+      </div>
 
 <%= image_tag "Path 2.png", id: "fleche-bas2" %>
 </div>
