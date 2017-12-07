@@ -3,8 +3,8 @@ class PoolsController < ApplicationController
     @pool = Pool.new
     @pools = Pool.all
 
+    # Permet de lire les coordonnees pour lister les piscines sur gmap
     @pools_gmap = Pool.where.not(latitude: nil, longitude: nil)
-
     @markers = @pools_gmap.map do |flat|
       {
         lat: flat.latitude,
