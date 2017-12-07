@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div id= "div-jours" class="hidden background-form"  style="background-image: url(<%= image_path 'background-form.png'%>)">
+<div id= "div-jours" class="hidden background-form">
 
   <h2 class="form-title">Quels jours ?</h2>
 
@@ -52,7 +52,7 @@
 
           <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
 
-          <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day %></label>
+          <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day.slice(0..2) %></label>
 
         <% end %>
       </div>
@@ -71,8 +71,9 @@
 
 </div>
 
-  <%= f.submit "créer programme", class: "btn btn-primary" %>
-
+<!--     <div class="arrow-submit"> -->
+      <%= image_submit_tag "Path 2.png", class: "arrow-submit" %>
+<!--     </div> -->
   <% end %>
 
 </div>

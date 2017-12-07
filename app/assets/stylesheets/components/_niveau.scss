@@ -6,10 +6,27 @@
 }
 
 #div-jours {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
+  background-image: asset-url('background-form.png');
+  background-size: cover;
+  height: 369px;
+  background-position-y: 76%;
+  h2 {
+    text-align: center;
+    padding: 8% 0px 2% 6%;
+  }
+  .category-choices {
+    position: relative;
+    left: 19%;
+  }
+}
+
+.arrow-submit {
+  position: relative;
+  left: 44%;
 }
 
 #vingnettes-niveau {
@@ -48,7 +65,8 @@
   h2 {
   font-size: 16px;
   font-weight: bolder;
-  margin-bottom: 20px;
+  text-align: center;
+  padding: 1% 0px 2% 1%;
   }
 }
 

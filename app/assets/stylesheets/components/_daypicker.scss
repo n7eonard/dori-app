@@ -15,27 +15,28 @@
 }
 
 .category-choice {
-    /* padding: 20px; */
     width: 83px;
-    height: 50px;
-    /* border-radius: 5px; */
-    /* text-align: center; */
+    position: relative;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
-    /* display: flex; */
     text-align: center;
     margin: 0px -1px;
     width: 83px;
-    height: 56px;
+    margin-bottom: 31px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
   &:hover {
     opacity: 1;
     cursor: pointer;
   }
   &.active {
-  background: #484faf;
-  color: white;
+  background: none;
+  color: rgba(13, 92, 124, 1);
   opacity: 1;
+  font-weight: bolder;
+  font-size: 18px;
   }
 }
 
@@ -59,7 +60,7 @@
 .fake-beginweek {
   position: relative;
   left: 113px;
-  bottom: 15px;
+  bottom: 13px;
   word-spacing: 45px;
   font-size: 11px;
   letter-spacing: 1.1px;
