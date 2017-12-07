@@ -7,6 +7,25 @@
     <meta name="google-signin-client_id" content="390476382887-unu7835m1leq4hdibfufnpbm7lme7abt.apps.googleusercontent.com.apps.googleusercontent.com">
     <meta name="google-signin-client_id" content="GOOGLE_CLIENT_ID">
     <%= favicon_link_tag 'favicon.ico' %>
+
+    <meta name="description" content="<%= meta_description %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
+
     <title>Dori 🐠 Nagez à Paris? Générez automatiquement vos séances de natation dans votre calendrier Google Calendar</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
