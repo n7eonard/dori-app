@@ -1,0 +1,185 @@
+DOC GOOGLE API CALENDAR PERSO
+
+### Modification couleurs event ###
+############# colorId #############
+
+1 - couleur de l'agenda
+2 - vert sauge
+3 - violet raison
+4 - rose clair
+5 - jaune banane
+6 - mandarine
+7 - bleu paon
+8 - anthracite
+9 - myrtille
+10 - vert basilic
+11 - rouge
+
+
+
+
+##########CREATE EVENT#########
+#### calendar.events.insert ###
+########### REQUEST ###########
+
+
+POST https://www.googleapis.com/calendar/v3/calendars/primary/events?maxAttendees=1&sendNotifications=true&supportsAttachments=false&key={YOUR_API_KEY}
+
+{
+ "end": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "start": {
+  "dateTime": "2017-12-08T12:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "recurrence": [
+  "RRULE:FREQ=WEEKLY"
+ ],
+ "description": "Echauffement:\n100 mètres nage libre\n300 (50 dos à deux bras - 50 dos normal)\n200 (50 crawl - 50 au choix progressif)\n(600 mètres)\n\nCorps de séance:\n200 (50 crawl - 50 dos ou brasse)\n2 x 100 (50 dos - 50 brasse)\n200 comme le premier\n2 x 100 (25 crawl - 50 brasse - 25 dos)\nRécupération : 60 secondes après les 200 et 30 secondes après chaque 100 mètres.\n(1400 mètres)\n\nFin de séance:\n100 tranquille\n(1500 mètres)",
+ "summary": "Dori entrainement",
+ "location": "24 rue de Rochechouart 75009 PARIS",
+ "reminders": {
+  "overrides": [
+   {
+    "method": "sms",
+    "minutes": 1440
+   }
+  ],
+  "useDefault": false
+ },
+ "colorId": "5",
+ "id": ""
+}
+
+########### RESPONSE ###########
+{
+
+ "kind": "calendar#event",
+ "etag": "\"3025326408765000\"",
+ "id": "2h84s85o1jc3s7plsegr2vebms",
+ "status": "confirmed",
+ "htmlLink": "https://www.google.com/calendar/event?eid=Mmg4NHM4NW8xamMzczdwbHNlZ3IydmVibXNfMjAxNzEyMDhUMTEwMDAwWiByYWJhbmVsLmZyYW5jb2lzQG0",
+ "created": "2017-12-07T16:13:24.000Z",
+ "updated": "2017-12-07T16:13:24.422Z",
+ "summary": "Dori entrainement",
+ "description": "Echauffement:\n100 mètres nage libre\n300 (50 dos à deux bras - 50 dos normal)\n200 (50 crawl - 50 au choix progressif)\n(600 mètres)\n\nCorps de séance:\n200 (50 crawl - 50 dos ou brasse)\n2 x 100 (50 dos - 50 brasse)\n200 comme le premier\n2 x 100 (25 crawl - 50 brasse - 25 dos)\nRécupération : 60 secondes après les 200 et 30 secondes après chaque 100 mètres.\n(1400 mètres)\n\nFin de séance:\n100 tranquille\n(1500 mètres)",
+ "location": "24 rue de Rochechouart 75009 PARIS",
+ "colorId": "5",
+ "creator": {
+  "email": "rabanel.francois@gmail.com",
+  "displayName": "François Rabanel",
+  "self": true
+ },
+ "organizer": {
+  "email": "rabanel.francois@gmail.com",
+  "displayName": "François Rabanel",
+  "self": true
+ },
+ "start": {
+  "dateTime": "2017-12-08T12:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "end": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "recurrence": [
+  "RRULE:FREQ=WEEKLY"
+ ],
+ "iCalUID": "2h84s85o1jc3s7plsegr2vebms@google.com",
+ "sequence": 0,
+ "reminders": {
+  "useDefault": false,
+  "overrides": [
+   {
+    "method": "sms",
+    "minutes": 1440
+   }
+  ]
+ }
+}
+
+
+
+##########CREATE EVENT#########
+#### calendar.events.update ###
+########### REQUEST ###########
+
+
+PUT https://www.googleapis.com/calendar/v3/calendars/primary/events/8s61luqnuh6lugvmfkqivhar7s_20171208T110000Z?key={YOUR_API_KEY}
+
+{
+ "end": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "start": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "location": "24 rue de Rochechouart 75009 PARIS"
+}
+
+########### RESPONSE ###########
+{
+
+
+ "kind": "calendar#event",
+ "etag": "\"3025326921141000\"",
+ "id": "8s61luqnuh6lugvmfkqivhar7s_20171208T110000Z",
+ "status": "confirmed",
+ "htmlLink": "https://www.google.com/calendar/event?eid=OHM2MWx1cW51aDZsdWd2bWZrcWl2aGFyN3NfMjAxNzEyMDhUMTEwMDAwWiByYWJhbmVsLmZyYW5jb2lzQG0",
+ "created": "2017-12-07T15:12:42.000Z",
+ "updated": "2017-12-07T16:17:40.613Z",
+ "location": "24 rue de Rochechouart 75009 PARIS",
+ "creator": {
+  "email": "rabanel.francois@gmail.com",
+  "displayName": "François Rabanel",
+  "self": true
+ },
+ "organizer": {
+  "email": "rabanel.francois@gmail.com",
+  "displayName": "François Rabanel",
+  "self": true
+ },
+ "start": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "end": {
+  "dateTime": "2017-12-08T13:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "recurringEventId": "8s61luqnuh6lugvmfkqivhar7s",
+ "originalStartTime": {
+  "dateTime": "2017-12-08T12:00:00+01:00",
+  "timeZone": "Europe/Paris"
+ },
+ "iCalUID": "8s61luqnuh6lugvmfkqivhar7s@google.com",
+ "sequence": 3,
+ "reminders": {
+  "useDefault": true
+ }
+
+}
+
+##########CREATE EVENT#########
+#### calendar.events.update ###
+########### REQUEST ###########
+
+
+DELETE https://www.googleapis.com/calendar/v3/calendars/primary/events/[[[[[[[[[8s61luqnuh6lugvmfkqivhar7s_20171208T110000Z]]]]]]]]]?sendNotifications=false&key={YOUR_API_KEY}
+
+Attention eid (event id) propre à un évènement unique, entre [[[]]] dans l'url
+
+
+
+
+
+
+
+
+
+
