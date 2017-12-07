@@ -6,7 +6,9 @@
 <%= simple_form_for @program do |f| %>
   <% @program.cards_builder.keys.each do |day| %>
     <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
-    <%= day %>
+    <div class="jours">
+    <%= day.capitalize %>
+    </div>
       <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: 'Début'  %>
       <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: 'Fin'  %>
 
