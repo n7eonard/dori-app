@@ -114,6 +114,32 @@ p {
 }
 
 
+.space-between{
+  height: 40px;
+  width: 100vw;
+  background-color: transparent;
+}
+
+
+.testimonial-slider{
+  //height: 100px;
+  background-image: asset-url('background-testimonials.png');
+  margin-top: 60px;
+
+  img {
+    width: 100vw;
+  }
+
+  h4 {
+    color: #3A4B7E;
+  }
+
+  p {
+    color: #59637E;
+  }
+}
+
+
 /* SIGNIN ZONE */
 
 .btn-google {
