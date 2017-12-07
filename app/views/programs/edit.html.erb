@@ -1,19 +1,26 @@
-<h1>Vos créneaux</h1>
+<div id="div-heures"  style="background-image: url(<%= image_path 'background-form.png'%>)">
 
+<h2 class ="form-title">Vos créneaux</h2>
+
+<div class="heures">
 <%= simple_form_for @program do |f| %>
   <% @program.cards_builder.keys.each do |day| %>
     <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
     <%= day %>
       <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: 'Début'  %>
       <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: 'Fin'  %>
+
+<%= image_tag "Path 2.png", id: "fleche-bas2" %>
+</div>
+</div>
+
+<div id="div-adresses" class="hidden"  style="background-image: url(<%= image_path 'background-form.png'%>)">
+
+<h2 class ="form-title">Vos adresses</h2>
       <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: 'adresse'  %>
     <% end %>
   <% end %>
 <%= f.submit "créer programme", class: "btn btn-primary" %>
 <% end %>
 
-
-
-
-
-
+</div>
