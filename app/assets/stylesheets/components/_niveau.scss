@@ -3,6 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  height: 540px;
+  margin-top: 30px;
+  .form-title {
+    color: rgb(4, 23, 94);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 #div-jours {
@@ -14,9 +22,12 @@
   background-size: cover;
   height: 369px;
   background-position-y: 76%;
-  h2 {
-    text-align: center;
-    padding: 8% 0px 2% 6%;
+  .form-title {
+    left: 37%;
+  }
+  .program_cards_builder {
+    margin-top: 30px;
+    padding-top: 70px;
   }
   .category-choices {
     position: relative;
@@ -33,25 +44,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  // justify-content: space-around;
+  p {
+    text-align: center;
+  }
 }
 
 .label-niveau {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .form-title {
-  color: rgb(4, 23, 94);
-  font-size: 20px;
-  font-weight: bold;
-  padding: 15px;
+    color: rgb(4, 23, 94);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 88px;
+}
+
+#casedebutant {
+  position: absolute;
+  top: 160px;
+}
+
+#caseintermediaire {
+  position: absolute;
+  top: 300px;
+}
+
+#caseexpert {
+  position: absolute;
+  top: 440px;
 }
 
 
+#new_program {
+  position: absolute;
+  bottom: 56px;
+}
+
 #fleche-bas2 {
-    position: relative;
-    left: 100px;
+
+}
+
+.niveau-actif-debutant {
+  position: relative;
+  top: -9px;
+  left: 3.5%;
+  width: 114px;
+}
+
+.niveau-actif-intermediaire {
+  position: relative;
+  left: 4%;
+  top: -9px;
+  width: 114px;
+}
+
+.niveau-actif-expert {
+  position: relative;
+  left: 2%;
+  top: -7px;
+  width: 114px;
 }

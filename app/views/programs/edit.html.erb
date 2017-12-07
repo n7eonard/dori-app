@@ -3,18 +3,27 @@
 <h2 class ="form-title">Vos créneaux</h2>
 
 <div class="heures">
+
+  <div class="ariane-container">
+    <div class="ariane-item">1</div>
+    <div class="ariane-item">2</div>
+    <div class="ariane-item-active">3</div>
+    <div class="ariane-item">4</div>
+    <div class="ariane-item ariane-last-item">5</div>
+  </div>
+
 <%= simple_form_for @program do |f| %>
   <% @program.cards_builder.keys.each do |day| %>
     <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
     <div class="jours">
     <%= day.capitalize %>
     </div>
-  
+
       <div class="container-form-heures">
         <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
         <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
       </div>
-  
+
       <% end %>
     <% end %>
 
