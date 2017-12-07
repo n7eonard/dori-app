@@ -1,60 +1,61 @@
 <div class="header-container">
-
-      <div class="image-dori">
-      <%= image_tag("doriWhite.png") %>
-      </div>
-
-      <div class="baseline-header">
-        <h4> Nager à Paris? Jamais sans Dori !</h4>
-      </div>
-
-      <div class="baseline-body">
-        <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
-      </div>
-
+  <div class="image-dori">
+    <%= image_tag("doriWhite.png") %>
+  </div>
+  <div class="baseline-header">
+    <h4> Nager à Paris? Jamais sans Dori !</h4>
+  </div>
+  <div class="baseline-body">
+    <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="btn-start text-center">
-      <%= link_to 'Et plouf!', new_program_path, type: 'button', class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to 'Et plouf!', new_program_path, type: 'button', class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
   </div>
 </div>
 
 <div class="proposition">
- <div class="proposition-container">
-
-      <div class="proposition-text-one">
-        <p>Propose des <strong>programmes adaptés à ton niveau</strong></p>
-      </div>
-
-      <div class="proposition-text-two">
-        <p>Permet de <strong>trouver les meilleures piscines</strong> à proximité</p>
-      </div>
-
-      <div class="proposition-text-three">
-        <p>Génère un suivi d'entraînement dans <strong>Google Calendar</strong></p>
-      </div>
-
+  <div class="proposition-container">
+    <div class="proposition-text-one">
+      <p>Propose des <strong>programmes adaptés à votre niveau</strong></p>
+    </div>
+    <div class="proposition-text-two">
+      <p>Permet de <strong>trouver les meilleures piscines</strong> à proximité</p>
+    </div>
+    <div class="proposition-text-three">
+      <p>Génère un suivi d'entraînement dans <strong>Google Calendar</strong></p>
+    </div>
   </div>
 </div>
 
-<span class="space-between"> </span>
+<div class="space-between-80px"> </div>
 
 <div class="testimonial-slider">
-
+  <div class="testimonial-header">
+    <%= image_tag("round-picture-testimonials.png") %>
+  </div>
   <div class="testimonial-body">
     <h4>Michael Phelps</h4>
     <p>Le véhicule a totalement répondu à notre besoin, un monospace vraiment confortable et adapté aux longues distances. Nous l'avons loué 1 mois pour partir en vacances en Espagne avec nos 4 enfants.</p>
   </div>
 
-  <div class="testimonial-progress-bar">
-     <i class="fa fa-circle" aria-hidden="true"></i>
+  <div class="testimonial-footer">
+    <i class="fa fa-circle" aria-hidden="true"></i>
   </div>
+</div>
 
+<div class="space-between"> </div>
+
+<div class="footer">
+  <div class="app-name">
+
+  </div>
 </div>
 
 
@@ -62,7 +63,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
       </div>
     </div>
   </div>

@@ -114,9 +114,8 @@ p {
 }
 
 
-.space-between{
-  height: 40px;
-  width: 100vw;
+.space-between-80px{
+  height: 80px;
   background-color: transparent;
 }
 
@@ -124,11 +123,6 @@ p {
 .testimonial-slider{
   //height: 100px;
   background-image: asset-url('background-testimonials.png');
-  margin-top: 60px;
-
-  img {
-    width: 100vw;
-  }
 
   h4 {
     color: #3A4B7E;
@@ -137,6 +131,36 @@ p {
   p {
     color: #59637E;
   }
+}
+
+.testimonial-header {
+  height: 66px;
+  text-align: center;
+
+  img {
+   position: relative;
+   top: -68px;
+  }
+}
+
+.testimonial-body {
+  margin-top: -10px;
+
+  h4 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+
+
 }
 
 
