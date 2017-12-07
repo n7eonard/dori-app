@@ -1,63 +1,78 @@
 <div class="header-container">
-
-      <div class="image-dori">
-      <%= image_tag("doriWhite.png") %>
-      </div>
-
-      <div class="baseline-header">
-        <h4> Nager à Paris? Jamais sans Dori !</h4>
-      </div>
-
-      <div class="baseline-body">
-        <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
-      </div>
-
+  <div class="image-dori">
+    <%= image_tag("doriWhite.png") %>
+  </div>
+  <div class="baseline-header">
+    <h4> Nager à Paris? Jamais sans Dori !</h4>
+  </div>
+  <div class="baseline-body">
+    <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="btn-start text-center">
-      <%= link_to 'Et plouf!', new_program_path, type: 'button', class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to 'Et plouf!', new_program_path, type: 'button', class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
   </div>
 </div>
 
 <div class="proposition">
- <div class="proposition-container">
-
-      <div class="proposition-wave">
-      <%= image_tag("vertical-wave.png") %>
-      </div>
-
-      <div class="proposition-text-one">
-        <p>Propose des <strong>programmes adaptés à ton niveau</strong></p>
-      </div>
-
-      <div class="proposition-text-two">
-        <p>Permet de <strong>trouver les meilleures piscines</strong> à proximité</p>
-      </div>
-
-      <div class="proposition-text-three">
-        <p>Génère un suivi d'entraînement dans <strong>Google Calendar</strong></p>
-      </div>
-
-  </div>
-</div>
-
-
-<div class="btn-google">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 text-center">
-          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
-      </div>
+  <div class="proposition-container">
+    <div class="proposition-text-one">
+      <p>Propose des <strong>programmes adaptés à votre niveau</strong></p>
+    </div>
+    <div class="proposition-text-two">
+      <p>Permet de <strong>trouver les meilleures piscines</strong> à proximité</p>
+    </div>
+    <div class="proposition-text-three">
+      <p>Génère un suivi d'entraînement dans <strong>Google Calendar</strong></p>
     </div>
   </div>
 </div>
 
+<div class="space-between-80px"> </div>
 
+<div class="testimonial-slider">
+  <div class="testimonial-header">
+    <%= image_tag("round-picture-testimonials.png") %>
+  </div>
+  <div class="testimonial-body">
+    <h4>Michael Phelps</h4>
+    <p>Le véhicule a totalement répondu à notre besoin, un monospace vraiment confortable et adapté aux longues distances. Nous l'avons loué 1 mois pour partir en vacances en Espagne avec nos 4 enfants.</p>
+  </div>
+
+  <div class="testimonial-footer text-center">
+    <i class="fa fa-circle" aria-hidden="true"></i>
+    <i class="fa fa-circle" aria-hidden="true"></i>
+    <i class="fa fa-circle" aria-hidden="true"></i>
+  </div>
+</div>
+
+<div class="space-between-57px"> </div>
+
+<div class="footer">
+
+  <div class="app-name-dori">DORI</div>
+
+  <div class="app-name-app">APP</div>
+
+  <div class="wave">
+    <%= image_tag("wave-footer.png") %>
+  </div>
+
+  <div class="FAQ">FAQ</div>
+  <div class="why-dori">Pourquoi Dori?</div>
+  <div class="api">API</div>
+  <div class="connexion">Connexion</div>
+  <div class="team">L'équipe de développement</div>
+  <div class="press">Presse</div>
+  <div class="partners">Partenaires</div>
+
+</div>
 
 
 

@@ -45,7 +45,11 @@
     <% else %>
       <!-- Login link (when logged out) -->
 
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <div class="btn-google text-center">
+        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn-login btn-login--google'%>
+      </div>
+
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: 'btn btn-primary' %>
     <% end %>
 
 </div>

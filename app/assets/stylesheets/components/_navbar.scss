@@ -22,18 +22,27 @@
   border-radius: 50%;
 }
 
-/* Right section */
+/* Left section */
 .navbar-wagon-left {
   display: flex;
   align-items: left;
   justify-content: space-between;
 }
 
+/* Right section */
+
+.navbar-wagon-right {
+
+}
+
+
+
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 0px;
 }
+
 
 /* Navbar link */
 .navbar-wagon-link {
