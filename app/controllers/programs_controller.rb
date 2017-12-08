@@ -51,7 +51,7 @@ class ProgramsController < ApplicationController
         @program.cards_builder[key][:start] = params[:program][start_key]
         @program.cards_builder[key][:end] = params[:program][end_key]
         @program.cards_builder[key][:address] = params[:program][address_key]
-        pool_card = Pool.near(@program.cards_builder[key][:address], 1)[0]
+        pool_card = Pool.near(@program.cards_builder[key][:address], 1.5)[0]
         @program.cards_builder[key][:okpool] = pool_card
         @trainings = Training.where(level: @program.swimming_level)
         training = @trainings.sample.description
