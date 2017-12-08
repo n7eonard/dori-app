@@ -4,9 +4,9 @@
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 97px;
   margin-left: 15px;
   margin-right: 15px;
+  margin-bottom: 75px;
 }
 
 .blue-content {
@@ -18,7 +18,7 @@
 
 #training_content {
   height: 150px;
-  overflow: hidden;
+  overflow: scroll;
   p {
     color: rgb(4, 23, 94);
     text-align: justify;
@@ -31,7 +31,6 @@
   background-image: asset-url('background-form.png');
   background-size: cover;
   background-position-y: 76%;
-  height: 100vh;
 }
 
 .card-title {
@@ -39,9 +38,19 @@
   font-size: 17px;
   font-weight: bold;
   text-align: center;
+
 }
 
 #program_day {
   color: #131e5e;
   font-weight: 550;
+}
+
+.center-program {
+    padding-top: 15px;
+    margin-left: 107px;
+}
+
+.row {
+  margin-top: 97px;
 }
