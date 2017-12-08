@@ -81,7 +81,8 @@ body {
   align-self: center;
   img {
     width: 130px;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
     padding-bottom: 10px;
     padding-top: 36px;
 
@@ -109,16 +110,31 @@ p {
 
 .proposition {
   background-image: asset-url('value-proposition-head.png');
-  background-size: contain;
-
+  background-size: cover;
+  background-position: center;
+  height: 250px;
   p {
     color: #666E88;
+    line-height: 1.3;
+    font-size: 14px;
+    font-weight: normal;
   }
 
   p.strong {
     color: #394A7D;
+    font-size: 14px;
+    line-height: 1.3;
   }
 
+.icon-midmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  img {
+    width:42px;
+  }
 
  // img {
  //  height: 100%;
@@ -127,11 +143,23 @@ p {
  // }
 }
 
+#number-one {
+  padding-top: 19px;
+  padding-left: 6px;
+
+}
+#number-two {
+  padding-left: 54px;
+}
+#number-three {
+  padding-left: 26px;
+}
+
 .proposition-container {
   display: grid;
   grid-template-rows: 33% 33% 33%;
   grid-template-columns: 30% 70%;
-  padding-top: 6px;
+  padding-top: 12px;
 }
 
 .proposition-wave {
@@ -145,16 +173,20 @@ p {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
   padding-top: 32px;
+  margin-left: -22px;
 }
 
 .proposition-text-two {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
+  padding-top: 12px;
 }
 
 .proposition-text-three {
   grid-row: 3 / span 1;
   grid-column: 2 / span 1;
+  padding-top: 12px;
+  margin-left: -12px;
 }
 
 
