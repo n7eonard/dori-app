@@ -12,7 +12,7 @@
         <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
         <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
           <% if value["okpool"] %>
-            <%= value["okpool"] %> <br>
+            <%= value["okpool"]["name"] %> <br>
             <%= value["okpool"]["metro"] %> <br>
             <%= value["okpool"]["address"] %></p>
             <p class = "blue-content"> (<%= value["okpool"]["opening_times"] %>)</p>
