@@ -7,10 +7,18 @@ class ProgramsController < ApplicationController
   def create
     @program = Program.new(program_params)
     @cards_builder = {}
+    mapping= {
+      "lundi" => "1_lundi",
+      "mardi" => "2_mardi",
+      "mercredi" => "3_mercredi",
+      "jeudi" => "4_jeudi",
+      "vendredi" => "5_vendredi",
+      "samedi" => "6_samedi",
+      "dimanche" => "7_dimanche"
+    }
     params[:program][:cards_builder].reject(&:empty?).each do |day|
-      @cards_builder[day.to_sym] = []
+      @cards_builder[mapping[day]] = []
     end
-
     @program.cards_builder = @cards_builder
     @program.user = current_user
     @program.save
@@ -28,15 +36,21 @@ class ProgramsController < ApplicationController
     @program = Program.find(params[:id])
     @program.update(program_params)
 
-    @info = params[:program]
-    @info.each do |key, value|
-      day = key.split('_').first
-      @program.cards_builder[day] << {key.split('_').last.to_sym => value}
-    end
+    # @info = params[:program]
+    # @info.each do |key, value|
+    #   day = key.split('_').first
+    #   @program.cards_builder[day] << {key.split('_').last.to_sym => value}
+    # end
 
     @program.cards_builder.each do |key, value|
-      if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? key
-        @program.cards_builder[key] = @program.cards_builder[key].reduce({}, :merge)
+      if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? key
+        start_key = key + "_start"
+        end_key = key + "_end"
+        address_key = key + "_address"
+        @program.cards_builder[key] = {}
+        @program.cards_builder[key][:start] = params[:program][start_key]
+        @program.cards_builder[key][:end] = params[:program][end_key]
+        @program.cards_builder[key][:address] = params[:program][address_key]
         pool_card = Pool.near(@program.cards_builder[key][:address], 1)[0]
         @program.cards_builder[key][:okpool] = pool_card
         @trainings = Training.where(level: @program.swimming_level)
