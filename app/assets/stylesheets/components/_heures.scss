@@ -3,12 +3,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  height: 540px;
+  background-position-y: 76%;
+  background-size: cover;
+  margin-top: 30px;
+
+  .form-title {
+    left: 37%;
+  }
 }
 
-
+.heures {
+  .edit_program {
+    position: absolute;
+    top: 160px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container-form-heures {
+  padding: 0px 0px 0px 50px;
   display: flex;
-  padding: 0px 25px;
   textarea.form-control {
     height: 38px;
     text-align: center;
@@ -41,7 +57,9 @@
   color: rgb(13, 92, 124);
   font-weight: bolder;
   text-align: center;
-
+  padding-left: 48px;
+  padding-bottom: 11px;
+  padding-top: 11px;
 }
 
 .text-blue {

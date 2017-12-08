@@ -3,11 +3,20 @@
 <h2 class ="form-title">Vos créneaux</h2>
 
 <div class="heures">
+
+  <div class="ariane-container">
+    <div class="ariane-item">1</div>
+    <div class="ariane-item">2</div>
+    <div class="ariane-item-active">3</div>
+    <div class="ariane-item">4</div>
+    <div class="ariane-item ariane-last-item">5</div>
+  </div>
+
 <%= simple_form_for @program do |f| %>
   <% @program.cards_builder.keys.each do |day| %>
-    <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
+    <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
     <div class="jours">
-    <%= day.capitalize %>
+    <%= day[2..-1].capitalize %>
     </div>
 
       <div class="container-form-heures">
@@ -18,20 +27,32 @@
       <% end %>
     <% end %>
 
-<%= image_tag "Path 2.png", id: "fleche-bas2" %>
 </div>
+<%= image_tag "Path 2.png", id: "fleche-bas2" %>
 </div>
 
 <div id="div-adresses" class="hidden"  style="background-image: url(<%= image_path 'background-form.png'%>)">
 
+<div class="ariane-container">
+  <div class="ariane-item">1</div>
+  <div class="ariane-item">2</div>
+  <div class="ariane-item">3</div>
+  <div class="ariane-item-active">4</div>
+  <div class="ariane-item ariane-last-item">5</div>
+</div>
+
 <h2 class ="form-title">Vos piscines :</h2>
-<p class="text-blue">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
-<% @program.cards_builder.keys.each do |day| %>
-    <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
-      <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day %>
+
+<p id="text-address">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
+  <div class="addresses-piscines">
+  <% @program.cards_builder.keys.each do |day| %>
+      <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+        <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1] %>
+    <% end %>
+     <% end %>
+  </div>
+  <%= image_submit_tag "Path 2.png", id: "arrow_last" %>
+
   <% end %>
-   <% end %>
-<%= image_submit_tag "Path 2.png", id: "arrow_last" %>
-<% end %>
 
 </div>
