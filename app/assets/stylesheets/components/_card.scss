@@ -1,48 +1,55 @@
-.card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
-  position: relative;
+#card-new {
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+
+.blue-content {
+  color: rgb(4, 23, 94);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
 }
+
+#training_content {
+  height: 150px;
+  overflow: hidden;
+  p {
+    color: rgb(4, 23, 94);
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
 .card-category {
   position: absolute;
   top: 10px;
-  left: 10px;
-  font-size: 15px;
+  left: 27px;
+  font-size: 11px;
   text-transform: uppercase;
+  color: #2381d0;
 }
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+
+
+
+#background_cards {
+  background-image: asset-url('background-form.png');
+  background-size: cover;
+  background-position-y: 76%;
+  height: 100vh;
 }
-.card-description h2 {
-  font-size: 24px;
+
+.card-title {
+  color: rgb(4, 23, 94);
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
 }
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
-.card-link:hover {
-  opacity: 0.1;
+
+#program_day {
+  color: #131e5e;
+  font-weight: 550;
 }

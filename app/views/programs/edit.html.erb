@@ -42,6 +42,7 @@
 </div>
 
 <h2 class ="form-title">Vos piscines :</h2>
+
 <p id="text-address">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
   <div class="addresses-piscines">
   <% @program.cards_builder.keys.each do |day| %>
@@ -51,6 +52,7 @@
      <% end %>
   </div>
   <%= image_submit_tag "Path 2.png", id: "arrow_last" %>
+
   <% end %>
 
 </div>
