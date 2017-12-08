@@ -12,6 +12,11 @@ body {
 .container {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+
+}
+
+#et-plouf {
+
 }
 
 .btn-primary {
@@ -29,20 +34,25 @@ body {
   // margin: 0;
   background-size: cover;
   background-position: center;
-  height: 30vh;
 
 }
 
 .baseline-header {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
-  padding-left: 15px;
+  padding-top: 34px;
+  padding-bottom: 10px;
+  h4 {
+    margin: 0px;
+  }
 }
 
 .baseline-body {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
-  padding-left: 15px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding-right: 5px;
 }
 
 .image-dori {
@@ -50,8 +60,10 @@ body {
   grid-column: 1 / span 1;
   align-self: center;
   img {
-    height: 130px;
+    width: 130px;
     padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 36px;
 
   }
 
