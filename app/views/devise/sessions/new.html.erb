@@ -1,15 +1,29 @@
-<h2>Log in</h2>
+<div class="container signin-body">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <div class="form-style-5">
+          <form>
+            <fieldset>
+              <legend><span class="number">1</span> Se connecter</legend>
+              <%= f.input :email, required: false, autofocus: true, class: "form-style-5-style" %>
+              <%= f.input :password, required: false, class: "form-style-5-style", label: "Mot de passe" %>
+              <%= f.input :remember_me, label: "Se souvenir de moi", class: "form-style-5-style", as: :boolean if devise_mapping.rememberable? %>
+            </fieldset>
+
+            <%= f.button :submit, "Se connecter", class: "form-style-5-button" %>
+
+            <%- resource_class.omniauth_providers.each do |provider| %>
+              <%= link_to "Se connecter avec Google", omniauth_authorize_path(resource_name, provider), class: "form-style-5-button" %>
+
+            <% end -%>
+            </br>
+            <%= link_to "S'enregistrer", new_registration_path(resource_name) %>
+          </form>
+        </div>
+
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
