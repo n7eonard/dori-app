@@ -4,6 +4,9 @@
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 97px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .blue-content {
@@ -23,17 +26,6 @@
     font-weight: 300;
   }
 }
-
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 27px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #2381d0;
-}
-
-
 
 #background_cards {
   background-image: asset-url('background-form.png');

@@ -1,26 +1,27 @@
 <div id="background_cards">
 
-<h2 class="form-title">Votre programme niveau :</h2>
+  <h2 class="form-title">Votre programme :</h2>
 
-<div class="container">
-  <div class="row">
-    <% @program.cards_builder.each do |key, value| %>
-    <div class="col-xs-12 col-sm-4">
-      <div id="card-new">
-        <h2 class="card-title"> <%= key[2..-1] %> </h2>
-        <p class="card-category"> <%= @program.swimming_level %></p>
-        <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
-        <%= value["okpool"]["name"] %> <br>
-        <%= value["okpool"]["metro"] %> <br>
-        <%= value["okpool"]["address"] %></p>
-          <p class = "blue-content"> (<%= value["okpool"]["opening_times"] %>)</p>
-          <h6 id="program_day">Programme du jour: </h6>
-          <div id="training_content">
-           <p> <%= value["training"] %></p>
-          </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <% @program.cards_builder.each do |key, value| %>
+
+      <div class="col-xs-12 col-sm-4">
+
+        <div id="card-new">
+          <h2 class="card-title"> <%= key[2..-1] %> </h2>
+          <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
+            <%= value["okpool"]["name"] %> <br>
+            <%= value["okpool"]["metro"] %> <br>
+            <%= value["okpool"]["address"] %></p>
+            <p class = "blue-content"> (<%= value["okpool"]["opening_times"] %>)</p>
+            <h6 id="program_day">Programme du jour: </h6>
+            <div id="training_content">
+              <p><%= value["training"] %></p>
+           </div>
+         </div>
+       </div>
+       <% end %>
+     </div>
+   </div>
+ </div>
