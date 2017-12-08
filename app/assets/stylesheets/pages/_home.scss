@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+/* BODY */
 
 body {
   // background-color: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -7,6 +7,15 @@ body {
   background-size: contain;
   background-position: center;
   background-size: cover;
+}
+
+.container {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.btn-primary {
+  margin-bottom: 40px;
 }
 
 /* HEADER */
@@ -63,54 +72,6 @@ p {
   margin-top: 30px;
   padding-bottom: 50px;
 }
-
-
-/* BODY */
-
-.container {
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-}
-
-.ariane-container {
-  position: absolute;
-  left: -2px;
-  top: 180px;
-  .ariane-item {
-    background-color: white;
-    padding: 6px 8px;
-    border: 1px solid rgba(13, 92, 124,1);
-    color: rgba(13, 92, 124,1);
-    opacity: 0.2;
-    box-shadow: -0.3px -0.8px 3px rgba(0, 0, 0, 0.4);
-    width: 30px;
-    font-size: 14px;
-    text-align: center;
-  }
-  .ariane-item-active{
-    background: -webkit-linear-gradient(top left, rgba(54, 134, 216, 0.94), #036ba2);
-    background: -o-linear-gradient(top left, rgba(54, 134, 216, 0.94), #036ba2);
-    background: linear-gradient(to bottom right, rgba(54, 134, 216, 0.94), #036ba2);
-    padding: 6px 8px;
-    border: 1px solid #0d5c7c;
-    color: white;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 56px;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
-  }
-
-  .ariane-last-item {
-    border-bottom-right-radius: 5px;
-  }
-}
-
-.btn-primary {
-  margin-bottom: 40px;
-}
-
 
 /* VALUE PROPOSITION */
 
@@ -212,66 +173,4 @@ p {
   }
 }
 
-/* FOOTER */
-
-.footer {
-  height: 50px;
-  background-color: white;
-  display: grid;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-columns: 25% 15% 1fr 1fr;
-  height: 22vh;
-}
-
-.app-name-dori{
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
-  color: #505F8B;
-}
-
-.app-name-app{
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 1;
-  color: #505F8B;
-}
-
-.wave{
-  grid-row: 2 / span 2;
-  grid-column: 2 / span 1;
-}
-
-.FAQ{
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.why-dori{
-  grid-row: 2 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.api{
-  grid-row: 3 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.connexion{
-  grid-row: 4 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.team{
-  grid-row: 1 / span 2;
-  grid-column: 4 / span 1;
-}
-
-.press{
-  grid-row: 3 / span 1;
-  grid-column: 4 / span 1;
-}
-
-.partners{
-  grid-row: 4 / span 1;
-  grid-column: 4 / span 1;
-}
-
+/* css du footer dans components/footer */
