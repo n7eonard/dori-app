@@ -3,10 +3,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  height: 540px;
+  background-position-y: 76%;
+  background-size: cover;
+  margin-top: 30px;
+
+  .form-title {
+    left: 37%;
+  }
 }
 
 .heures {
-  margin-top: 70px;
+  .edit_program {
+    position: relative;
+    bottom: 75px;
+  }
 }
 .container-form-heures {
   padding: 0px 0px 0px 50px;
