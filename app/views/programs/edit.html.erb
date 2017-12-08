@@ -9,12 +9,12 @@
     <div class="jours">
     <%= day.capitalize %>
     </div>
-  
+
       <div class="container-form-heures">
         <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
         <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
       </div>
-  
+
       <% end %>
     <% end %>
 
@@ -25,7 +25,7 @@
 <div id="div-adresses" class="hidden"  style="background-image: url(<%= image_path 'background-form.png'%>)">
 
 <h2 class ="form-title">Vos piscines :</h2>
-<p id="text-address">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
+<p class="text-blue">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
 <% @program.cards_builder.keys.each do |day| %>
     <% if ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"].include? day %>
       <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day %>
