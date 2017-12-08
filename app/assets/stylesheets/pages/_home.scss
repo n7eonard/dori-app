@@ -12,6 +12,31 @@ body {
 .container {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+
+}
+
+#et-plouf {
+  height: 84px;
+  margin-bottom: 30px;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  .btn-lg {
+    padding: 10px 16px;
+    width: 212px;
+    font-size: 23px;
+    line-height: 0.8;
+    border-radius: 40px;
+    background: none;
+    height: 43px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 10px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 9px rgba(255,255,255,0.3), -1px -1px 9px rgba(255,255,255,0.3), inset 0px 0px 15px rgba(255,255,255,0.5);
+    text-shadow: 0px 0px 18px rgba(255,255,255,0.8);
+  }
 }
 
 .btn-primary {
@@ -29,20 +54,25 @@ body {
   // margin: 0;
   background-size: cover;
   background-position: center;
-  height: 30vh;
 
 }
 
 .baseline-header {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
-  padding-left: 15px;
+  padding-top: 34px;
+  padding-bottom: 10px;
+  h4 {
+    margin: 0px;
+  }
 }
 
 .baseline-body {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
-  padding-left: 15px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding-right: 5px;
 }
 
 .image-dori {
@@ -50,8 +80,10 @@ body {
   grid-column: 1 / span 1;
   align-self: center;
   img {
-    height: 130px;
+    width: 130px;
     padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 36px;
 
   }
 
