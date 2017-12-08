@@ -20,7 +20,7 @@
   // justify-content: space-around;
   background-image: asset-url('background-form.png');
   background-size: cover;
-  height: 369px;
+  height: 540px;
   background-position-y: 76%;
   .form-title {
     left: 37%;
@@ -36,8 +36,9 @@
 }
 
 .arrow-submit {
-  position: relative;
-  left: 44%;
+  left: 41%;
+  position: absolute;
+  bottom: 56px;
 }
 
 #vingnettes-niveau {
@@ -88,7 +89,9 @@
 }
 
 #fleche-bas2 {
-
+  left: 41%;
+  position: absolute;
+  bottom: 56px;
 }
 
 .niveau-actif-debutant {
