@@ -15,8 +15,11 @@
 
 .heures {
   .edit_program {
-    position: relative;
-    bottom: 75px;
+    position: absolute;
+    top: 160px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
   }
 }
 .container-form-heures {
