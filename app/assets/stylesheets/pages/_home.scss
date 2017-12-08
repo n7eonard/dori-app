@@ -9,10 +9,6 @@ body {
   background-size: cover;
 }
 
-body a:hover {
-  text-decoration: none;
-}
-
 .container {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
@@ -22,6 +18,7 @@ body a:hover {
 #et-plouf {
   height: 84px;
   margin-bottom: 30px;
+  margin-top: 0px;
   display: flex;
   padding-top: 20px;
   align-items: center;
