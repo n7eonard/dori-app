@@ -16,7 +16,27 @@ body {
 }
 
 #et-plouf {
-
+  height: 84px;
+  margin-bottom: 30px;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  .btn-lg {
+    padding: 10px 16px;
+    width: 212px;
+    font-size: 23px;
+    line-height: 0.8;
+    border-radius: 40px;
+    background: none;
+    height: 43px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 10px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 9px rgba(255,255,255,0.3), -1px -1px 9px rgba(255,255,255,0.3), inset 0px 0px 15px rgba(255,255,255,0.5);
+    text-shadow: 0px 0px 18px rgba(255,255,255,0.8);
+  }
 }
 
 .btn-primary {
