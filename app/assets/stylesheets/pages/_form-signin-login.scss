@@ -1,0 +1,84 @@
+.form-style-5{
+  max-width: 500px;
+  padding: 10px 20px;
+  background: white;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+  font-size: smaller;
+  font-weight: lighter;
+}
+.form-style-5 fieldset{
+  border: none;
+}
+.form-style-5 legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.help-block {
+  font-size: smaller;
+}
+
+.form-style-5-style {
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;
+  outline: 0;
+  padding: 7px;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+
+.form-style-5-style:focus{
+    background: #d2d9dd;
+}
+
+.form-style-5 .number {
+  background: $blue;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+
+.form-style-5-button {
+  position: relative;
+  display: block;
+  padding: 9px 39px 9px 39px;;
+  color: #FFF;
+  margin: 0 auto;
+  background: $blue;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid $blue;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+
+.form-style-5-button:hover {
+  background: $blue;
+}
+
+.google-btn {
+  text-decoration: none;
+  border: 1px solid red;
+}
