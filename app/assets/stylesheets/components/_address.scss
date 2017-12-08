@@ -8,4 +8,24 @@
   background-size: cover;
   margin-top: 30px;
   padding-top: 20px;
+  .addresses-piscines {
+    position: absolute;
+    top: 209px;
+    right: 76px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-weight: lighter;
+    position: absolute;
+    top: 146px;
+    width: 265px;
+  }
+}
+
+#arrow_last {
+  left: 41%;
+  position: absolute;
+  bottom: 56px;
 }
