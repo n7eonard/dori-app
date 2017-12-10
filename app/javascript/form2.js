@@ -1,5 +1,5 @@
-const flèche_2 = document.getElementById("fleche-bas2");
-flèche_2.addEventListener("click", (event) => {
+const fleche_3 = document.getElementById("go-forward3");
+fleche_3.addEventListener("click", (event) => {
   document.getElementById('div-heures').classList.add("hidden");
   document.getElementById('div-adresses').classList.remove("hidden");
 });
@@ -17,15 +17,11 @@ last_field_hours.addEventListener("focus", (event) => {
     };
 });
 
-// last_field_hours.forEach((hour) => {
-
-// });
 
 last_field_hours.addEventListener("keyup", (event) => {
   if (last_field_hours.value == "")
     {document.getElementById("go-forward3").classList.add("no-go")};
 });
-// };
 
 const hours = document.querySelectorAll(".container-form-heures");
 hours.forEach((hourline) => {

@@ -17,14 +17,20 @@
   .edit_program {
     position: absolute;
     top: 160px;
-    right: 0px;
+    right: 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 .container-form-heures {
-  padding: 0px 0px 0px 50px;
   display: flex;
+  width: 80vw;
   textarea.form-control {
     height: 38px;
     text-align: center;
@@ -57,7 +63,6 @@
   color: rgb(13, 92, 124);
   font-weight: bolder;
   text-align: center;
-  padding-left: 48px;
   padding-bottom: 11px;
   padding-top: 11px;
 }
