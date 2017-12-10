@@ -6,7 +6,7 @@ flèche_2.addEventListener("click", (event) => {
 
 const start_hours = document.querySelectorAll("textarea[id*='start']");
 const last_field_hours = document.querySelectorAll(".container-form-heures:last-child textarea")[1];
-last_field_hours.addEventListener("input", (event) => {
+last_field_hours.addEventListener("focus", (event) => {
   const start_hours_size = start_hours.length
   var sum_of_existant = 0
   start_hours.forEach((hour) => {
