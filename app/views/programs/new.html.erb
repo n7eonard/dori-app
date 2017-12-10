@@ -30,7 +30,7 @@
       <%= image_tag "Arrow-left.png", width: 14 %>
   </div>
 
-  <div class="go-forward">
+  <div class="go-forward no-go" id="go-forward1">
     <%= image_tag "Arrow-right.png", width: 14 %>
   </div>
 
@@ -62,19 +62,16 @@
       </div>
     </div>
 
-  <div class="ariane-container">
-    <div class="ariane-item">1</div>
-    <div class="ariane-item-active">2</div>
-    <div class="ariane-item">3</div>
-    <div class="ariane-item">4</div>
-    <div class="ariane-item ariane-last-item">5</div>
+  <div class="go-back" id="go-back1" >
+      <%= image_tag "Arrow-left.png", width: 14 %>
+  </div>
+
+  <div class="go-forward no-go" id="go-forward2">
+    <%= image_submit_tag "Arrow-right.png", width: 14 %>
   </div>
 
 </div>
 
-<!--     <div class="arrow-submit"> -->
-      <%= image_submit_tag "Path 2.png", class: "arrow-submit" %>
-<!--     </div> -->
   <% end %>
 
 </div>

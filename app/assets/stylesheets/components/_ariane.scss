@@ -56,6 +56,10 @@
   font-weight: bolder;
   font-size: 20px;
 
+  input {
+    vertical-align: sub;
+  }
+
 
   img {
     margin-bottom: 3px;
@@ -67,3 +71,5 @@
 .no-go {
   opacity: 0.1;
 }
+
+
