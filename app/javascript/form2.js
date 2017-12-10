@@ -34,7 +34,13 @@ hours.forEach((hourline) => {
   console.log("coucou");
   end_hour.addEventListener("focus", (event) => {
     console.log("hibou");
-    end_hour.value = start_hour.value;
+    starting_time = start_hour.value;
+    const heures_regex1 = Number(starting_time.match(/\d{2}/)[0]);
+    const minutes_regex1 = Number(starting_time.match(/(h(\d{2}))/)[2]);
+    console.log(heures_regex1);
+    if (starting_time.match(/\d{2}h\d{2}/)) {
+      end_hour.value = `${heures_regex1+1}h${minutes_regex1}`;
+    };
   });
 });
 
