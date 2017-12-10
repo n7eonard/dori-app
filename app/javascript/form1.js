@@ -1,4 +1,4 @@
-const fleche = document.getElementById("fleche-bas");
+const fleche = document.getElementById("go-forward");
 if (fleche) {
   fleche.addEventListener("click", (event) => {
     document.getElementById('div-niveau').classList.add("hidden");
