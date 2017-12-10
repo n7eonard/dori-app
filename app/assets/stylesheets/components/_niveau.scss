@@ -48,7 +48,19 @@
   // justify-content: space-around;
   p {
     text-align: center;
-    color: $blue;
+    color: rgba(53, 149, 179,0.5);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: rgba(53, 149, 179, 0.5);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    border: 1px solid;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: -8px;
+    // border-image: linear-gradient(-169deg,rgba(28, 80, 141,1), rgba(53, 149, 179, 1), rgba(77, 220, 217,1)) 1;
   }
 }
 
