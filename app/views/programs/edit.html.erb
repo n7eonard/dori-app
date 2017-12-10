@@ -5,7 +5,9 @@
 <div class="heures">
 
   <div class="go-back" id="go-back2" >
+      <%= link_to new_program_path do %>
       <%= image_tag "Arrow-left.png", width: 14 %>
+      <% end %>
   </div>
 
   <div class="go-forward no-go" id="go-forward3">
@@ -28,7 +30,6 @@
     <% end %>
 
 </div>
-<%= image_tag "Path 2.png", id: "fleche-bas2" %>
 </div>
 
 <div id="div-adresses" class="hidden"  style="background-image: url(<%= image_path 'background-form.png'%>)">
