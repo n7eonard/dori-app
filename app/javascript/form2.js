@@ -35,11 +35,18 @@ hours.forEach((hourline) => {
   end_hour.addEventListener("focus", (event) => {
     console.log("hibou");
     starting_time = start_hour.value;
-    const heures_regex1 = Number(starting_time.match(/\d{2}/)[0]);
-    const minutes_regex1 = Number(starting_time.match(/(h(\d{2}))/)[2]);
-    console.log(heures_regex1);
     if (starting_time.match(/\d{2}h\d{2}/)) {
+      const heures_regex1 = Number(starting_time.match(/\d{2}/)[0]);
+      const minutes_regex1 = Number(starting_time.match(/(h(\d{2}))/)[2]);
       end_hour.value = `${heures_regex1+1}h${minutes_regex1}`;
+    }
+    else if (starting_time.match(/^\d{2}h$/)) {
+      const heures_regex2 = Number(starting_time.match(/\d{2}/)[0]);
+      end_hour.value = `${heures_regex2+1}h`;
+    }
+    else if (starting_time.match(/^\d{2}$/)) {
+      const heures_regex3 = Number(starting_time.match(/\d{2}/)[0]);
+      end_hour.value = `${heures_regex3+1}`;
     };
   });
 });
