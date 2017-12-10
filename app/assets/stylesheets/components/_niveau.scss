@@ -48,6 +48,7 @@
   // justify-content: space-around;
   p {
     text-align: center;
+    color: $blue;
   }
 }
 
@@ -89,9 +90,9 @@
 }
 
 #fleche-bas {
-  left: 41%;
-  position: absolute;
-  bottom: 8%;
+  left: 0%;
+  position: relative;
+  bottom: -16%;
 }
 
 #fleche-bas2 {
