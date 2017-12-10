@@ -1,8 +1,16 @@
-const fleche = document.getElementById("fleche-bas");
+const fleche = document.getElementById("go-forward1");
 if (fleche) {
   fleche.addEventListener("click", (event) => {
     document.getElementById('div-niveau').classList.add("hidden");
     document.getElementById('div-jours').classList.remove("hidden");
+  });
+}
+
+const fleche2 = document.getElementById("go-back1");
+if (fleche2) {
+  fleche2.addEventListener("click", (event) => {
+    document.getElementById('div-niveau').classList.remove("hidden");
+    document.getElementById('div-jours').classList.add("hidden");
   });
 }
 
@@ -19,6 +27,7 @@ const categories = document.querySelectorAll(".category-choice");
 categories.forEach((category) => {
 category.addEventListener("click", (event) => {
   event.currentTarget.classList.toggle("active");
+  document.getElementById("go-forward2").classList.remove("no-go");
 })
 });
 
@@ -29,6 +38,7 @@ if (debutant) {
     active1();
       imgintermediaire.classList.remove("niveau-actif-intermediaire");
       imgexpert.classList.remove("niveau-actif-expert");
+      document.getElementById("go-forward1").classList.remove("no-go");
   });
 }
 
@@ -47,6 +57,7 @@ if (intermediaire) {
     active2();
     imgdebutant.classList.remove("niveau-actif-debutant");
     imgexpert.classList.remove("niveau-actif-expert");
+    document.getElementById("go-forward1").classList.remove("no-go");
   });
 }
 
@@ -64,6 +75,7 @@ if (expert) {
     active3();
     imgdebutant.classList.remove("niveau-actif-debutant");
     imgintermediaire.classList.remove("niveau-actif-intermediaire");
+    document.getElementById("go-forward1").classList.remove("no-go");
   });
 }
 
