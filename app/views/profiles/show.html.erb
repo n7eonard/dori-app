@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="pools-tab" style="visibility: hidden;" >
+  <div class="pools-tab" >
     <div class="titlemap">
       <p> Piscines à proximité </p>
 
@@ -120,7 +120,7 @@
     </div>
   </div>
 
-  <div class="program-tab">
+  <div class="program-tab hidden">
   <div class="program-level">
     <div class="title">
       <p>Niveau</p>
@@ -178,24 +178,19 @@
     <h4>Piscines</h4>
     <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
   </div>
-  <div class="pools-address-name">
-
-  </div>
    <div class="pools-address-details">
+    <div class="row">
 
-  </div>
-  <div class="add-an-address">
-    <div class="add-an-addressContent">
+        <% @program.cards_builder.keys.each do |day| %>
+          <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+            <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1], placeholder: @program.cards_builder[day]["okpool"]["address"] %>
+          <% end %>
+        <% end %>
 
     </div>
-    <div class="add-down-arrow">
-
-    </div>
-
-  </div>
   </div>
   <div class="end-button">
-    <%= f.button :submit %>
+    <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
     <% end %>
   </div>
 </div>
