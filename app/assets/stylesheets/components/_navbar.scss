@@ -31,14 +31,11 @@
 
 /* Right section */
 
-.navbar-wagon-right {
-
-}
-
-
 
 /* Basic navbar item */
 .navbar-wagon-item {
+  position: relative;
+  left: 90%;
   cursor: pointer;
   padding: 0 0px;
 }
@@ -82,12 +79,22 @@
   height: 10px;
   width: 10px;
   position: absolute;
-  left: 10px;
+  right: 23px;
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.dropdown-menu-left {
+    left: -115px;
+    right: auto;
+}
+
+.dropdown-menu {
+  top: 90%;
+  padding: 0px 0;
 }
 
 .navbar-wagon-dropdown-menu-right {
@@ -103,20 +110,4 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu-right li > a:hover {
-  background: transparent !important;
-  color: black !important;
-}
 
-.navbar-wagon-dropdown-menu-right:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
-}
