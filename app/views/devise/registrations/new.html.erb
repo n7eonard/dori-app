@@ -14,7 +14,8 @@
             </fieldset>
             <%= f.button :submit, "S'enregistrer", class: "form-style-5-button" %>
             <%- resource_class.omniauth_providers.each do |provider| %>
-              <%= link_to "S'enregistrer avec Google", omniauth_authorize_path(resource_name, provider), class: "form-style-5-button" %>
+
+              <%= link_to "S'enregistrer avec Google", omniauth_authorize_path(resource_name, provider), class: "google-login-btn" %>
             <% end -%></br>
           <%= link_to "Se connecter", new_session_path(resource_name) %>
           </form>
