@@ -21,13 +21,13 @@
     <%= day[2..-1].capitalize %>
     </div>
 
-      <div class="container-form-heures">
-        <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
-        <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
-      </div>
+    <div class="container-form-heures">
+      <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
+      <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
+    </div>
 
-      <% end %>
     <% end %>
+  <% end %>
 
 </div>
 </div>
