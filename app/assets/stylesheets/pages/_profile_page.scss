@@ -384,8 +384,9 @@
       display: flex;
       align-items: center;
       padding-top: 17px;
-      input:placeholder {
+      textarea[placeholder] {
         font-size: 12px;
+        color: red;
       }
       label {
         color: darkblue;
