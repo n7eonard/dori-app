@@ -1,10 +1,10 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
-    var flatAddress = document.getElementById('flat_address');
+    var poolAddress = document.getElementById('program_1_lundi_address');
 
-    if (flatAddress) {
-      var autocomplete = new google.maps.places.Autocomplete(flatAddress, { types: [ 'geocode' ] });
-      google.maps.event.addDomListener(flatAddress, 'keydown', function(e) {
+    if (poolAddress) {
+      var autocomplete = new google.maps.places.Autocomplete(poolAddress, { types: [ 'geocode' ] });
+      google.maps.event.addDomListener(poolAddress, 'keydown', function(e) {
         if (e.key === "Enter") {
           e.preventDefault(); // Do not submit the form on Enter.
         }
