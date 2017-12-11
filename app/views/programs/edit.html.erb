@@ -22,8 +22,111 @@
     </div>
 
       <div class="container-form-heures">
-        <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: "12h00" %>
-        <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
+        <select class="form-control select optional" name="program[<%= day %>_start]" id="program_<%= day %>_start"><option value=""></option>
+       <option value="0">00H00</option>
+            <option value="0,5">00H30</option>
+            <option value="1">01H00</option>
+            <option value="1,5">01H30</option>
+            <option value="2">02H00</option>
+            <option value="2,5">02H30</option>
+            <option value="3">03H00</option>
+            <option value="3,5">03H30</option>
+            <option value="4">04H00</option>
+            <option value="4,5">04H30</option>
+            <option value="5">05H00</option>
+            <option value="5,5">05H30</option>
+            <option value="6">06H00</option>
+            <option value="6,5">06H30</option>
+            <option value="7">07H00</option>
+            <option value="7,5">07H30</option>
+            <option value="8">08H00</option>
+            <option value="8,5">08H30</option>
+            <option value="9">09H00</option>
+            <option value="9,5">09H30</option>
+            <option value="10">10H00</option>
+            <option value="10,5">10H30</option>
+            <option value="11">11H00</option>
+            <option value="11,5">11H30</option>
+            <option value="12">12H00</option>
+            <option value="12,5">12H30</option>
+            <option value="13">13H00</option>
+            <option value="13,5">13H30</option>
+            <option value="14">14H00</option>
+            <option value="14,5">14H30</option>
+            <option value="15">15H00</option>
+            <option value="15,5">15H30</option>
+            <option value="16">16H00</option>
+            <option value="16,5">16H30</option>
+            <option value="17">17H00</option>
+            <option value="17,5">17H30</option>
+            <option value="18">18H00</option>
+            <option value="18,5">18H30</option>
+            <option value="19">19H00</option>
+            <option value="19,5">19H30</option>
+            <option value="20">20H00</option>
+            <option value="20,5">20H30</option>
+            <option value="21">21H00</option>
+            <option value="21,5">21H30</option>
+            <option value="22">22H00</option>
+            <option value="22,5">22H30</option>
+            <option value="23">23H00</option>
+            <option value="23,5">23H30</option>
+            <option value="24">24H00</option>
+        </select>
+        <%#= f.input "#{day}_start", as: :text, collection: [0,1,2], input_html: { value: "" }, label: false, placeholder: "12h00" %>
+
+          <select class="form-control select optional" name="program[<%= day %>_end]" id="program_<%= day %>_end"><option value=""></option>
+            <option value="0">00H00</option>
+            <option value="0,5">00H30</option>
+            <option value="1">01H00</option>
+            <option value="1,5">01H30</option>
+            <option value="2">02H00</option>
+            <option value="2,5">02H30</option>
+            <option value="3">03H00</option>
+            <option value="3,5">03H30</option>
+            <option value="4">04H00</option>
+            <option value="4,5">04H30</option>
+            <option value="5">05H00</option>
+            <option value="5,5">05H30</option>
+            <option value="6">06H00</option>
+            <option value="6,5">06H30</option>
+            <option value="7">07H00</option>
+            <option value="7,5">07H30</option>
+            <option value="8">08H00</option>
+            <option value="8,5">08H30</option>
+            <option value="9">09H00</option>
+            <option value="9,5">09H30</option>
+            <option value="10">10H00</option>
+            <option value="10,5">10H30</option>
+            <option value="11">11H00</option>
+            <option value="11,5">11H30</option>
+            <option value="12">12H00</option>
+            <option value="12,5">12H30</option>
+            <option value="13">13H00</option>
+            <option value="13,5">13H30</option>
+            <option value="14">14H00</option>
+            <option value="14,5">14H30</option>
+            <option value="15">15H00</option>
+            <option value="15,5">15H30</option>
+            <option value="16">16H00</option>
+            <option value="16,5">16H30</option>
+            <option value="17">17H00</option>
+            <option value="17,5">17H30</option>
+            <option value="18">18H00</option>
+            <option value="18,5">18H30</option>
+            <option value="19">19H00</option>
+            <option value="19,5">19H30</option>
+            <option value="20">20H00</option>
+            <option value="20,5">20H30</option>
+            <option value="21">21H00</option>
+            <option value="21,5">21H30</option>
+            <option value="22">22H00</option>
+            <option value="22,5">22H30</option>
+            <option value="23">23H00</option>
+            <option value="23,5">23H30</option>
+            <option value="24">24H00</option>
+          </select>
+        <%#= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
       </div>
 
       <% end %>
