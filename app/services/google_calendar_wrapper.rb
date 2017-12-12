@@ -69,7 +69,6 @@ class GoogleCalendarWrapper
 
     range_week = (Date.today .. (Date.today + 6.days))
     events = []
-    binding.pry
     range_week.each do |day|
       day_name = mapping[day.wday]
       next unless program.cards_builder.has_key?(day_name)
@@ -90,7 +89,7 @@ class GoogleCalendarWrapper
         ],
         "description": element["training"],
         "summary": "Dori entrainement",
-        "location": element["address"],
+        "location": element["okpool"]["address"],
         "reminders": {
           "overrides": [
             {
