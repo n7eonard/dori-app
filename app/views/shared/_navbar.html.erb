@@ -16,6 +16,11 @@
 
         <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
           <li>
+            <%= link_to root_path do %>
+              <i class="fa fa-home"></i> Acceuil
+            <% end %>
+          </li>
+          <li>
             <%= link_to profile_path do %>
               <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
             <% end %>
