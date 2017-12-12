@@ -8,8 +8,6 @@ import "bootstrap";
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-
 import 'google_id.js'
 import 'bootstrap'
 import { form1Navigation } from '../form1.js';
