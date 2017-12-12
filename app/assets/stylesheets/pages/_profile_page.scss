@@ -126,14 +126,13 @@
   }
 }
 
-.mapgoogle {
+.map {
   grid-row: 1 / span 1;
   grid-column: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: grey;
   height: 33vh;
 }
 
