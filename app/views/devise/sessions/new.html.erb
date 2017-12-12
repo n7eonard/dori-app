@@ -15,7 +15,11 @@
             <%= f.button :submit, "Se connecter", class: "form-style-5-button" %>
 
             <%- resource_class.omniauth_providers.each do |provider| %>
-              <%= link_to "Se connecter avec Google", omniauth_authorize_path(resource_name, provider), class: "form-style-5-button" %>
+
+            <%= link_to omniauth_authorize_path(resource_name, provider), class: "google-login-btn" do %>
+              <div class="logo-google"> <%= image_tag("google-logo-revised-spinner.png") %></div>
+              <div class="text-google">Connexion</div>
+            <% end %>
 
             <% end -%>
             </br>

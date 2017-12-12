@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="google-signin-scope" content="profile email">
+
     <meta name="google-signin-client_id" content="390476382887-unu7835m1leq4hdibfufnpbm7lme7abt.apps.googleusercontent.com.apps.googleusercontent.com">
     <meta name="google-signin-client_id" content="GOOGLE_CLIENT_ID">
     <%= favicon_link_tag 'favicon.ico' %>
@@ -26,7 +27,7 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-    <title>Dori 🐠 Nagez à Paris? Générez automatiquement vos séances de natation dans votre calendrier Google Calendar</title>
+    <title>Dori | Nagez à Paris? Générez automatiquement vos séances de natation dans votre calendrier Google Calendar</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -37,11 +38,12 @@
     <%= yield %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "https://maps.google.com/maps/api/js" %>
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_pack_tag "map" %>
+
     <script src="https://smartlock.google.com/client" async defer></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
   </body>
 </html>
 

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
+  resource :profile, only: [:show]
 
   resources :pools, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :trainings, only: [:new, :create]
