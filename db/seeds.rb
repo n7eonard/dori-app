@@ -1,7 +1,9 @@
 
 puts "Cleaning database..."
-Pool.destroy_all
 Training.destroy_all
+Program.destroy_all
+User.destroy_all
+Pool.destroy_all
 
 puts "Creating pools..."
 
