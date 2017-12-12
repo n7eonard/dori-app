@@ -1,17 +1,20 @@
 <!-- <div class="container"> -->
 
-<div class="profilePage">
+<div class="profile-container">
 
-  <div class="profile-pic">
-    <div class="round-pic-profile">
 
-    </div>
+  <div class="profile-header">
+  <% if current_user.image %>
+     <%= image_tag current_user.image, class: "avatar-big" %>
+      <% else %>
+      <%= image_tag "placeholder-avatar.jpg", width: 100 %>
+     <% end %>
   </div>
 
-  <div class="profile-id">
-    <h4>Nicolas Amiel</h4>
-    <p> <%= current_user.email %> </p>
 
+  <div class="profile-id">
+    <h4><%= current_user.first_name.upcase %></h4>
+    <p> <%= current_user.email %> </p>
   </div>
 
   <div class="profile-nav">
@@ -24,10 +27,10 @@
   </div>
 
   <div class="pools-tab" >
-    <div class="titlemap">
+   <!--  <div class="titlemap">
       <p> Piscines à proximité </p>
 
-    </div>
+    </div> -->
 
     <div class="mapgoogle">
 
@@ -37,7 +40,7 @@
       <div class="status-bar">
 
       </div>
-      <div class="pool-content">
+      <div class="pool-card-large">
         <div class="title">
           <p>PISCINE DE LA COUR DES LIONS</p>
         </div>
@@ -58,7 +61,7 @@
       <div class="status-bar">
 
       </div>
-      <div class="pool-content">
+      <div class="pool-card-large">
         <div class="title">
           <p>PISCINE CATHERINE LAGATU</p>
         </div>
@@ -82,7 +85,7 @@
       <div class="status-bar">
 
       </div>
-      <div class="pool-content">
+      <div class="pool-card-small">
         <div class="title">
           <p>PISCINE MOLITOR</p>
         </div>
@@ -103,7 +106,7 @@
       <div class="status-bar">
 
       </div>
-      <div class="pool-content">
+      <div class="pool-card-small">
         <div class="title">
           <p>PISCINE ROGER LEGALL</p>
         </div>
@@ -121,15 +124,17 @@
   </div>
 
   <div class="program-tab hidden">
-  <div class="program-level">
-    <div class="title">
-      <p>Niveau</p>
+    <% if @program %>
+      <div class="program-level">
+        <div class="title">
+          <p>Niveau</p>
+        </div>
+      <div class="dropdown-levels">
+        <%= simple_form_for @program do |f| %>
+        <%= f.input :swimming_level, collection: ["debutant", "intermediaire", "expert"] , label: false, as: :select %>
+      </div>
     </div>
-    <div class="dropdown-levels">
-      <%= simple_form_for @program do |f| %>
-      <%= f.input :swimming_level, collection: ["debutant", "intermediaire", "expert"] , label: false, as: :select %>
-    </div>
-  </div>
+
   <div class="program-days">
     <div class="title">
       <p>Jours</p>
@@ -193,8 +198,11 @@
     <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
     <% end %>
   </div>
-</div>
+  <% else %>
+  <%= link_to 'Créer mon programme', new_program_path, class: 'btn btn-success btn-lg btn-block'%>
+  <% end %>
 
+</div>
 
 
 <!-- </div> -->
