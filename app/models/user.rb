@@ -52,6 +52,7 @@ class User < ApplicationRecord
            last_name: data['last_name'],
            image: data['image'],
            token: credentials['token'],
+           refresh_token: credentials['refresh_token'],
            expires_at: credentials['expires_at'],
            expires: credentials['expires'],
            gender: raw_info['gender'],

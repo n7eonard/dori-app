@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :trainings, only: [:new, :create]
 
   resources :programs, only: [:new, :create, :edit, :update] do
-    resources :cards, only: [:index, :show, :new, :create, :edit, :update]
+    get :send_to_google
+    resources :cards, only: [:index, :show, :new, :create, :edit, :update] do
+    end
   end
 end
