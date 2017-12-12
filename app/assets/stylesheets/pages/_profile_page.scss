@@ -1,13 +1,44 @@
-.profilePage {
-  background-color: white;
+.profile-container {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
 
+.profile-header {
+  height: 66px;
+  text-align: center;
+
+  img {
+    position: relative;
+    top: -20px;
+    width: 100px;
+    height: 100px;
+    border-color: white;
+    border: solid;
+  }
+}
+
+.profile-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 15px;
+  line-height: 5px;
+  h4 {
+    color: white;
+    font-weight: bold;
+  }
+
+  p {
+    color: white;
+  }
 }
 
 .pools-tab {
-  background-color: white;
+  background-color: transparent;
   display: grid;
-  grid-template-rows: 5% 30% 30% 5% 30% ;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30% 15% 15% 10% 30%;
+  grid-template-columns: 50% 50%;
 }
 
 .program-tab {
@@ -22,36 +53,12 @@
 
 
 
-.profile-pic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .round-pic-profile {
-    width: 100px;
-    height: 100px;
-    color: grey;
-    border: 1px solid grey;
-    border-radius: 50%;
-  }
+.avatar-big{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
-.profile-id {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 24px;
-    padding-bottom: 24px;
-    line-height: 5px;
-  h4 {
-    color: darkblue;
-  }
-
-  p {
-    color: darkblue;
-  }
-}
 
 .profile-nav {
   display: flex;
@@ -121,34 +128,35 @@
   }
 }
 
-.mapgoogle {
-  grid-row: 2 / span 1;
+#map {
+  grid-row: 1 / span 1;
   grid-column: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: grey;
   height: 33vh;
 }
 
 .closest-pool1 {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 
 }
 
 .closest-pool2 {
   grid-row: 3 / span 1;
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .status-bar {
@@ -156,15 +164,20 @@
 
 }
 
-.pool-content {
+.pool-card-large {
   box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
   padding: 10px;
-  height: 180px;
+  height: 100px;
+  width: 270px;
+  background-color: white;
   p {
     font-size: 12px;
     color: grey;
   }
   .title{
+    p {
+      font-weight: bold;
+    }
 
   }
   .address-pool {
@@ -172,6 +185,24 @@
   }
   .opening-hours {
 
+  }
+}
+
+.pool-card-small {
+  box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
+  padding: 10px;
+  height: 170px;
+  width: 270px;
+  background-color: white;
+  p {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .title {
+    p {
+      font-weight: bold;
+    }
   }
 }
 

@@ -4,8 +4,8 @@ class GoogleCalendarWrapper
   end
   def configure_client(current_user)
     @client = Google::APIClient.new
-    @client.authorization.access_token = User.last.token
-    @client.authorization.refresh_token = User.last.refresh_token
+    @client.authorization.access_token = current_user.token
+    @client.authorization.refresh_token = current_user.refresh_token
     @client.authorization.client_id = ENV['GOOGLE_CLIENT_ID']
     @client.authorization.client_secret = ENV['GOOGLE_CLIENT_SECRET']
     @client.authorization.refresh!
@@ -69,7 +69,6 @@ class GoogleCalendarWrapper
 
     range_week = (Date.today .. (Date.today + 6.days))
     events = []
-
     range_week.each do |day|
       day_name = mapping[day.wday]
       next unless program.cards_builder.has_key?(day_name)
@@ -90,7 +89,7 @@ class GoogleCalendarWrapper
         ],
         "description": element["training"],
         "summary": "Dori entrainement",
-        "location": element["address"],
+        "location": element["okpool"]["address"],
         "reminders": {
           "overrides": [
             {
