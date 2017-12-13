@@ -34,31 +34,8 @@
       <div id="map" style="width: 100%; height: 300px;"
       data-markers="<%= @markers.to_json %>">
       </div>
-      <div class="closest-pool1">
-        <% @program.cards_builder.each do |key, value| %>
-          <% if value["okpool"]["open"] == true %>
-            <div class="status-bar-open">
-            </div>
-          <% else %>
-            <div class="status-bar-close">
-            </div>
-          <% end %>
-          <div class="pool-card-large">
-            <div class="title">
-              <%= value["okpool"]["name"] %>
-            </div>
-            <div class="address-pool">
-              <%= value["okpool"]["address"] %>
-              <%= value["okpool"]["metro"] %>
-            </div>
-            <div class="opening-hours">
-              <p>Horaires d'ouverture :</p>
-              <%= value["okpool"]["opening_times"] %>
-            </div>
-          </div>
-        <% end %>
-      </div>
     </div>
+
     <div class="program-tab hidden">
         <div class="program-level">
           <div class="title">
@@ -70,34 +47,9 @@
           </div>
         </div>
 
-        <div class="program-days">
-          <div class="title">
-          <p>Jours</p>
-          </div>
-          <div class="content-days">
-            <div class="category-choices">
-              <div class="fake-endweek">
-                <p>vendredi samedi dimanche</p>
-              </div>
-              <div class="pickable-week">
-                <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
-
-                  <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
-
-                  <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day.slice(0..2) %></label>
-
-                <% end %>
-              </div>
-              <div class="fake-beginweek">
-                <p>lundi mardi</p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="program-hours-title">
           <p>Créneaux</p>
         </div>
-
         <div class="program-hours-days">
           <% @program.cards_builder.keys.each do |day| %>
             <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
@@ -117,6 +69,30 @@
         <div class="program-pools-title">
           <h4>Piscines</h4>
           <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
+          <div class="closest-pool1">
+            <% @program.cards_builder.each do |key, value| %>
+              <% if value["okpool"]["open"] == true %>
+                <div class="status-bar-open">
+                </div>
+              <% else %>
+                <div class="status-bar-close">
+                </div>
+              <% end %>
+              <div class="pool-card-large">
+                <div class="title">
+                  <%= value["okpool"]["name"] %>
+                </div>
+                <div class="address-pool">
+                  <%= value["okpool"]["address"] %>
+                  <%= value["okpool"]["metro"] %>
+                </div>
+                <div class="opening-hours">
+                  <p>Horaires d'ouverture :</p>
+                  <%= value["okpool"]["opening_times"] %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
         <div class="pools-address-details">
           <div class="row">
@@ -131,6 +107,7 @@
         </div>
         <div class="end-button">
           <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
+          <%= link_to 'Google', program_update_to_google_path(@program) %>
         </div>
       <% end %>
     </div>
