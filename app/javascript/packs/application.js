@@ -10,10 +10,14 @@ import "bootstrap";
 
 import 'google_id.js'
 import 'bootstrap'
+import { home1Navigation } from '../home.js';
+import { home2Navigation } from '../home.js';
 import { form1Navigation } from '../form1.js';
 import { form2Navigation } from '../form2.js';
 import { tabNavigation } from '../profile.js';
 
+home1Navigation();
+home2Navigation();
 form1Navigation();
 tabNavigation();
 form2Navigation();
