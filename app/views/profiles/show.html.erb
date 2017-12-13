@@ -28,7 +28,7 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
-  
+
     <div class="placeholder-no-program">
       <%= link_to 'Créez votre programme', new_program_path, type: 'button',class: 'btn btn-default btn-block btn-lg btn-create-program' %>
     </div>
@@ -39,19 +39,7 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     <div class="space-between"></div>
-
-        <div class="pool-card-lg-1">
-<<<<<<< HEAD
-          <div class="card-status">CLOSED</div>
-              <h4><%= Pool.near(@geocoder_result.data['lat'], @geocoder_result.data['lng']) %></h4>
-
-        </div>
-
-        <div class="pool-card-lg-2">
-          <div class="card-status">OPEN</div>
-          <h4>Piscine Georges Rigal</h4>
-           <p>115 Boulevard de Charonne, 75011 Paris</p>
-=======
+       <div class="pool-card-lg-1">
           <div class="card-status"><%= @pool_near_me[0].open %></div>
               <h3><%= @pool_near_me[0].name.downcase.capitalize %></h3>
               <p><%= @pool_near_me[0].address %></p>
@@ -61,7 +49,6 @@
           <div class="card-status"><%= @pool_near_me[1].open %></div>
           <h3><%= @pool_near_me[1].name.downcase.capitalize %></h3>
            <p><%= @pool_near_me[1].address %></p>
->>>>>>> master
         </div>
     </div>
 

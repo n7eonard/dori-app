@@ -16,10 +16,7 @@ class ProfilesController < ApplicationController
     @geocoder_result.data['lat'] = 48.864848
     @geocoder_result.data['lng'] = 2.379853
     @markers << @geocoder_result.data
-<<<<<<< HEAD
-
-=======
     @pool_near_me = Pool.near([@geocoder_result.data['lat'], @geocoder_result.data['lng']], 1.2)
->>>>>>> master
+
   end
 end
