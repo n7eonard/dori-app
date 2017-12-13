@@ -1,24 +1,21 @@
 <div class="container">
 
-<div id= "div-niveau" style="background-image: url(<%= image_path 'background-form.png'%>); background-position: center; background-size: cover">
+<div id= "div-niveau">
 
-  <h2 class ="form-title">Niveau</h2>
+  <h1 class ="form-title">NIVEAU</h1>
 
   <div id= "vingnettes-niveau">
 
     <div class='label-niveau' id="casedebutant">
-      <p>debutant</p>
-      <%= image_tag "Image debutant.png", id: "debutant" %>
+      <h2>DEBUTANT</h2>
     </div>
 
     <div class='label-niveau' id="caseintermediaire">
-      <p>intermediaire</p>
-      <%= image_tag "Image intermediaire.png", id: "intermediaire" %>
+      <h2>INTERMEDIAIRE</h2>
     </div>
 
     <div class='label-niveau' id="caseexpert">
-      <p>expert</p>
-      <%= image_tag "image expert.png", id: "expert" %>
+      <h2>EXPERT</h2>
     </div>
 
     <%= simple_form_for @program do |f| %>
@@ -26,12 +23,9 @@
 
   </div>
 
-  <div class="go-back no-go">
-      <%= image_tag "Arrow-left.png", width: 14 %>
-  </div>
-
-  <div class="go-forward no-go" id="go-forward1">
-    <%= image_tag "Arrow-right.png", width: 14 %>
+  <div class="go-forward" id="go-forward1">
+    <h2>NEXT</h2>
+    <%= image_tag "next-line.png"%>
   </div>
 
 
