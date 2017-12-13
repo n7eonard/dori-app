@@ -18,9 +18,6 @@ class ProfilesController < ApplicationController
     @geocoder_result.data['lng'] = 2.379853
     @markers << @geocoder_result.data
 
-    @user_position = []
-    @user_position.push(@geocoder_result.data['lat'], @geocoder_result.data['lng'])
-
   end
 
 end
