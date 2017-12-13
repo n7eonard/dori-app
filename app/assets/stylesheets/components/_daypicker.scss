@@ -1,3 +1,32 @@
+#div-jours {
+  background: asset-url('swimmer-bg.jpg'), -webkit-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), -o-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
+  background-size: cover;
+  height: 100vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  .form-title {
+    color: $white;
+    font-size: 39px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 7px;
+    position: relative;
+    top: 10vh;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 
 .category-choices {
   // display: flex;
