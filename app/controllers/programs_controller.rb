@@ -80,10 +80,10 @@ class ProgramsController < ApplicationController
     redirect_to profile_path
   end
 
-  def update_to_google
+  def delete_to_google
     @program = Program.where(:user_id == current_user.id).last
     @google = GoogleCalendarWrapper.new(current_user)
-    @google.update_calendar(@program)
+    @google.delete_calendar(@program)
     redirect_to profile_path
   end
 
