@@ -1,54 +1,62 @@
 #div-heures {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 540px;
-  background-position-y: 76%;
+  background: asset-url('swimmer-bg.jpg'), -webkit-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), -o-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
   background-size: cover;
-  margin-top: 30px;
+  height: 100%;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
 
   .form-title {
-    // left: 37%;
+    color: $white;
+    font-size: 39px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 7px;
+    position: relative;
+    top: 10vh;
   }
 }
 
 .heures {
   .edit_program {
-    position: absolute;
-    top: 160px;
-    right: 37px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    margin: 0px;
+    padding: 0px;
     flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 12vh;
   }
 }
 .container-form-heures {
   display: flex;
   width: 80vw;
+  .form-control {
+    background: none;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    margin: 10px 11px;
+    width: 250px;
+    color: #F5F5F5;
+    /* text-align: center; */
+    display: flex;
+    font-weight: lighter;
+    &:focus {
+      box-shadow: 1px 1px 3px rgba(37, 138, 174, 0.2),
+      -1px -1px 3px rgba(37, 138, 174, 0.2);
+    }
+  }
   textarea.form-control {
-    height: 38px;
-    text-align: center;
   }
   .form-group {
     padding: 12px 30px 10px 30px;
-    .form-control {
-      border: 1px solid rgba(37,138, 174, 0.3);
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      &:focus {
-        box-shadow: 1px 1px 3px rgba(37, 138, 174, 0.2),
-        -1px -1px 3px rgba(37, 138, 174, 0.2);
-      }
-    }
-  }
-  div:first-child {
-    border-right: 1px solid rgba(13, 92, 124, 0.2);
   }
 }
 
@@ -60,11 +68,12 @@
 }
 
 .jours {
-  color: rgb(13, 92, 124);
+  color: #F5F5F5;
   font-weight: bolder;
   text-align: center;
-  padding-bottom: 11px;
-  padding-top: 11px;
+  font-size: 19px;
+  font-family: "Rubik", sans-serif;
+
 }
 
 .text-blue {
@@ -77,4 +86,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+#go-forward3 {
+  position: absolute;
+  top: 71vh;
 }
