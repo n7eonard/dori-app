@@ -136,19 +136,21 @@
 </div>
 </div>
 
-<div id="div-adresses" class="hidden"  style="background-image: url(<%= image_path 'background-form.png'%>)">
+<div id="div-adresses" class="hidden">
 
 <div class="go-back" id="go-back3" >
-    <%= image_tag "Arrow-left.png", width: 14 %>
+  <h2>BACK</h2>
+  <%= image_tag "back-line.png" %>
 </div>
 
-<div class="go-forward no-go" id="go-forward4">
-  <%= image_submit_tag "Arrow-right.png", width: 14 %>
+
+
+<div class ="form-title">
+  <h2>PISCINES</h2>
+  <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
 </div>
 
-<h2 class ="form-title">Vos piscines :</h2>
 
-<p class="text-blue">Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
   <div class="addresses-piscines">
   <% @program.cards_builder.keys.each do |day| %>
       <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
@@ -156,8 +158,10 @@
     <% end %>
      <% end %>
   </div>
-  <%= image_submit_tag "Path 2.png", id: "arrow_last" %>
-
+  <div class="go-forward" id="go-forward4">
+    <%= f.submit "NEXT" %>
+    <%= image_tag "next-line.png" %>
+  </div>
   <% end %>
 
 </div>

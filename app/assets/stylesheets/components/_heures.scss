@@ -1,6 +1,4 @@
 #div-heures {
-  background: asset-url('swimmer-bg.jpg'), -webkit-linear-gradient(#2502d3, #006fff 75%);
-  background: asset-url('swimmer-bg.jpg'), -o-linear-gradient(#2502d3, #006fff 75%);
   background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
   background-size: cover;
   height: 100%;
@@ -61,10 +59,11 @@
 }
 
 ::placeholder { /* Most modern browsers support this now. */
-   color: rgba(13, 92, 124, 0.35)!important;
-   font-weight: normal!important;
+   color: $white !important;
+   font-weight: lighter !important;
    font-size: 20px;
    text-align: center;
+   padding-top: 0px !important;
 }
 
 .jours {
@@ -73,6 +72,7 @@
   text-align: center;
   font-size: 19px;
   font-family: "Rubik", sans-serif;
+  letter-spacing: 2px;
 
 }
 
