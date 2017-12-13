@@ -1,11 +1,28 @@
 <div class="wrapper-home1">
+  <div class="dori-home1-content">
+    <div class="dori-title">
+      <h1> DORI </h1>
+    </div>
 
+    <div class="dori-description">
+      <p>Générez automatiquement vos séances de natation dans votre calendrier</p>
+    </div>
 
+    <div class="button-commencer">
+      <%= link_to new_program_path do %>
+      <h2>COMMENCER</h2>
+      <% end %>
+    </div>
+
+    <div class="button-scroll-1">
+      <%= image_tag ("slide-down.png") %>
+    </div>
+  </div>
 </div>
 
 <div class="space-between-80px"> </div>
 
-<div class="testimonial-slider">
+<div class="testimonial-slider hidden">
   <div class="testimonial-header">
     <%= image_tag("round-picture-testimonials.png") %>
   </div>
@@ -21,9 +38,9 @@
   </div>
 </div>
 
-<div class="space-between-57px"> </div>
+<div class="space-between-57px hidden"> </div>
 
-<div class="footer">
+<div class="footer hidden">
 
   <div class="app-name-dori">DORI</div>
 
