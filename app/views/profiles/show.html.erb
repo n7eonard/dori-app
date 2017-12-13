@@ -40,15 +40,15 @@
     <div class="space-between"></div>
 
         <div class="pool-card-lg-1">
-          <div class="card-status">CLOSED</div>
-              <h3>Piscine de la Cour des Lions</h3>
-              <p>9 Rue Alphonse Baudin, 75011 Paris</p>
+          <div class="card-status"><%= @pool_near_me[0].open %></div>
+              <h3><%= @pool_near_me[0].name.downcase.capitalize %></h3>
+              <p><%= @pool_near_me[0].address %></p>
         </div>
 
         <div class="pool-card-lg-2">
-          <div class="card-status">OPEN</div>
-          <h3>Piscine Georges Rigal</h3>
-           <p>115 Boulevard de Charonne, 75011 Paris</p>
+          <div class="card-status"><%= @pool_near_me[1].open %></div>
+          <h3><%= @pool_near_me[1].name.downcase.capitalize %></h3>
+           <p><%= @pool_near_me[1].address %></p>
         </div>
     </div>
 
