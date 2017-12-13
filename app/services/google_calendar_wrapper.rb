@@ -27,6 +27,9 @@ class GoogleCalendarWrapper
     return calendar["id"]
   end
 
+  def event_id
+  end
+
   def send_calendar(program)
     events(program).each do |event|
       @client.execute(
@@ -34,6 +37,22 @@ class GoogleCalendarWrapper
         :parameters => {
           'calendarId' => calendar_id,
           'sendNotifications' => true
+        },
+        :body => JSON.dump(event),
+        :headers => {'Content-Type' => 'application/json'}
+      )
+    end
+  end
+
+  def update_calendar(program)
+    events(program).each do |event|
+    binding.pry
+      @client.execute(
+        :api_method => @service.events.update,
+        :parameters => {
+          'calendarId' => calendar_id,
+          'sendNotifications' => true,
+          'eventId' => event_id
         },
         :body => JSON.dump(event),
         :headers => {'Content-Type' => 'application/json'}
@@ -69,6 +88,7 @@ class GoogleCalendarWrapper
 
     range_week = (Date.today .. (Date.today + 6.days))
     events = []
+    i = 1
     range_week.each do |day|
       day_name = mapping[day.wday]
       next unless program.cards_builder.has_key?(day_name)
@@ -100,8 +120,10 @@ class GoogleCalendarWrapper
           "useDefault": false
         },
         "colorId": "5",
-        "id": ""
+        "id": i
       }
+
+      i += 1
     end
 
     return events
