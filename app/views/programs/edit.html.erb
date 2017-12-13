@@ -1,139 +1,139 @@
 <div id="div-heures">
 
-<h2 class ="form-title">HORAIRES</h2>
+  <h2 class ="form-title">HORAIRES</h2>
 
-<div class="heures">
+  <div class="heures">
 
-  <div class="go-back" id="go-back2" >
-      <%= link_to new_program_path do %>
-      <h2>BACK</h2>
-      <% end %>
-      <%= image_tag "back-line.png" %>
-  </div>
-
-  <div class="go-forward" id="go-forward3">
-    <h2>NEXT</h2>
-    <%= image_tag "next-line" %>
-  </div>
-
-<%= simple_form_for @program do |f| %>
-  <% @program.cards_builder.keys.each do |day| %>
-    <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-    <div class="jours">
-    <%= day[2..-1].capitalize %>
+    <div class="go-back" id="go-back2" >
+        <%= link_to new_program_path do %>
+        <h2>BACK</h2>
+        <% end %>
+        <%= image_tag "back-line.png" %>
     </div>
 
-      <div class="container-form-heures">
-        <select class="form-control select optional" name="program[<%= day %>_start]" id="program_<%= day %>_start"><option value=""></option>
-       <option value="00h00">00h00</option>
-            <option value="00:30">00h30</option>
-            <option value="01:00">01h00</option>
-            <option value="01:30">01h30</option>
-            <option value="02:00">02h00</option>
-            <option value="02:30">02h30</option>
-            <option value="03:00">03h00</option>
-            <option value="03:30">03h30</option>
-            <option value="04:00">04h00</option>
-            <option value="04:30">04h30</option>
-            <option value="05:00">05h00</option>
-            <option value="05:30">05h30</option>
-            <option value="06:00">06h00</option>
-            <option value="06:30">06h30</option>
-            <option value="07:00">07h00</option>
-            <option value="07:30">07h30</option>
-            <option value="08:00">08h00</option>
-            <option value="08:30">08h30</option>
-            <option value="09:00">09h00</option>
-            <option value="09:30">09h30</option>
-            <option value="10:00">10h00</option>
-            <option value="10:30">10h30</option>
-            <option value="11:00">11h00</option>
-            <option value="11:30">11h30</option>
-            <option value="12:00">12h00</option>
-            <option value="12:30">12h30</option>
-            <option value="13:00">13h00</option>
-            <option value="13:30">13h30</option>
-            <option value="14:00">14h00</option>
-            <option value="14:30">14h30</option>
-            <option value="15:00">15h00</option>
-            <option value="15:30">15h30</option>
-            <option value="16:00">16h00</option>
-            <option value="16:30">16h30</option>
-            <option value="17:00">17h00</option>
-            <option value="17:30">17h30</option>
-            <option value="18:00">18h00</option>
-            <option value="18:30">18h30</option>
-            <option value="19:00">19h00</option>
-            <option value="19:30">19h30</option>
-            <option value="20:00">20h00</option>
-            <option value="20:30">20h30</option>
-            <option value="21:00">21h00</option>
-            <option value="21:30">21h30</option>
-            <option value="22:00">22h00</option>
-            <option value="22:30">22h30</option>
-            <option value="23:00">23h00</option>
-            <option value="23:30">23h30</option>
-            <option value="24:00">24h00</option>
-        </select>
-        <%#= f.input "#{day}_start", as: :text, collection: [0,1,2], input_html: { value: "" }, label: false, placeholder: "12h00" %>
 
-          <select class="form-control select optional" name="program[<%= day %>_end]" id="program_<%= day %>_end"><option value=""></option>
-            <option value="00:30">00h30</option>
-            <option value="01:00">01h00</option>
-            <option value="01:30">01h30</option>
-            <option value="02:00">02h00</option>
-            <option value="02:30">02h30</option>
-            <option value="03:00">03h00</option>
-            <option value="03:30">03h30</option>
-            <option value="04:00">04h00</option>
-            <option value="04:30">04h30</option>
-            <option value="05:00">05h00</option>
-            <option value="05:30">05h30</option>
-            <option value="06:00">06h00</option>
-            <option value="06:30">06h30</option>
-            <option value="07:00">07h00</option>
-            <option value="07:30">07h30</option>
-            <option value="08:00">08h00</option>
-            <option value="08:30">08h30</option>
-            <option value="09:00">09h00</option>
-            <option value="09:30">09h30</option>
-            <option value="10:00">10h00</option>
-            <option value="10:30">10h30</option>
-            <option value="11:00">11h00</option>
-            <option value="11:30">11h30</option>
-            <option value="12:00">12h00</option>
-            <option value="12:30">12h30</option>
-            <option value="13:00">13h00</option>
-            <option value="13:30">13h30</option>
-            <option value="14:00">14h00</option>
-            <option value="14:30">14h30</option>
-            <option value="15:00">15h00</option>
-            <option value="15:30">15h30</option>
-            <option value="16:00">16h00</option>
-            <option value="16:30">16h30</option>
-            <option value="17:00">17h00</option>
-            <option value="17:30">17h30</option>
-            <option value="18:00">18h00</option>
-            <option value="18:30">18h30</option>
-            <option value="19:00">19h00</option>
-            <option value="19:30">19h30</option>
-            <option value="20:00">20h00</option>
-            <option value="20:30">20h30</option>
-            <option value="21:00">21h00</option>
-            <option value="21:30">21h30</option>
-            <option value="22:00">22h00</option>
-            <option value="22:30">22h30</option>
-            <option value="23:00">23h00</option>
-            <option value="23:30">23h30</option>
-            <option value="24:00">24h00</option>
-          </select>
-        <%#= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
+  <%= simple_form_for @program do |f| %>
+    <% @program.cards_builder.keys.each do |day| %>
+      <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+      <div class="jours">
+      <%= day[2..-1].capitalize %>
       </div>
 
-    <% end %>
-  <% end %>
+        <div class="container-form-heures">
+          <select class="form-control select optional" name="program[<%= day %>_start]" id="program_<%= day %>_start"><option value=""></option>
+         <option value="00h00">00h00</option>
+              <option value="00:30">00h30</option>
+              <option value="01:00">01h00</option>
+              <option value="01:30">01h30</option>
+              <option value="02:00">02h00</option>
+              <option value="02:30">02h30</option>
+              <option value="03:00">03h00</option>
+              <option value="03:30">03h30</option>
+              <option value="04:00">04h00</option>
+              <option value="04:30">04h30</option>
+              <option value="05:00">05h00</option>
+              <option value="05:30">05h30</option>
+              <option value="06:00">06h00</option>
+              <option value="06:30">06h30</option>
+              <option value="07:00">07h00</option>
+              <option value="07:30">07h30</option>
+              <option value="08:00">08h00</option>
+              <option value="08:30">08h30</option>
+              <option value="09:00">09h00</option>
+              <option value="09:30">09h30</option>
+              <option value="10:00">10h00</option>
+              <option value="10:30">10h30</option>
+              <option value="11:00">11h00</option>
+              <option value="11:30">11h30</option>
+              <option value="12:00">12h00</option>
+              <option value="12:30">12h30</option>
+              <option value="13:00">13h00</option>
+              <option value="13:30">13h30</option>
+              <option value="14:00">14h00</option>
+              <option value="14:30">14h30</option>
+              <option value="15:00">15h00</option>
+              <option value="15:30">15h30</option>
+              <option value="16:00">16h00</option>
+              <option value="16:30">16h30</option>
+              <option value="17:00">17h00</option>
+              <option value="17:30">17h30</option>
+              <option value="18:00">18h00</option>
+              <option value="18:30">18h30</option>
+              <option value="19:00">19h00</option>
+              <option value="19:30">19h30</option>
+              <option value="20:00">20h00</option>
+              <option value="20:30">20h30</option>
+              <option value="21:00">21h00</option>
+              <option value="21:30">21h30</option>
+              <option value="22:00">22h00</option>
+              <option value="22:30">22h30</option>
+              <option value="23:00">23h00</option>
+              <option value="23:30">23h30</option>
+              <option value="24:00">24h00</option>
+          </select>
+          <%#= f.input "#{day}_start", as: :text, collection: [0,1,2], input_html: { value: "" }, label: false, placeholder: "12h00" %>
 
-</div>
+            <select class="form-control select optional" name="program[<%= day %>_end]" id="program_<%= day %>_end"><option value=""></option>
+              <option value="00:30">00h30</option>
+              <option value="01:00">01h00</option>
+              <option value="01:30">01h30</option>
+              <option value="02:00">02h00</option>
+              <option value="02:30">02h30</option>
+              <option value="03:00">03h00</option>
+              <option value="03:30">03h30</option>
+              <option value="04:00">04h00</option>
+              <option value="04:30">04h30</option>
+              <option value="05:00">05h00</option>
+              <option value="05:30">05h30</option>
+              <option value="06:00">06h00</option>
+              <option value="06:30">06h30</option>
+              <option value="07:00">07h00</option>
+              <option value="07:30">07h30</option>
+              <option value="08:00">08h00</option>
+              <option value="08:30">08h30</option>
+              <option value="09:00">09h00</option>
+              <option value="09:30">09h30</option>
+              <option value="10:00">10h00</option>
+              <option value="10:30">10h30</option>
+              <option value="11:00">11h00</option>
+              <option value="11:30">11h30</option>
+              <option value="12:00">12h00</option>
+              <option value="12:30">12h30</option>
+              <option value="13:00">13h00</option>
+              <option value="13:30">13h30</option>
+              <option value="14:00">14h00</option>
+              <option value="14:30">14h30</option>
+              <option value="15:00">15h00</option>
+              <option value="15:30">15h30</option>
+              <option value="16:00">16h00</option>
+              <option value="16:30">16h30</option>
+              <option value="17:00">17h00</option>
+              <option value="17:30">17h30</option>
+              <option value="18:00">18h00</option>
+              <option value="18:30">18h30</option>
+              <option value="19:00">19h00</option>
+              <option value="19:30">19h30</option>
+              <option value="20:00">20h00</option>
+              <option value="20:30">20h30</option>
+              <option value="21:00">21h00</option>
+              <option value="21:30">21h30</option>
+              <option value="22:00">22h00</option>
+              <option value="22:30">22h30</option>
+              <option value="23:00">23h00</option>
+              <option value="23:30">23h30</option>
+              <option value="24:00">24h00</option>
+            </select>
+          <%#= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
+        </div>
+
+      <% end %>
+    <% end %>
+
+    <div class="go-forward" id="go-forward3">
+      <h2>NEXT</h2>
+      <%= image_tag "next-line.png" %>
+    </div>
+  </div>
 </div>
 
 <div id="div-adresses" class="hidden">
@@ -152,15 +152,15 @@
 
 
   <div class="addresses-piscines">
-  <% @program.cards_builder.keys.each do |day| %>
-      <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-        <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1] %>
-    <% end %>
-     <% end %>
-  </div>
-  <div class="go-forward" id="go-forward4">
-    <%= f.submit "NEXT" %>
-    <%= image_tag "next-line.png" %>
+    <% @program.cards_builder.keys.each do |day| %>
+        <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+          <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1] %>
+      <% end %>
+       <% end %>
+    <div class="go-forward" id="go-forward4">
+      <%= f.submit "NEXT" %>
+      <%= image_tag "next-line.png" %>
+    </div>
   </div>
   <% end %>
 

@@ -1,7 +1,7 @@
 #div-adresses {
   background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
   background-size: cover;
-  height: 100%;
+  height: 160vh;
   background-blend-mode: overlay;
   width: 100vw;
   z-index: -1;
@@ -45,6 +45,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 15vh;
     .form-group {
       display: flex;
       flex-direction: column;
@@ -55,6 +57,7 @@
       letter-spacing: 2px;
       font-size: 19px;
       font-family: "Rubik", sans-serif;
+      margin: 0px;
       textarea {
         font-size: 20px;
         font-family: "Roboto", sans-serif;
@@ -68,13 +71,12 @@
         background: none;
         border: 1px solid #F5F5F5;
         border-radius: 5px;
-        margin: 10px 11px;
+        margin-bottom: 21px;
         width: 250px;
         color: #F5F5F5;
         /* text-align: center; */
         display: flex;
         font-weight: lighter;
-        margin: 0px;
         height: 42px;
       }
     }
@@ -97,21 +99,27 @@
   left: 0px;
 }
 
+#go-forward3 {
+  position: relative;
+  top: 50px;
+  right: 10vh;
+}
+
 #go-forward4 {
-  position: absolute;
-  top: 71vh;
-  left: 0px;
+  position: relative;
+  top: 25px;
+  right: 112px;
   margin: 0px;
   padding: 0px;
-  width: 0px;
+  /* width: 0px; */
   input {
     font-size: 20px;
     font-weight: normal;
     font-family: "Roboto", sans-serif;
     margin: 0px;
     position: relative;
-    top: 31px;
-    left: 150px;
+    top: 2px;
+    left: 238px;
     letter-spacing: 4px;
     padding-right: 10px;
   }
