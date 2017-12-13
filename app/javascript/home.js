@@ -11,6 +11,7 @@ function home1Navigation() {
 function home2Navigation() {
   const slideup1 = document.querySelector(".button-scroll-up-1 img");
   const slidedown2 = document.querySelector(".button-scroll-down-2 img");
+  const slideup2 = document.querySelector(".button-scroll-up-2 img");
   if (slideup1) {
     slideup1.addEventListener("click", (event) => {
       document.querySelector(".wrapper-home2").classList.add("hidden");
@@ -22,6 +23,13 @@ function home2Navigation() {
     slidedown2.addEventListener("click", (event) => {
       document.querySelector(".wrapper-home2").classList.add("hidden");
       document.querySelector(".wrapper-home3").classList.remove("hidden");
+    });
+  };
+
+    if (slideup2) {
+    slideup2.addEventListener("click", (event) => {
+      document.querySelector(".wrapper-home3").classList.add("hidden");
+      document.querySelector(".wrapper-home2").classList.remove("hidden");
     });
   };
 

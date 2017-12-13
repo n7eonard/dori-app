@@ -1,12 +1,17 @@
 .footer {
-  height: 50px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 52px;
   position: absolute;
-  top: 40.2vh;
+  top: 37vh;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px solid $white;
   .dori-special-text {
     h2 {
-      color: #F5F5F5;
+      color: $white;
     }
     #do {
       font-size: 23px;
@@ -21,7 +26,20 @@
   .footer-content {
     display: flex;
     width: 76vw;
-    p {
+    padding: 6px 0px;
+    .first-part {
+      display: flex;
+      flex-direction: column;
+      line-height: 12px;
+      font-size: 14px;
+      /* padding: 6px; */
+      padding: 0px 32px;
+    }
+    .second-part {
+      display: flex;
+      flex-direction: column;
+      line-height: 12px;
+      font-size: 14px;
 
     }
 
