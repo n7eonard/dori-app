@@ -16,7 +16,13 @@
 }
 
 /* Right section */
-
+.connection a {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  font-size: 13px;
+  margin-right: 20px;
+}
 
 /* Basic navbar item */
 .navbar-wagon-item {
@@ -53,6 +59,10 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.dropdown img {
+  width: 30px;
 }
 
 .dropdown-menu-left {

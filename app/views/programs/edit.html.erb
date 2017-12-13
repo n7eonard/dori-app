@@ -1,17 +1,19 @@
-<div id="div-heures"  style="background-image: url(<%= image_path 'background-form.png'%>)">
+<div id="div-heures">
 
-<h2 class ="form-title">Vos créneaux</h2>
+<h2 class ="form-title">HORAIRES</h2>
 
 <div class="heures">
 
   <div class="go-back" id="go-back2" >
       <%= link_to new_program_path do %>
-      <%= image_tag "Arrow-left.png", width: 14 %>
+      <h2>BACK</h2>
       <% end %>
+      <%= image_tag "back-line.png" %>
   </div>
 
-  <div class="go-forward no-go" id="go-forward3">
-    <%= image_submit_tag "Arrow-right.png", width: 14 %>
+  <div class="go-forward" id="go-forward3">
+    <h2>NEXT</h2>
+    <%= image_tag "next-line.png" %>
   </div>
 
 <%= simple_form_for @program do |f| %>
