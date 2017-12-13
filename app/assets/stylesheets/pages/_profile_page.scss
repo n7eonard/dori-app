@@ -1,5 +1,12 @@
 .profile-container {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  h3 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
 }
 
 .profile-header {
@@ -163,21 +170,22 @@
   grid-row: 3 / span 1;
   grid-column: 1 / span 2;
   box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
+  border-radius: 5px;
   margin-bottom: 30px;
   margin-left: 25px;
   padding: 20px;
   height: 200px;
   width: 85%;
-  background-color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.elitetraveler.com/wp-content/uploads/2013/06/Grace-Santorini-Greece-.jpg');
+  background-size: cover;
   .title{
     font-weight: bold;
+
     font-size: 14px;
   }
   .address-pool {
     font-size: 11px;
-  }
-  .opening-hours {
-    font-size: 12px;
+
   }
 }
 
@@ -186,29 +194,35 @@
   grid-row: 4 / span 1;
   grid-column: 1 / span 2;
   box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
+  border-radius: 5px;
   margin-left: 25px;
   margin-right: -25px;
   padding: 20px;
   height: 200px;
   width: 85%;
-  background-color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://hips.hearstapps.com/toc.h-cdn.co/assets/16/43/al-bustan-palace-muscat.jpg');
+  background-size: cover;
   .title{
     font-weight: bold;
     font-size: 14px;
+
   }
   .address-pool {
     font-size: 11px;
+
   }
   .opening-hours {
     font-size: 12px;
   }
 }
 
-.card-category {
-  position: absolute;
+.card-status {
+  position: relative;
   top: 10px;
   left: 10px;
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
   text-transform: uppercase;
 }
 .card-description {
