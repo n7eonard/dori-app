@@ -28,6 +28,7 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
+  
     <div class="placeholder-no-program">
       <%= link_to 'Créez votre programme', new_program_path, type: 'button',class: 'btn btn-default btn-block btn-lg btn-create-program' %>
     </div>
@@ -123,11 +124,24 @@
 
           </div>
         </div>
-        <div class="end-button">
-          <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
-          <%= link_to 'Google', program_delete_to_google_path(@program) %>
+        <div class="end-button text-center">
+          <%= link_to 'Supprimer votre programme', program_delete_to_google_path(@program), type: 'button', class: 'btn btn-default btn-lg' %>
         </div>
       <% end %>
     </div>
   <% end %>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
