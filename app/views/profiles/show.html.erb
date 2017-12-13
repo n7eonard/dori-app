@@ -18,7 +18,7 @@
       <h4> Piscines </h4>
     </div>
     <div class="nav-programme">
-      <h4> Programme </h4>
+      <h4> Mon programme </h4>
     </div>
   </div>
 
@@ -28,12 +28,29 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
-    <%= link_to 'Créez votre programme', new_program_path, type: 'button', class: 'btn btn-default btn-lg' %>
+    <div class="placeholder-no-program">
+      <%= link_to 'Créez votre programme', new_program_path, type: 'button',class: 'btn btn-default btn-block btn-lg btn-create-program' %>
+    </div>
+
     <% else %>
     <div class="pools-tab" >
       <div id="map" style="width: 100%; height: 300px;"
       data-markers="<%= @markers.to_json %>">
       </div>
+    <div class="space-between"></div>
+
+        <div class="pool-card-lg-1">
+           <h2>Piscine de mes 2 couilles</h2>
+           <p>Adresse de mes couilles</p>
+        </div>
+
+        <div class="pool-card-lg-2">
+          <h2>Piscine de mes 2 couilles</h2>
+           <p>Adresse de mes couilles</p>
+        </div>
+
+
+
     </div>
 
     <div class="program-tab hidden">
