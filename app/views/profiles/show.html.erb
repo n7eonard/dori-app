@@ -18,7 +18,7 @@
       <h4> Piscines </h4>
     </div>
     <div class="nav-programme">
-      <h4> Programme </h4>
+      <h4> Mon programme </h4>
     </div>
   </div>
 
@@ -28,13 +28,31 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
-    <%= link_to 'Créez votre programme', new_program_path, type: 'button', class: 'btn btn-default btn-lg' %>
+    <div class="placeholder-no-program">
+      <%= link_to 'Créez votre programme', new_program_path, type: 'button',class: 'btn btn-default btn-block btn-lg btn-create-program' %>
+    </div>
+
     <% else %>
     <div class="pools-tab" >
       <div id="map" style="width: 100%; height: 300px;"
       data-markers="<%= @markers.to_json %>">
       </div>
+    <div class="space-between"></div>
+
+        <div class="pool-card-lg-1">
+          <div class="card-status">CLOSED</div>
+              <h3>Piscine de la Cour des Lions</h3>
+              <p>9 Rue Alphonse Baudin, 75011 Paris</p>
+        </div>
+
+        <div class="pool-card-lg-2">
+          <div class="card-status">OPEN</div>
+          <h3>Piscine Georges Rigal</h3>
+           <p>115 Boulevard de Charonne, 75011 Paris</p>
+        </div>
     </div>
+
+    <div class="space-between"></div>
 
     <div class="program-tab hidden">
         <div class="program-level">
