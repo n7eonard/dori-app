@@ -3,11 +3,92 @@
 body {
   // background-color: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   // height: 100vh;
-  background-image: linear-gradient(197deg, #0e287d, #04175e 54%, #0c5bc2 83%);
-  background-size: contain;
-  background-position: center;
-  background-size: cover;
 }
+
+// 1st screen of HOME below:
+
+.wrapper-home1 {
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
+  background-size: cover;
+  height: 100vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-image: linear-gradient(to bottom,rgb(37,2,211),rgb(0, 111, 255));
+  //   opacity: .9;
+  // }
+}
+
+.dori-home1-content {
+  position: relative;
+  top: 48vh;
+
+
+  .dori-title {
+    h1 {
+      letter-spacing: 15px;
+      font-size: 100px;
+      position: relative;
+      color: #F5F5F5;
+      padding-left: 13px;
+      margin: 0px;
+    }
+  }
+
+  .dori-description {
+    p {
+    padding: 0px 42px;
+    margin: 0px;
+    margin-top: -7px;
+    line-height: 21px;
+    font-size: 17px;
+    letter-spacing: 1.3px;
+    }
+  }
+
+  .button-commencer {
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      border: 5px solid rgb(255, 224, 116);
+      border-radius: 10px;
+      padding: 7px 37px;
+      color: rgb(255, 224, 116);
+      font-family: "Roboto";
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-top: 18px;
+    }
+  }
+
+  .button-scroll-1 {
+    position: relative;
+    top: 6vh;
+  }
+}
+
+
+// 2nd screen of HOME below:
+
+
+// old-home CSS below:
 
 .container {
   padding: 0px 0px 0px 0px;
