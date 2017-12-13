@@ -35,7 +35,6 @@ gem "geocoder"
 gem 'nokogiri'
 
 
-
 group :development, :test do
   gem 'web-console', '>= 3.3.0'
   gem 'pry-byebug'

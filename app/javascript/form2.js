@@ -52,6 +52,3 @@ function form2Navigation() {
   }
 
 };
-
-export { form2Navigation };
-
