@@ -1,10 +1,6 @@
-<!-- <div class="container"> -->
-
 <div class="profile-container">
-
-
   <div class="profile-header">
-  <% if current_user.image %>
+    <% if current_user.image %>
      <%= image_tag current_user.image, class: "avatar-big" %>
       <% else %>
       <%= image_tag "placeholder-avatar.jpg", width: 100 %>
@@ -26,183 +22,94 @@
     </div>
   </div>
 
-  <div class="pools-tab" >
-   <!--  <div class="titlemap">
-      <p> Piscines à proximité </p>
-
-    </div> -->
-
-    <div id="map" style="width: 100%; height: 300px;"
-    data-markers="<%= @markers.to_json %>">
+  <% if Program.where(:user_id == current_user).empty? %>
+    <div class="pools-tab" >
+      <div id="map" style="width: 100%; height: 300px;"
+      data-markers="<%= @markers.to_json %>">
+      </div>
     </div>
-
-    <div class="closest-pool1">
-      <div class="status-bar">
-
-      </div>
-      <div class="pool-card-large">
-        <div class="title">
-          <%= @program.cards_builder["address"] %>
-        </div>
-        <div class="address-pool">
-          <p>9 rue Alphonse Baudin 75011 Paris</p>
-        </div>
-        <div class="opening-hours">
-          <p>07:00-08:30 11:45-13:30 16:45-20:30</p>
-        </div>
-      </div>
-      <div class="fav-icon">
-
-      </div>
-
-    </div>
-
-    <div class="closest-pool2">
-      <div class="status-bar">
-
-      </div>
-      <div class="pool-card-large">
-        <div class="title">
-          <p>PISCINE CATHERINE LAGATU</p>
-        </div>
-        <div class="address-pool">
-          <p>155 Avenue Parmentier 75011 Paris</p>
-        </div>
-        <div class="opening-hours">
-          <p>07:00-08:30 11:45-13:30 16:45-20:30</p>
-        </div>
-      </div>
-      <div class="fav-icon">
-
+    <%= link_to 'Créez votre programme', new_program_path, type: 'button', class: 'btn btn-default btn-lg' %>
+    <% else %>
+    <div class="pools-tab" >
+      <div id="map" style="width: 100%; height: 300px;"
+      data-markers="<%= @markers.to_json %>">
       </div>
     </div>
 
-    <div class="title-favs">
-      <p>Piscines favorites</p>
-    </div>
-
-    <div class="fav-pool1">
-      <div class="status-bar">
-
-      </div>
-      <div class="pool-card-small">
-        <div class="title">
-          <p>PISCINE MOLITOR</p>
-        </div>
-        <div class="address-pool">
-          <p>8 Avenue de la Porte Molitor 75016 Paris</p>
-        </div>
-        <div class="opening-hours">
-          <p>07:00-08:30 11:45-13:30 16:45-20:30</p>
-        </div>
-      </div>
-      <div class="fav-icon">
-
-      </div>
-
-    </div>
-
-    <div class="fav-pool2">
-      <div class="status-bar">
-
-      </div>
-      <div class="pool-card-small">
-        <div class="title">
-          <p>PISCINE ROGER LEGALL</p>
-        </div>
-        <div class="address-pool">
-          <p>34 boulevard Carnot 75012 Paris</p>
-        </div>
-        <div class="opening-hours">
-          <p>07:00-08:30 11:45-13:30 16:45-20:30</p>
-        </div>
-      </div>
-      <div class="fav-icon">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="program-tab hidden">
-    <% if @program %>
-      <div class="program-level">
-        <div class="title">
+    <div class="program-tab hidden">
+        <div class="program-level">
+          <div class="title">
           <p>Niveau</p>
-        </div>
-      <div class="dropdown-levels">
-        <%= simple_form_for @program do |f| %>
-        <%= f.input :swimming_level, collection: ["debutant", "intermediaire", "expert"] , label: false, as: :select %>
-      </div>
-    </div>
-
-  <div class="program-days">
-    <div class="title">
-      <p>Jours</p>
-    </div>
-    <div class="content-days">
-      <div class="category-choices">
-        <div class="fake-endweek">
-          <p>vendredi samedi dimanche</p>
-        </div>
-        <div class="pickable-week">
-          <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
-
-            <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
-
-            <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day.slice(0..2) %></label>
-
-          <% end %>
-        </div>
-        <div class="fake-beginweek">
-         <p>lundi mardi</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="program-hours-title">
-    <p>Créneaux</p>
-  </div>
-
-      <div class="program-hours-days">
-  <% @program.cards_builder.keys.each do |day| %>
-    <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-        <div class="row">
-          <div class="col-sm-12">
-            <p>
-              <%= day[2..-1].capitalize %>
-            </p>
-            <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: @program.cards_builder[day]["start"] %>
-            <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: @program.cards_builder[day]["end"] %>
+          </div>
+          <div class="dropdown-levels">
+            <%= simple_form_for @program do |f| %>
+            <%= f.input :swimming_level, collection: ["debutant", "intermediaire", "expert"] , label: false, as: :select %>
           </div>
         </div>
-    <% end %>
-  <% end %>
-      </div>
 
-  <div class="program-pools-title">
-    <h4>Piscines</h4>
-    <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
-  </div>
-   <div class="pools-address-details">
-    <div class="row">
-
-        <% @program.cards_builder.keys.each do |day| %>
-          <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-            <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1], placeholder: @program.cards_builder[day]["okpool"]["address"] %>
+        <div class="program-hours-title">
+          <p>Créneaux</p>
+        </div>
+        <div class="program-hours-days">
+          <% @program.cards_builder.keys.each do |day| %>
+            <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>
+                    <%= day[2..-1].capitalize %>
+                  </p>
+                  <%= f.input "#{day}_start", as: :text, input_html: { value: "" }, label: false, placeholder: @program.cards_builder[day]["start"] %>
+                  <%= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: @program.cards_builder[day]["end"] %>
+                </div>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
 
+        <div class="program-pools-title">
+          <h4>Piscines</h4>
+          <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
+          <div class="closest-pool1">
+            <% @program.cards_builder.each do |key, value| %>
+              <% if value["okpool"]["open"] == true %>
+                <div class="status-bar-open">
+                </div>
+              <% else %>
+                <div class="status-bar-close">
+                </div>
+              <% end %>
+              <div class="pool-card-large">
+                <div class="title">
+                  <%= value["okpool"]["name"] %>
+                </div>
+                <div class="address-pool">
+                  <%= value["okpool"]["address"] %>
+                  <%= value["okpool"]["metro"] %>
+                </div>
+                <div class="opening-hours">
+                  <p>Horaires d'ouverture :</p>
+                  <%= value["okpool"]["opening_times"] %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="pools-address-details">
+          <div class="row">
+
+            <% @program.cards_builder.keys.each do |day| %>
+              <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
+                <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1], placeholder: @program.cards_builder[day]["okpool"]["address"] %>
+              <% end %>
+            <% end %>
+
+          </div>
+        </div>
+        <div class="end-button">
+          <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
+          <%= link_to 'Google', program_update_to_google_path(@program) %>
+        </div>
+      <% end %>
     </div>
-  </div>
-  <div class="end-button">
-    <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
-    <% end %>
-  </div>
-  <% else %>
-  <%= link_to 'Créer mon programme', new_program_path, class: 'btn btn-success btn-lg btn-block'%>
   <% end %>
-
 </div>
-
-
-<!-- </div> -->

@@ -149,42 +149,31 @@
 
 }
 
-.closest-pool2 {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.status-bar-open {
+  border: 3px solid $green;
+  height: 200px;
 }
 
-.status-bar {
-  position: absolute;
-
+.status-bar-close {
+  border: 3px solid $red;
+  height: 200px;
 }
 
 .pool-card-large {
   box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
   padding: 10px;
-  height: 100px;
+  height: 200px;
   width: 270px;
   background-color: white;
-  p {
-    font-size: 12px;
-    color: grey;
-  }
   .title{
-    p {
-      font-weight: bold;
-    }
-
+    font-weight: bold;
+    font-size: 14px;
   }
   .address-pool {
-
+    font-size: 11px;
   }
   .opening-hours {
-
+    font-size: 12px;
   }
 }
 
@@ -205,43 +194,6 @@
     }
   }
 }
-
-.fav-icon {
-  position: absolute;
-}
-
-.title-favs {
-  grid-row: 4 / span 1;
-  grid-column: 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  p {
-    color: darkblue;
-    font-size: 12px;
-    margin: 0px;
-  }
-
-}
-
-.fav-pool1 {
-  grid-row: 5 / span 1;
-  grid-column: 1 / span 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-}
-
-.fav-pool2 {
-  grid-row: 5 / span 1;
-  grid-column: 2 / span 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-}
-
 
 // ICI : pour le second Grid correspondant à program
 

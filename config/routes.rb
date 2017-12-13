@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
   root to: 'pages#home'
 
   resource :profile, only: [:show] do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :programs, only: [:new, :create, :edit, :update] do
     get :send_to_google
+    get :update_to_google
     resources :cards, only: [:index, :show, :new, :create, :edit, :update] do
     end
   end

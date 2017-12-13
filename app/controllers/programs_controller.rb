@@ -77,9 +77,15 @@ class ProgramsController < ApplicationController
     @program = Program.where(:user_id == current_user.id).last
     @google = GoogleCalendarWrapper.new(current_user)
     @google.send_calendar(@program)
-    redirect_to root_path
+    redirect_to profile_path
   end
 
+  def update_to_google
+    @program = Program.where(:user_id == current_user.id).last
+    @google = GoogleCalendarWrapper.new(current_user)
+    @google.update_calendar(@program)
+    redirect_to profile_path
+  end
 
   private
 
