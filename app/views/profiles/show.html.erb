@@ -28,8 +28,10 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
-    <%= link_to 'Créez votre programme', new_program_path, type: 'button', class: 'btn btn-default btn-lg' %>
-    <% else %>
+    <div class="end-button text-center">
+      <%= link_to 'Créer votre programme', new_program_path, type: 'button', class: 'btn btn-default btn-lg' %>
+    </div>
+  <% else %>
     <div class="pools-tab" >
       <div id="map" style="width: 100%; height: 300px;"
       data-markers="<%= @markers.to_json %>">
@@ -105,11 +107,24 @@
 
           </div>
         </div>
-        <div class="end-button">
-          <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
-          <%= link_to 'Google', program_delete_to_google_path(@program) %>
+        <div class="end-button text-center">
+          <%= link_to 'Supprimer votre programme', program_delete_to_google_path(@program), type: 'button', class: 'btn btn-default btn-lg' %>
         </div>
       <% end %>
     </div>
   <% end %>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-
   def show
     @user = current_user
     @geocoder_result = request.location
@@ -18,5 +17,4 @@ class ProfilesController < ApplicationController
     @geocoder_result.data['lng'] = 2.379853
     @markers << @geocoder_result.data
   end
-
 end
