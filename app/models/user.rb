@@ -1,7 +1,7 @@
 # == Schema Information
-#
+
 # Table name: users
-#
+
 #  id                     :integer          not null, primary key
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
@@ -27,6 +27,10 @@
 #  gender                 :string
 #  locale                 :string
 #  hd                     :string
+#  refresh_token          :string
+#  latitude               :float
+#  longitude              :float
+#  ip_address             :float
 #
 
 class User < ApplicationRecord
@@ -36,6 +40,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:google_oauth2]
 
+  geocoded_by :ip_address,
+  :latitude => :lat, :longitude => :lon
+  after_validation :geocode
 
   def self.from_omniauth(access_token)
       data = access_token.info
@@ -58,7 +65,8 @@ class User < ApplicationRecord
            gender: raw_info['gender'],
            locale: raw_info['locale'],
            hd: raw_info['hd'],
-           uid: access_token['uid']
+           uid: access_token['uid'],
+           # ip_address: geocoder_result.data["ip"]
 
         )
       end
