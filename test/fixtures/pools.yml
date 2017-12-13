@@ -7,6 +7,16 @@
 #  opening_times :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  name          :string
+#  size          :integer
+#  open          :boolean          default(TRUE)
+#  latitude      :float
+#  longitude     :float
+#  price         :integer
+#  treatment     :string
+#  lane          :integer
+#  metro         :string
+#  phone         :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
