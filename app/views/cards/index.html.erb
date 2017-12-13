@@ -1,9 +1,10 @@
+<div class="wrapper-home1">
 
-<div class="container" id="background_cards">
+<div class="container">
 
-<h2 class="form-title center-program">Votre programme :</h2>
+<h2 class="form-title center-program">PROGRAMME</h2>
 
-  <div class="row margin">
+<div class="row margin">
     <% @program.cards_builder.each do |key, value| %>
 
       <div class="col-xs-12 col-sm-4">
@@ -27,9 +28,11 @@
       </div>
       <% end %>
     </div>
+
     <div id='btn-finish-program'>
       <%= link_to "J'ai compris!", profile_path, type: 'button', class: 'btn btn-success btn-lg btn-block' %>
     </div>
   </div>
 
 <%= link_to 'Google', program_send_to_google_path(@program) %>
+</div>

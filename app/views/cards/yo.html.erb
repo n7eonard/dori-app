@@ -1,0 +1,49 @@
+<div id="carouselExampleIndicators" class="carousel slide row margin" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+
+    <% @program.cards_builder.each do |key, value| %>
+
+      <div class="col-xs-12 col-sm-4">
+
+        <div id="card-new" class="carousel-item">
+          <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
+          <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
+            <% if value["okpool"] %>
+              <%= value["okpool"]["name"] %> <br>
+              <%= value["okpool"]["metro"] %> <br>
+              <%= value["okpool"]["address"] %>
+          </p>
+              <p class = "blue-content"> (<%= value["okpool"]["opening_times"] %>)</p>
+            <% end %>
+          <h6 id="program_day">Programme du jour: </h6>
+          <div id="training_content">
+            <p><%= value["training"] %></p>
+          </div>
+        </div>
+
+      </div>
+      <% end %>
+
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+
+
