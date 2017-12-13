@@ -86,7 +86,108 @@ body {
 
 
 // 2nd screen of HOME below:
+.wrapper-home2 {
+  background: asset-url('swimmer-bg2.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+  background-size: cover;
+  height: 100vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  .dori-home2-content {
+    position: relative;
+    top: 15vh;
+    .button-scroll-up-1 {
+      img {
+        transform: scaleY(-1);
+        position: relative;
+        bottom: 13vh;
+      }
 
+    }
+    .button-scroll-down-2 {
+
+    }
+    .dori-explanation {
+      p {
+        color: #F5F5F5;
+        font-weight: bold;
+        padding: 41px 50px;
+        line-height: 24px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        position: relative;
+        bottom: 30px;
+      }
+
+    }
+  }
+}
+
+// 3rd screen of HOME below:
+
+.wrapper-home3 {
+  background: asset-url('swimmer-bg3.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+  background-size: cover;
+  height: 100vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  .dori-home3-content {
+    position: relative;
+    top: 52vh;
+    .dori-testimonial {
+      .open-quotes {
+        position: absolute;
+        left: 30px;
+        top: 4px;
+        opacity: 0.5;
+      }
+      .closed-quotes {
+        position: absolute;
+        right: 30px;
+        bottom: 4px;
+        opacity: 0.5;
+      }
+      p {
+        color: #F5F5F5;
+        font-weight: lighter;
+        margin: 0px;
+        padding: 0px 44px;
+      }
+      .action-slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        .round-selection {
+          border: 1px solid white;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          margin: 0px 4px;
+        }
+        #selected-one {
+          background-color: yellow;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  .button-scroll-up-2 {
+    img {
+      transform: scaleY(-1);
+      position: relative;
+      bottom: 49vh;
+    }
+  }
+}
 
 // old-home CSS below:
 
