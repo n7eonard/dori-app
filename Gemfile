@@ -33,7 +33,6 @@ gem 'uglifier'
 gem 'webpacker', '~> 3.0'
 gem "geocoder"
 gem 'nokogiri'
-gem "jquery-slick-rails"
 
 
 group :development, :test do
