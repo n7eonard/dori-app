@@ -1,18 +1,28 @@
 .profile-container {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  h3 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
 }
 
 .profile-header {
-  height: 66px;
+  height: 94px;
   text-align: center;
 
   img {
     position: relative;
-    top: -20px;
+    top: 17px;
     width: 100px;
     height: 100px;
-    border-color: white;
-    border: solid;
+    // border: 5px solid #ffe074;
+    border-color: #FCB581;
+    border-style: double;
+    border-width: medium;
+    border-width: 5px;
   }
 }
 
@@ -37,7 +47,7 @@
 .pools-tab {
   background-color: transparent;
   display: grid;
-  grid-template-rows: 30% 15% 15% 10% 30%;
+  grid-template-rows: 30% 10% 30% 30%;
   grid-template-columns: 50% 50%;
 }
 
@@ -138,17 +148,6 @@
   height: 33vh;
 }
 
-.closest-pool1 {
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-
-}
-
 .status-bar-open {
   border: 3px solid $green;
   height: 200px;
@@ -159,41 +158,87 @@
   height: 200px;
 }
 
-.pool-card-large {
+.space-between {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+  background-color: transparent;
+  height: 50px;
+}
+
+
+.pool-card-lg-1 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
   box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
-  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  padding: 20px;
   height: 200px;
-  width: 270px;
-  background-color: white;
+  width: 85%;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.elitetraveler.com/wp-content/uploads/2013/06/Grace-Santorini-Greece-.jpg');
+  background-size: cover;
   .title{
     font-weight: bold;
+
     font-size: 14px;
   }
   .address-pool {
     font-size: 11px;
+
+  }
+}
+
+
+.pool-card-lg-2 {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 2;
+  box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-right: -25px;
+  padding: 20px;
+  height: 200px;
+  width: 85%;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://hips.hearstapps.com/toc.h-cdn.co/assets/16/43/al-bustan-palace-muscat.jpg');
+  background-size: cover;
+  .title{
+    font-weight: bold;
+    font-size: 14px;
+
+  }
+  .address-pool {
+    font-size: 11px;
+
   }
   .opening-hours {
     font-size: 12px;
   }
 }
 
-.pool-card-small {
-  box-shadow: 1px 1px 1px rgba(30, 30, 30, 0.3);
-  padding: 10px;
-  height: 170px;
-  width: 270px;
-  background-color: white;
-  p {
-    font-size: 12px;
-    color: grey;
-  }
-
-  .title {
-    p {
-      font-weight: bold;
-    }
-  }
+.card-status {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
 }
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
 
 // ICI : pour le second Grid correspondant à program
 
@@ -395,4 +440,10 @@
 
 }
 
-
+.btn-create-program {
+  font-size: 24px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  font-family: "Roboto";
+  letter-spacing: 5px;
+}
