@@ -20,24 +20,30 @@
 }
 
 #div-jours {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: space-around;
-  background-image: asset-url('background-form.png');
+  background: asset-url('swimmer-bg.jpg'), -webkit-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), -o-linear-gradient(#2502d3, #006fff 75%);
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
   background-size: cover;
-  height: 540px;
-  background-position-y: 76%;
+  height: 100vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
   .form-title {
-    // left: 37%;
-  }
-  .program_cards_builder {
-    margin-top: 30px;
-    padding-top: 70px;
-  }
-  .category-choices {
+    color: $white;
+    font-size: 39px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 7px;
     position: relative;
-    left: 19%;
+    top: 10vh;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -75,7 +81,7 @@
     font-weight: lighter;
     color: #F5F5F5;
     letter-spacing: 3px;
-    border: 1px solid white;
+    border: 1px solid #F5F5F5;
     padding: 10px;
     width: 220px;
     text-align: center;
@@ -91,7 +97,7 @@
   h2 {
     font-family: "Rubik", sans-serif;
     font-size: 19px;
-    font-weight: lighter;
+    font-weight: bolder;
     letter-spacing: 3px;
     padding: 10px;
     width: 220px;
@@ -111,7 +117,7 @@
   h2 {
     font-family: "Rubik", sans-serif;
     font-size: 19px;
-    font-weight: lighter;
+    font-weight: bolder;
     letter-spacing: 3px;
     padding: 10px;
     width: 220px;
@@ -130,7 +136,7 @@
   h2 {
     font-family: "Rubik", sans-serif;
     font-size: 19px;
-    font-weight: lighter;
+    font-weight: bolder;
     letter-spacing: 3px;
     padding: 10px;
     width: 220px;
@@ -175,6 +181,6 @@
 
 
 #go-forward1 {
-  position: relative;
-  top: 25vh;
+  position: absolute;
+  top: 71vh;
 }

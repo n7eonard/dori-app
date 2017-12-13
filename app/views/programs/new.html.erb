@@ -31,17 +31,18 @@
 
 </div>
 
-<div id= "div-jours" class="hidden background-form">
+<div id= "div-jours" class="hidden">
 
-  <h2 class="form-title">Quels jours ?</h2>
+  <h1 class="form-title">JOURS</h1>
+  <div class="go-back" id="go-back1" >
+    <h2>BACK</h2>
+    <%= image_tag "back-line.png"%>
+  </div>
 
   <div class="form-group program_cards_builder">
     <input type="hidden" name="program[cards_builder][]" value="">
 
     <div class="category-choices">
-      <div class="fake-endweek">
-        <p>vendredi samedi dimanche</p>
-      </div>
       <div class="pickable-week">
         <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
 
@@ -51,20 +52,15 @@
 
         <% end %>
       </div>
-      <div class="fake-beginweek">
-       <p>lundi mardi</p>
-      </div>
     </div>
 
-  <div class="go-back" id="go-back1" >
-      <%= image_tag "Arrow-left.png", width: 14 %>
+
   </div>
 
   <div class="go-forward no-go" id="go-forward2">
-    <%= image_submit_tag "Arrow-right.png", width: 14 %>
+    <%= f.submit "NEXT" %>
+    <%= image_tag "next-line.png"%>
   </div>
-
-</div>
 
   <% end %>
 

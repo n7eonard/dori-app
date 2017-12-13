@@ -1,15 +1,15 @@
 function form1Navigation() {
-  const fleche = document.getElementById("go-forward1");
-  if (fleche) {
-    fleche.addEventListener("click", (event) => {
+  const next1 = document.getElementById("go-forward1");
+  if (next1) {
+    next1.addEventListener("click", (event) => {
       document.getElementById('div-niveau').classList.add("hidden");
       document.getElementById('div-jours').classList.remove("hidden");
     });
   }
 
-  const fleche2 = document.getElementById("go-back1");
-  if (fleche2) {
-    fleche2.addEventListener("click", (event) => {
+  const back1 = document.getElementById("go-back1");
+  if (back1) {
+    back1.addEventListener("click", (event) => {
       document.getElementById('div-niveau').classList.remove("hidden");
       document.getElementById('div-jours').classList.add("hidden");
     });
