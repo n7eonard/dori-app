@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-
   def show
     @user = current_user
     @geocoder_result = request.location
@@ -19,5 +18,4 @@ class ProfilesController < ApplicationController
     @markers << @geocoder_result.data
     @pool_near_me = Pool.near([@geocoder_result.data['lat'], @geocoder_result.data['lng']], 1.2)
   end
-
 end

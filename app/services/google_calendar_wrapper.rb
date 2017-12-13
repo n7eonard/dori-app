@@ -12,13 +12,6 @@ class GoogleCalendarWrapper
     @service = @client.discovered_api('calendar', 'v3')
   end
 
-  # def calendar_id(schedule)
-  #   response = @client.execute(api_method:
-  #     @service.calendar_list.list)
-  #   calendars = JSON.parse(response.body)
-  #   binding.pry
-  # end
-
   def calendar_id
     response = @client.execute(api_method:
     @service.calendar_list.list)
