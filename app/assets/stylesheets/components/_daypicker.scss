@@ -5,64 +5,53 @@
   // flex-wrap: wrap;
   // margin: 20px 0;
   // padding: 0px 0px 0px 77px;
-  background-image: asset-url('grille-semainier.png');
-  background-size: cover;
-  background-position: center;
-  width: 253px;
-  height: 217px;
   display: flex;
   flex-direction: column;
+  width: 80vw;
+  padding-left: 10px;
+  position: relative;
+  top: 17vh
 }
 
 .category-choice {
-    width: 83px;
-    position: relative;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    text-align: center;
-    margin: 0px -1px;
-    width: 83px;
-    margin-bottom: 31px;
-    font-size: 14px;
-    font-weight: 500;
-    opacity: 0.7;
-  &:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-  &.active {
-  background: none;
-  color: rgba(13, 92, 124, 1);
-  opacity: 1;
-  font-weight: bolder;
-  font-size: 18px;
-  }
-}
-
-
-.pickable-week {
-  position: relative;
-  top: 36px;
-
-}
-
-.fake-endweek {
-  word-spacing: 31px;
-  width: 263px;
-  top: 15px;
-  position: relative;
+  width: 121px;
+  -ms-flex: 0 0 30%;
   text-align: center;
-  font-size: 11px;
-  letter-spacing: 1.1px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #F5F5F5;
+  border: 1px solid #F5F5F5;
+  margin: 9px 7px;
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  &.active {
+    font-family: "Rubik", sans-serif;
+    font-size: 19px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 6px;
+    color: #FFE074 !important;
+    border: 4px solid #FFE074 !important;
+  }
 }
 
-.fake-beginweek {
-  position: relative;
-  left: 113px;
-  bottom: 13px;
-  word-spacing: 45px;
-  font-size: 11px;
-  letter-spacing: 1.1px;
-  height: 25px;
+
+#go-forward2 {
+  position: absolute;
+  top: 69.5vh;
+  right: 20vh;
+  input {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    position: relative;
+    top: 31px;
+    left: 71px;
+    letter-spacing: 4px;
+    padding-right: 10px;
+  }
 }
