@@ -1,11 +1,12 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
-    var poolAddresses = document.querySelectorAll("textarea[id*='address']");
+    var poolAddresses = document.querySelectorAll("input[id*='address']");
     var options = {
       componentRestrictions: {country: 'fr'}
     };
     poolAddresses.forEach((poolAddress) => {
       if (poolAddress) {
+        console.log(poolAddress instanceof HTMLInputElement);
         var autocomplete = new google.maps.places.Autocomplete(poolAddress, options, { types: [ 'geocode' ] });
 
         google.maps.event.addListener(autocomplete, 'place_changed', function(){
