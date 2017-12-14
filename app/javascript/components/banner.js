@@ -9,8 +9,8 @@ function bindSweetAlertButtonDemo() {
         text: "Bienvenue sur votre profil.",
         icon: "success",
         button: "J'ai compris!",
-        timer: 5000,
-        //allowOutsideClick: true;
+        timer: 3000,
+        // allowOutsideClick: true;
       })
     });
   }
