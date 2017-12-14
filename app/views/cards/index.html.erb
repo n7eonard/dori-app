@@ -4,10 +4,15 @@
 
 <h2 class="form-title center-program">PROGRAMME</h2>
 
+  <div class="go-back" >
+     <%= link_to edit_program_path(@program) do %>
+      <h2 class="white-text">BACK</h2>
+      <%= image_tag "back-line.png"%>
+      <% end %>
+  </div>
+
+
 <div class="row margin">
-
-
-
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -56,12 +61,16 @@
   </a>
 </div>
 
-    <div id='btn-finish-program'>
-      <%= link_to "J'ai compris!", profile_path, type: 'button', class: 'btn btn-success btn-lg btn-block' %>
-    </div>
+
   </div>
 
-<%= link_to 'Google', program_send_to_google_path(@program) %>
+ <div class="push-google">
+     <%= link_to program_send_to_google_path(@program) do %>
+      <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
+      <%= image_tag "export-line.png"%>
+      <% end %>
+  </div>
+
 </div>
 
 
