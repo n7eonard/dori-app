@@ -1,47 +1,44 @@
-
 <div class="wrapper-cards">
 
   <h2 class="form-title center-program">PROGRAMME</h2>
 
-  <div class="container">
 
 
-    <div class="go-back" id="go-back4" >
-     <%= link_to edit_program_path(@program) do %>
-     <h2 class="white-text">BACK</h2>
-     <% end %>
-     <%= image_tag "back-line.png"%>
-   </div>
+  <div class="go-back" id="go-back4" >
+   <%= link_to edit_program_path(@program) do %>
+   <h2 class="white-text">BACK</h2>
+   <% end %>
+   <%= image_tag "back-line.png"%>
+ </div>
 
+<div class="cardscapsule">
 
-   <div class="row margin">
+   <% @program.cards_builder.each_with_index do |(key, value), index| %>
 
-     <% @program.cards_builder.each_with_index do |(key, value), index| %>
-
-        <div id="card-new">
-          <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
-          <p class = "blue-content"> Votre session : <%= value["start"] %> - <%= value["end"] %> <br>
-            <% if value["okpool"] %>
-            <%= value["okpool"]["name"] %> <br>
-            <%= value["okpool"]["metro"] %> <br>
-            <%= value["okpool"]["address"] %> <br>
-            <%= value["okpool"]["opening_times"] %></p>
-          <% end %>
-          <h6 id="program_day">Programme du jour: </h6>
-          <div id="training_content">
-            <p><%= value["training"] %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-      <div class="export-to-google">
-       <%= link_to program_send_to_google_path(@program) do %>
-         <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
-         <%= image_tag "export-line.png", class: 'yellow-arrow'%>
-       <% end %>
+   <div id="card-new">
+    <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
+    <p class = "blue-content"> Votre session : <%= value["start"] %> - <%= value["end"] %> <br>
+      <% if value["okpool"] %>
+      <%= value["okpool"]["name"] %> <br>
+      <%= value["okpool"]["metro"] %> <br>
+      <%= value["okpool"]["address"] %> <br>
+      <%= value["okpool"]["opening_times"] %></p>
+      <% end %>
+      <h6 id="program_day">Programme du jour: </h6>
+      <div id="training_content">
+        <p><%= value["training"] %></p>
       </div>
     </div>
-<!--  <div class="push-google"> -->
- <!--   </div> -->
-  </div>
+    <% end %>
 
+</div>
+
+    <div class="export-to-google">
+     <%= link_to program_send_to_google_path(@program) do %>
+     <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
+     <%= image_tag "export-line.png", class: 'yellow-arrow'%>
+     <% end %>
+
+   </div>
+
+</div>
