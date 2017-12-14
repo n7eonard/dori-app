@@ -10,10 +10,10 @@ function autocomplete() {
         var autocomplete = new google.maps.places.Autocomplete(poolAddress, options, { types: [ 'geocode' ] });
 
         google.maps.event.addListener(autocomplete, 'place_changed', function(){
-          const first_address = document.querySelector("textarea[id*='address']");
+          const first_address = document.querySelector("input[id*='address']");
 
           if (first_address == poolAddress) {
-            const all = document.querySelectorAll("textarea[id*='address']");
+            const all = document.querySelectorAll("input[id*='address']");
 
             all.forEach((input) => {
               input.value = first_address.value;

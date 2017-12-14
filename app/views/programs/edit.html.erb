@@ -91,7 +91,7 @@
           </select>
           <%#= f.input "#{day}_end", as: :text, input_html: { value: "" }, label: false, placeholder: "13h00" %>
         </div>
-      <% end %>
+    <% end %>
     <% end %>
   </div>
   <div class="go-forward" id="go-forward3">
@@ -120,8 +120,10 @@
 
         <%= f.input "#{day}_address", input_html: { value: "" }, label: day[2..-1] %>
 
+
       <% end %>
     <% end %>
+
     <div class="go-forward" id="go-forward4">
       <%= f.submit "NEXT" %>
       <%= image_tag "next-line.png" %>
