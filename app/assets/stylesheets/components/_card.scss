@@ -93,3 +93,15 @@
     top: -179px;
     right: -34px;
 }
+
+.wrapper-cards {
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
+  background-size: cover;
+  height: 124vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+}
