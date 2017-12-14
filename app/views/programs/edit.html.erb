@@ -118,8 +118,9 @@
   <div class="addresses-piscines">
     <% @program.cards_builder.keys.each do |day| %>
       <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-        <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1] %>
-      <% end %>
+
+        <%= f.input "#{day}_address", input_html: { value: "" }, label: day[2..-1] %>
+    
     <% end %>
     <div class="go-forward" id="go-forward4">
       <%= f.submit "NEXT" %>
