@@ -119,15 +119,13 @@
       <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
 
         <%= f.input "#{day}_address", input_html: { value: "" }, label: day[2..-1] %>
-    
+
     <% end %>
     <div class="go-forward" id="go-forward4">
       <%= f.submit "NEXT" %>
       <%= image_tag "next-line.png" %>
     </div>
-  </div>
-
-
-  <!-- fin du simple_form_for -->
   <% end %>
+
 </div>
+<% end %>

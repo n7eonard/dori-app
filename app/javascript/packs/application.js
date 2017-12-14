@@ -10,7 +10,7 @@ import "bootstrap";
 
 import 'google_id.js'
 import 'bootstrap'
-import 'schedule_plusone'
+//import 'schedule_plusone'
 
 import { home1Navigation } from '../home.js';
 import { home2Navigation } from '../home.js';
