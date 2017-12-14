@@ -43,15 +43,12 @@
     <input type="hidden" name="program[cards_builder][]" value="">
 
     <div class="category-choices">
-      <div class="pickable-week">
-        <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
+      <% [:lundi, :mardi, :mercredi, :jeudi, :vendredi, :samedi, :dimanche].each do |day|  %>
 
-          <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
+        <input type="checkbox" class="hidden" value= "<%= day %>" name="program[cards_builder][]" id="program_cards_builder_<%= day %>">
 
           <label class= "category-choice" for="program_cards_builder_<%= day %>"><%=  day.slice(0..2) %></label>
-
-        <% end %>
-      </div>
+      <% end %>
     </div>
 
 

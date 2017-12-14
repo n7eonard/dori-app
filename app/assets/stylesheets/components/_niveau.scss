@@ -171,6 +171,16 @@
 
 
 #go-forward1 {
-  position: absolute;
-  top: 71vh;
+  position: relative;
+  top: 26%;
+  right: 20%;
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    position: relative;
+    left: 21%;
+    letter-spacing: 4px;
+  }
 }

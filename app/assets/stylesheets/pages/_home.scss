@@ -32,7 +32,7 @@ body {
 .button-scroll-1 {
   position: absolute;
   bottom: 3vh;
-  left: 46vw;
+  left: 47vw;
 }
 
 .dori-home1-content {
@@ -104,12 +104,11 @@ body {
   align-items: center;
   justify-content: center;
   .button-scroll-up-1 {
-  img {
-    transform: scaleY(-1);
     position: absolute;
     top: 4vh;
-  }
-
+    img {
+      transform: scaleY(-1);
+    }
   }
   .button-scroll-down-2 {
     position: absolute;
@@ -195,10 +194,11 @@ body {
     }
   }
   .button-scroll-up-2 {
+    position: absolute;
+    top: 4vh;
+    left: 47vw;
     img {
       transform: scaleY(-1);
-      position: relative;
-      bottom: 49vh;
     }
   }
 }

@@ -8,10 +8,6 @@
       <%= image_tag "back-line.png" %>
     </div>
 
-    <div class="go-forward" id="go-forward3">
-      <h2>NEXT</h2>
-      <%= image_tag "next-line.png" %>
-    </div>
 
     <%= simple_form_for @program do |f| %>
       <% @program.cards_builder.keys.each do |day| %>
@@ -19,6 +15,7 @@
           <div class="jours">
             <%= day[2..-1].capitalize %>
           </div>
+
 
         <div class="container-form-heures">
           <select class="form-control select optional" name="program[<%= day %>_start]" id="program_<%= day %>_start">
@@ -98,6 +95,10 @@
       <% end %>
     <% end %>
   </div>
+  <div class="go-forward" id="go-forward3">
+    <h2>NEXT</h2>
+    <%= image_tag "next-line.png" %>
+  </div>
 </div>
 
 <div id="div-adresses" class="hidden">
@@ -105,24 +106,27 @@
     <h2>BACK</h2>
     <%= image_tag "back-line.png" %>
   </div>
-  <h2 class ="form-title">
-    PISCINES
-  </h2>
-  <p class="text-center">
-    Choisissez l'adresse à proximité de laquelle vous souhaitez nager
-  </p>
+  <div class ="form-title">
+    <h2>
+      PISCINES
+    </h2>
+    <p class="text-center">
+      Choisissez l'adresse à proximité de laquelle vous souhaitez nager
+    </p>
+  </div>
+
   <div class="addresses-piscines">
     <% @program.cards_builder.keys.each do |day| %>
       <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
         <%= f.input "#{day}_address", as: :text, input_html: { value: "" }, label: day[2..-1] %>
       <% end %>
     <% end %>
+    <div class="go-forward no-go" id="go-forward4">
+      <%= f.submit "NEXT" %>
+      <%= image_tag "next-line.png" %>
+    </div>
   </div>
 
-  <div class="go-forward no-go" id="go-forward4">
-    <h2>NEXT</h2>
-    <%= image_submit_tag "next-line.png" %>
-  </div>
 
   <!-- fin du simple_form_for -->
   <% end %>
