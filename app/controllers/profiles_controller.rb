@@ -18,5 +18,20 @@ class ProfilesController < ApplicationController
     @markers << @geocoder_result.data
     @pool_near_me = Pool.near([@geocoder_result.data['lat'], @geocoder_result.data['lng']], 1.2)
 
+
+    pools_array = []
+    user_position = []
+    user_position << @markers.last["lat"]
+    user_position << @markers.last["lng"]
+
+    @pool_near_me.each do |pool|
+      one_pool = []
+      one_pool << pool.latitude
+      one_pool << pool.longitude
+      pools_array << one_pool
+    end
+
+    how_far = Geocoder::Calculations.distance_between(user_position, pools_array[0])
+    @distance_from_user =  how_far * 1.60934
   end
 end
