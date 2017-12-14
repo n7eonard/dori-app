@@ -16,10 +16,9 @@
             <%= day[2..-1].capitalize %>
           </div>
 
-
-        <div class="container-form-heures">
+        <div class="container-form-heures" id="start_hour">
           <select class="form-control select optional" name="program[<%= day %>_start]" id="program_<%= day %>_start">
-            <option value="début"></option>
+            <option value=""></option>
             <option value="07:00">07h00</option>
             <option value="07:30">07h30</option>
             <option value="08:00">08h00</option>
@@ -55,8 +54,8 @@
           </select>
           <%#= f.input "#{day}_start", as: :text, collection: [0,1,2], input_html: { value: "" }, label: false, placeholder: "12h00" %>
 
-          <select class="form-control select optional" name="program[<%= day %>_end]" id="program_<%= day %>_end">
-            <option value="fin"></option>
+          <select class="form-control select optional" name="program[<%= day %>_end]" id="program_<%= day %>_end end_hour">
+            <option value=""></option>
             <option value="07:30">07h30</option>
             <option value="08:00">08h00</option>
             <option value="08:30">08h30</option>

@@ -124,7 +124,7 @@
           </div>
         </div>
         <div class="end-button text-center">
-          <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-default btn-lg', data: { confirm: 'Tu es certain de vouloir faire ça jeune inconscient ?' } %>
+          <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg', id: "sweet-alert-delete" %>
         </div>
       <% end %>
     </div>
