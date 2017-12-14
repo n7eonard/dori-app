@@ -394,7 +394,7 @@
   }
   .row {
     p {
-      color: darkblue;
+      color: $blue;
       padding-bottom: 12px;
     }
     display: flex;
@@ -411,7 +411,7 @@
         color: red;
       }
       label {
-        color: darkblue;
+        color: $blue;
         padding-right: 10px;
         font-weight: normal;
       }
@@ -440,4 +440,8 @@
   color: white;
   font-family: "Roboto";
   letter-spacing: 5px;
+}
+
+.placeholder-no-program {
+  height: 120px;
 }

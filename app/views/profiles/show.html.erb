@@ -12,7 +12,11 @@
 
 
   <div class="profile-id">
-    <h4><%= current_user.first_name.upcase %></h4>
+    <% if current_user.first_name %>
+      <h4><%= current_user.first_name.upcase %></h4>
+    <% else %>
+      <h4>Nageur de compet'</h4>
+    <% end %>
     <p><i class="fa fa-envelope" aria-hidden="true"></i>
  <%= current_user.email %> </p>
   </div>
@@ -130,7 +134,7 @@
           </div>
         </div>
         <div class="end-button text-center">
-          <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg', id: "sweet-alert-delete" %>
+          <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg btn-block', id: "sweet-alert-delete" %>
         </div>
       <% end %>
     </div>

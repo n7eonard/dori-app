@@ -20,7 +20,7 @@ function bindSweetAlertDeleteProgram() {
   document.getElementById('sweet-alert-delete').addEventListener('click', () => {
     swal({
       title: "T'es sur de toi?!",
-      text: "Pas de retour en arrière possible",
+      text: "Il sera bientôt trop tard ...",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
