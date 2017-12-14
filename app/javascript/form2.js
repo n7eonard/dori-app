@@ -7,6 +7,14 @@ function form2Navigation() {
     });
   }
 
+  const back2 = document.getElementById("go-back3");
+  if (back2) {
+    back2.addEventListener("click", (event) => {
+      document.getElementById('div-adresses').classList.add("hidden");
+      document.getElementById('div-heures').classList.remove("hidden");
+    });
+  }
+
   const start_hours = document.querySelectorAll("textarea[id*='start']");
   const last_field_hours = document.querySelectorAll(".container-form-heures:last-child textarea")[1];
   // if (last_field_hours) {
