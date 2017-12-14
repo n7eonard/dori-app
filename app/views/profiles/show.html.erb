@@ -62,7 +62,6 @@
         </div>
     </div>
 
-    <div class="space-between"></div>
 
     <div class="program-tab hidden">
         <div class="program-level">
@@ -85,6 +84,11 @@
                   <p>
                     <%= day[2..-1].capitalize %>
                   </p>
+
+                  <p>
+                    <%= @program.cards_builder[day]["start"] %>
+                    <%= @program.cards_builder[day]["end"] %>
+                  </p>
                 </div>
               </div>
             <% end %>
@@ -92,13 +96,10 @@
         </div>
 
         <div class="program-pools-title">
-          <h4>Piscines</h4>
-          <p>Choisissez l'adresse à proximité de laquelle vous souhaitez nager</p>
+          <h2>Piscines</h2>
           <div class="closest-pool1">
             <% @program.cards_builder.each do |key, value| %>
               <% if value["okpool"]["open"] == true %>
-                <div class="status-bar-open">
-                </div>
               <% else %>
                 <div class="status-bar-close">
                 </div>
@@ -112,21 +113,10 @@
                   <%= value["okpool"]["metro"] %>
                 </div>
                 <div class="opening-hours">
-                  <p>Horaires d'ouverture :</p>
                   <%= value["okpool"]["opening_times"] %>
                 </div>
               </div>
             <% end %>
-          </div>
-        </div>
-        <div class="pools-address-details">
-          <div class="row">
-
-            <% @program.cards_builder.keys.each do |day| %>
-              <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>
-              <% end %>
-            <% end %>
-
           </div>
         </div>
 
