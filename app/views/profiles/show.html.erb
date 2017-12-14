@@ -126,10 +126,10 @@
 
           </div>
         </div>
-        <div class="end-button text-center">
-          <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg', id: "sweet-alert-delete" %>
-        </div>
       <% end %>
+      <div class="end-button">
+        <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg' %>
+      </div>
     </div>
   <% end %>
 </div>
