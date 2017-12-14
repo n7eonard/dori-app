@@ -11,7 +11,6 @@
         <%= image_tag "back-line.png" %>
     </div>
 
-
   <%= simple_form_for @program do |f| %>
     <% @program.cards_builder.keys.each do |day| %>
       <% if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? day %>

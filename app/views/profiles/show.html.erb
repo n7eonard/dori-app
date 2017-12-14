@@ -28,6 +28,7 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     </div>
+
     <div class="placeholder-no-program">
       <%= link_to 'Créez votre programme', new_program_path, type: 'button',class: 'btn btn-default btn-block btn-lg btn-create-program' %>
     </div>
@@ -38,17 +39,16 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     <div class="space-between"></div>
-
-        <div class="pool-card-lg-1">
-          <div class="card-status">CLOSED</div>
-              <h3>Piscine de la Cour des Lions</h3>
-              <p>9 Rue Alphonse Baudin, 75011 Paris</p>
+       <div class="pool-card-lg-1">
+          <div class="card-status"><%= @pool_near_me[0].open %></div>
+              <h3><%= @pool_near_me[0].name.downcase.capitalize %></h3>
+              <p><%= @pool_near_me[0].address %></p>
         </div>
 
         <div class="pool-card-lg-2">
-          <div class="card-status">OPEN</div>
-          <h3>Piscine Georges Rigal</h3>
-           <p>115 Boulevard de Charonne, 75011 Paris</p>
+          <div class="card-status"><%= @pool_near_me[1].open %></div>
+          <h3><%= @pool_near_me[1].name.downcase.capitalize %></h3>
+           <p><%= @pool_near_me[1].address %></p>
         </div>
     </div>
 
@@ -123,11 +123,24 @@
 
           </div>
         </div>
-        <div class="end-button">
-          <%= f.button :submit, value: "Enregistrer sur l'agenda" %>
-          <%= link_to 'Google', program_delete_to_google_path(@program) %>
+        <div class="end-button text-center">
+          <%= link_to 'Supprimer votre programme', program_delete_to_google_path(@program), type: 'button', class: 'btn btn-default btn-lg' %>
         </div>
       <% end %>
     </div>
   <% end %>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
