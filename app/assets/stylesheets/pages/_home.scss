@@ -29,6 +29,12 @@ body {
   // }
 }
 
+.button-scroll-1 {
+  position: absolute;
+  bottom: 3vh;
+  left: 46vw;
+}
+
 .dori-home1-content {
   position: relative;
   top: 48vh;
@@ -78,11 +84,7 @@ body {
     }
   }
 
-  .button-scroll-1 {
-    position: absolute;
-    bottom: 3vh;
-    left: 45vw;
-  }
+
 }
 
 
@@ -97,21 +99,29 @@ body {
   position: absolute;
   top: 0px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .button-scroll-up-1 {
+  img {
+    transform: scaleY(-1);
+    position: absolute;
+    top: 4vh;
+  }
+
+  }
+  .button-scroll-down-2 {
+    position: absolute;
+    bottom: 4vh;
+  }
   .dori-home2-content {
     position: relative;
-    top: 15vh;
-    .button-scroll-up-1 {
-      img {
-        transform: scaleY(-1);
-        position: relative;
-        bottom: 13vh;
-      }
 
-    }
-    .button-scroll-down-2 {
-
-    }
     .dori-explanation {
+      margin: 0px;
+      padding: 0px;
+      height: 408px;
       p {
         color: $white;
         font-weight: bold;
@@ -121,6 +131,7 @@ body {
         letter-spacing: 1px;
         position: relative;
         bottom: 30px;
+        margin: 0px;
       }
 
     }
@@ -160,6 +171,8 @@ body {
         font-weight: lighter;
         margin: 0px;
         padding: 0px 44px;
+        height: 22vh;
+        overflow: scroll;
       }
       .action-slider {
         display: flex;
