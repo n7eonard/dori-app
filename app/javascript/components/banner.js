@@ -5,12 +5,11 @@ function bindSweetAlertButtonDemo() {
   if (buttonDemo) {
     document.addEventListener('DOMContentLoaded', () => {
       swal({
-        title: "Prêt à nager",
-        text: "Bienvenue sur votre profil.",
+        title: "Synchronisation réalisée avec succès !",
+        // title: "Merci a tout ceux du wagon pour ces 2 mois !",
         icon: "success",
         button: "J'ai compris!",
-        timer: 3000,
-        // allowOutsideClick: true;
+        timer: 6000,
       })
     });
   }
