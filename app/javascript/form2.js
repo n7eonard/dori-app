@@ -17,18 +17,21 @@ function form2Navigation() {
 
   const start_hours = document.querySelectorAll("textarea[id*='start']");
   const last_field_hours = document.querySelectorAll(".container-form-heures:last-child textarea")[1];
-  // if (last_field_hours) {
-  //   last_field_hours.addEventListener("focus", (event) => {
-  //     const start_hours_size = start_hours.length
-  //     var sum_of_existant = 0
-  //     start_hours.forEach((hour) => {
-  //       if (hour.value != "") {sum_of_existant += 1};
-  //     });
-  //     if (sum_of_existant == start_hours_size) {
-  //       document.getElementById("go-forward3").classList.remove("no-go");
-  //       };
-  //   });
-  // }
+
+  const contain_hours = document.querySelectorAll(".container-form-heures");
+  contain_hours.forEach((c) => {
+
+    const divStart = c.querySelector("select[id*='start']");
+    divStart.addEventListener("change", (event) => {
+        const valueStart = divStart.value;
+        const divEnd = c.querySelector("select[id*='_end']");
+        divEnd.value = valueStart;
+    });
+
+
+  });
+
+
 
   if (last_field_hours) {
     last_field_hours.addEventListener("keyup", (event) => {
@@ -58,6 +61,9 @@ function form2Navigation() {
       });
     });
   }
+
+
+
 
 };
 
