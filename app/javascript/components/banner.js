@@ -9,7 +9,7 @@ function bindSweetAlertButtonDemo() {
         // title: "Merci a tout ceux du wagon pour ces 2 mois !",
         icon: "success",
         button: "J'ai compris!",
-        timer: 6000,
+        timer: 5000,
       })
     });
   }

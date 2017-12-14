@@ -80,7 +80,7 @@ class GoogleCalendarWrapper
           "RRULE:FREQ=WEEKLY"
         ],
         "description": element["training"],
-        "summary": "Swim avec Dori",
+        "summary": "Swim avec Dori 🐠",
         "location": element["okpool"]["address"],
         "reminders": {
           "overrides": [
