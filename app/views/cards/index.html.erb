@@ -53,19 +53,19 @@
   </a>
 
 
+
+
 </div>
 
 
 <!--  <div class="push-google"> -->
+   <%= link_to program_send_to_google_path(@program) do %>
+     <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
+     <%= image_tag "export-line.png", class: 'yellow-arrow'%>
+   <% end %>
  <!--   </div> -->
 
 
-</div>
-<div class="export-to-google">
- <%= link_to program_send_to_google_path(@program) do %>
-    <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
-    <%= image_tag "export-line.png", class: 'yellow-arrow'%>
- <% end %>
 </div>
 
 </div>

@@ -10,15 +10,22 @@ import "bootstrap";
 
 import 'google_id.js'
 import 'bootstrap'
+//import 'schedule_plusone'
+
 import { home1Navigation } from '../home.js';
 import { home2Navigation } from '../home.js';
 import { form1Navigation } from '../form1.js';
 import { form2Navigation } from '../form2.js';
 import { tabNavigation } from '../profile.js';
+import { bindSweetAlertButtonDemo } from '../components/banner';
+import { bindSweetAlertDeleteProgram } from '../components/banner';
+
 
 home1Navigation();
 home2Navigation();
 form1Navigation();
 tabNavigation();
 form2Navigation();
+bindSweetAlertButtonDemo();
+bindSweetAlertDeleteProgram();
 
