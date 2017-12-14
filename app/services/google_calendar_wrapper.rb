@@ -59,21 +59,6 @@ class GoogleCalendarWrapper
       7 => "7_dimanche"
     }
 
-    # mapping2= {
-    #   "1_lundi" => 1,
-    #   "2_mardi" => 2,
-    #   "3_mercredi" => 3,
-    #   "4_jeudi" => 4,
-    #   "5_vendredi" => 5,
-    #   "6_samedi" => 6,
-    #   "7_dimanche" => 7
-    # }
-    # #récupère les key correspondantes aux jours du programme
-    # keys_mapped = []
-    # program.cards_builder.keys.each do |key|
-    #   keys_mapped << mapping2[key]
-    # end
-
     range_week = (Date.today .. (Date.today + 6.days))
     events = []
     range_week.each do |day|
@@ -110,7 +95,6 @@ class GoogleCalendarWrapper
         "id": ""
       }
     end
-
     return events
   end
 end
