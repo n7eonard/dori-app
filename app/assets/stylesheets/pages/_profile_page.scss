@@ -61,6 +61,17 @@
   grid-template-rows: 7% 35% 23% 5% 20% 5% 5%;
   grid-template-columns: 38% 62%;;
   width: 100%;
+  margin-top: 15px;
+  background: linear-gradient(to top, #2e3ed3, #046dfb 95%);
+  h2 {
+    font-size: 16px;
+    color: white;
+    margin: 0px;
+    letter-spacing: 2px;
+    font-family: "Roboto";
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
 }
 
 
@@ -88,7 +99,7 @@
   width: 50%;
   opacity: 0.6;
   height: 47px;
-  margin-top:14px;
+  margin-top:10px;
   h4 {
     font-size: 16px;
     color: $white;
@@ -258,26 +269,13 @@
   justify-content: center;
   flex-direction: column;
   p {
-    font-size: 14px;
-    font-weight: bold;
-    color: darkblue;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Rubik";
+    color: $white;
     padding: 10px;
     margin: 0px;
-  }
-  .dropdown-levels {
-  width: 200px;
-  height: 30px;
-
-  p {
-    color: darkblue;
-    font-weight: normal;
-    font-size: 12px;
-    opacity: 0.8;
-  }
-  .form-group {
-    border: 1px solid darkblue;
-    border-radius: 4px;
-  }
   }
 }
 
@@ -290,11 +288,11 @@
   flex-direction: column;
   .title {
     p {
-    font-size: 14px;
-    font-weight: bold;
-    color: darkblue;
+    font-size: 20px;
+    font-weight: lighter;
+    color: $white;
     padding: 10px;
-    margin: 10px 0px 0px 0px;
+    margin: 0px;
     }
   }
   .content-days {
@@ -313,11 +311,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
   p {
-    font-size: 14px;
-    font-weight: bold;
-    color: darkblue;
-    padding: 12px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: "Rubik";
+    font-weight: bolder;
+    color: $white;
+    padding: 0px;
+    margin-bottom: 6px;
   }
 
 }
@@ -331,19 +333,24 @@
   flex-direction: column;
   .row {
     p {
-      color: darkblue;
+      color: $white;
       padding-bottom: 12px;
     }
     display: flex;
     margin: 0px;
+    top: 0px;
+    height: auto;
     .col-sm-12 {
       display: flex;
       align-items: center;
-      .form-group {
-        padding: 0px 0px 15px 25px;
-        .form-control {
-          height: 40px;
-        }
+      p {
+        padding-left: 19px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding-bottom: 0px;
+        margin: 0px;
+        text-transform: uppercase;
       }
     }
   }
@@ -366,10 +373,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  h4 {
-    font-size: 14px;
-    font-weight: bold;
-    color: darkblue;
+  margin-top: 20px;
+  h2 {
+    font-size: 20px;
+    font-family: "Rubik";
+    font-weight: bolder;
+    color: #F5F5F5;
+    padding: 0px;
+    text-transform: none;
   }
   p {
     font-size: 12px;
@@ -378,6 +389,26 @@
     text-align: center;
     width: 70%;
   }
+}
+
+.closest-pool1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 50px;
+  color: $white;
+}
+
+.pool-card-large {
+  margin: 8px 0px;
+  padding-bottom: 7px;
+  margin: 8px 0px;
+  padding-bottom: 7px;
+  font-family: "Roboto";
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 // .pools-address-name {
