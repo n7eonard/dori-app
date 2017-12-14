@@ -9,8 +9,8 @@
     <div class="go-back" id="go-back4" >
      <%= link_to edit_program_path(@program) do %>
      <h2 class="white-text">BACK</h2>
-     <%= image_tag "back-line.png"%>
      <% end %>
+     <%= image_tag "back-line.png"%>
    </div>
 
 
@@ -20,7 +20,7 @@
 
         <div id="card-new">
           <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
-          <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
+          <p class = "blue-content"> Votre session : <%= value["start"] %> - <%= value["end"] %> <br>
             <% if value["okpool"] %>
             <%= value["okpool"]["name"] %> <br>
             <%= value["okpool"]["metro"] %> <br>
@@ -33,15 +33,15 @@
           </div>
         </div>
       </div>
-    </div>
     <% end %>
+      <div class="export-to-google">
+       <%= link_to program_send_to_google_path(@program) do %>
+         <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
+         <%= image_tag "export-line.png", class: 'yellow-arrow'%>
+       <% end %>
+      </div>
+    </div>
+<!--  <div class="push-google"> -->
+ <!--   </div> -->
   </div>
 
-<!--  <div class="push-google"> -->
-  <div class="export-to-google">
-   <%= link_to program_send_to_google_path(@program) do %>
-     <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
-     <%= image_tag "export-line.png", class: 'yellow-arrow'%>
-   <% end %>
-  </div>
- <!--   </div> -->
