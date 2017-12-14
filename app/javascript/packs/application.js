@@ -23,4 +23,5 @@ form1Navigation();
 tabNavigation();
 form2Navigation();
 bindSweetAlertButtonDemo();
+bindSweetAlertDeleteProgram();
 
