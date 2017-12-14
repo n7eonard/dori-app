@@ -9,22 +9,18 @@
     <div class="go-back" id="go-back4" >
      <%= link_to edit_program_path(@program) do %>
      <h2 class="white-text">BACK</h2>
-     <%= image_tag "back-line.png"%>
      <% end %>
+     <%= image_tag "back-line.png"%>
    </div>
 
 
    <div class="row margin">
 
-    <!-- Wrapper for slides -->
-
-    <div class="carousel-inner" role="listbox">
      <% @program.cards_builder.each_with_index do |(key, value), index| %>
-     <div class="item <%= index == 0 ? 'active' : '' %>">
-      <div class="carousel-content">
+
         <div id="card-new">
           <h2 class="card-title"> <%= key[2..-1].capitalize %> </h2>
-          <p class = "blue-content"><%= value["start"] %> - <%= value["end"] %> <br>
+          <p class = "blue-content"> Votre session : <%= value["start"] %> - <%= value["end"] %> <br>
             <% if value["okpool"] %>
             <%= value["okpool"]["name"] %> <br>
             <%= value["okpool"]["metro"] %> <br>
@@ -37,37 +33,15 @@
           </div>
         </div>
       </div>
-    </div>
     <% end %>
-  </div>
-
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-
-
-
-
-</div>
-
-
-
-
-</div>
+      <div class="export-to-google">
+       <%= link_to program_send_to_google_path(@program) do %>
+         <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
+         <%= image_tag "export-line.png", class: 'yellow-arrow'%>
+       <% end %>
+      </div>
+    </div>
 <!--  <div class="push-google"> -->
-  <div class="export-to-google">
-   <%= link_to program_send_to_google_path(@program) do %>
-     <h2 class="export-text">EXPORTER <br> VERS L'AGENDA</h2>
-     <%= image_tag "export-line.png", class: 'yellow-arrow'%>
-   <% end %>
-  </div>
  <!--   </div> -->
+  </div>
 
-</div>
