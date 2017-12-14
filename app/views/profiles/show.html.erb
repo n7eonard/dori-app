@@ -12,8 +12,13 @@
 
 
   <div class="profile-id">
-    <h4><%= current_user.first_name.upcase %></h4>
-    <p> <%= current_user.email %> </p>
+    <% if current_user.first_name %>
+      <h4><%= current_user.first_name.upcase %></h4>
+    <% else %>
+      <h4>Nageur de compet'</h4>
+    <% end %>
+    <p><i class="fa fa-envelope" aria-hidden="true"></i>
+ <%= current_user.email %> </p>
   </div>
 
   <div class="profile-nav">
@@ -21,7 +26,7 @@
       <h4> Piscines </h4>
     </div>
     <div class="nav-programme">
-      <h4> Mon programme </h4>
+      <h4> Programme </h4>
     </div>
   </div>
 
@@ -45,13 +50,15 @@
        <div class="pool-card-lg-1">
           <div class="card-status"><%= @pool_near_me[0].open %></div>
               <h3><%= @pool_near_me[0].name.downcase.capitalize %></h3>
-              <p><%= @pool_near_me[0].address %></p>
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+ <%= @pool_near_me[0].address %></p>
         </div>
 
         <div class="pool-card-lg-2">
           <div class="card-status"><%= @pool_near_me[1].open %></div>
           <h3><%= @pool_near_me[1].name.downcase.capitalize %></h3>
-           <p><%= @pool_near_me[1].address %></p>
+           <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+ <%= @pool_near_me[1].address %></p>
         </div>
     </div>
 
@@ -126,6 +133,7 @@
 
           </div>
         </div>
+
       <% end %>
       <div class="end-button">
         <%= link_to "Supprimer votre programme", program_path(@program), method: :delete, type: "button", class: 'btn btn-danger btn-lg' %>

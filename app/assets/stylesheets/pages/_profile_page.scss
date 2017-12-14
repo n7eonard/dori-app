@@ -1,5 +1,7 @@
 .profile-container {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-image: linear-gradient(to bottom, #0088ff, #00f2fe, #00f2fe 48%, #0088ff 110%);
+  background-size: cover;
+  z-index: -1;
 }
 
 .profile-header {
@@ -11,11 +13,7 @@
     top: 17px;
     width: 100px;
     height: 100px;
-    // border: 5px solid #ffe074;
-    border-color: #FCB581;
-    border-style: double;
-    border-width: medium;
-    border-width: 5px;
+    border: 3px solid $white;
   }
 }
 
@@ -27,7 +25,7 @@
   text-align: center;
   padding-top: 15px;
   line-height: 5px;
-  h4 {
+  h3 {
     color: white;
     font-weight: bold;
   }
@@ -45,12 +43,10 @@
 }
 
 .program-tab {
-  background-color: white;
+
   display: grid;
   grid-template-rows: 7% 35% 23% 5% 20% 5% 5%;
   grid-template-columns: 38% 62%;;
-  position: absolute;
-  top: 345px;
   width: 100%;
 }
 
@@ -67,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid darkblue;
+  border-bottom: 1px solid $white;
   padding: 0px 50px;
 
 }
@@ -82,7 +78,7 @@
   margin-top:14px;
   h4 {
     font-size: 16px;
-    color: darkblue;
+    color: $white;
     font-weight: normal;
     font-family: "Montserrat", sans-serif;
   }
@@ -98,14 +94,14 @@
   margin-top:14px;
  h4 {
     font-size: 16px;
-    color: darkblue;
+    color: $white;
     font-weight: normal;
     font-family: "Montserrat", sans-serif;
  }
 }
 
 .nav-active {
-  border-bottom: 5px solid darkblue;
+  border-bottom: 5px solid $white;
   opacity: 1;
   h4 {
     font-weight: bolder;
@@ -125,7 +121,7 @@
   justify-content: center;
   padding: 13px;
   p {
-    color: darkblue;
+    color: $white;
     font-size: 12px;
     margin: 0px;
   }
@@ -169,12 +165,15 @@
   padding: 20px;
   height: 200px;
   width: 85%;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.elitetraveler.com/wp-content/uploads/2013/06/Grace-Santorini-Greece-.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.pariszigzag.fr/wp-content/uploads/2013/11/ppailleron-nborel_028.jpg');
   background-size: cover;
-  .title{
-    font-weight: bold;
 
-    font-size: 14px;
+  h3 {
+    color: $white;
+    font-family: "Roboto";
+    font-weight: normal;
+    letter-spacing: 2px;
+
   }
   .address-pool {
     font-size: 11px;
@@ -193,11 +192,13 @@
   padding: 20px;
   height: 200px;
   width: 85%;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://hips.hearstapps.com/toc.h-cdn.co/assets/16/43/al-bustan-palace-muscat.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://media.timeout.com/images/100463479/image.jpg');
   background-size: cover;
-  .title{
-    font-weight: bold;
-    font-size: 14px;
+  h3 {
+    color: $white;
+    font-family: "Roboto";
+    font-weight: normal;
+    letter-spacing: 2px;
 
   }
   .address-pool {
@@ -393,7 +394,7 @@
   }
   .row {
     p {
-      color: darkblue;
+      color: $blue;
       padding-bottom: 12px;
     }
     display: flex;
@@ -410,7 +411,7 @@
         color: red;
       }
       label {
-        color: darkblue;
+        color: $blue;
         padding-right: 10px;
         font-weight: normal;
       }
@@ -439,4 +440,8 @@
   color: white;
   font-family: "Roboto";
   letter-spacing: 5px;
+}
+
+.placeholder-no-program {
+  height: 120px;
 }

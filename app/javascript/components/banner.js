@@ -9,7 +9,7 @@ function bindSweetAlertButtonDemo() {
         // title: "Merci a tout ceux du wagon pour ces 2 mois !",
         icon: "success",
         button: "J'ai compris!",
-        // allowOutsideClick: true;
+        timer: 6000,
       })
     });
   }
@@ -19,7 +19,7 @@ function bindSweetAlertDeleteProgram() {
   document.getElementById('sweet-alert-delete').addEventListener('click', () => {
     swal({
       title: "T'es sur de toi?!",
-      text: "Pas de retour en arrière possible",
+      text: "Il sera bientôt trop tard ...",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
