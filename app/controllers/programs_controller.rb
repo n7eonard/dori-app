@@ -60,7 +60,7 @@ class ProgramsController < ApplicationController
   end
 
   def send_to_google
-    @program = Program.where(:user_id == current_user.id).last
+    @program = current_user.programs.last
     @google = GoogleCalendarWrapper.new(current_user)
     @google.send_calendar(@program)
     redirect_to profile_path(sweetalert: true)

@@ -64,7 +64,6 @@ class GoogleCalendarWrapper
     range_week.each do |day|
       day_name = mapping[day.wday]
       next unless program.cards_builder.has_key?(day_name)
-
       element = program.cards_builder[day_name]
 
       events << {
