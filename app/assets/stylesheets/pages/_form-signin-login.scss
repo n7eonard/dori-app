@@ -1,3 +1,10 @@
+.signin-body {
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
+  background-size: cover;
+  height: 100vh;
+}
+
+
 .form-style-5{
   max-width: 500px;
   padding: 10px 20px;
