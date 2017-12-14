@@ -56,12 +56,10 @@
   font-weight: 550;
 }
 
-.center-program {
-  padding-top: 15px;
-}
-
 .row {
-  margin-top: 162px;
+  height: 438px;
+  position: relative;
+  top: 24%;
 }
 
 #btn-finish-program {
@@ -72,36 +70,88 @@
   color: white;
 }
 
-.export-text {
-    color: #ffe074;
-    position: relative;
-    top: -112px;
-    right: 45px;
-    font-size: 27px;
-    text-align: right;
-    text-decoration: none;
-}
 
 .carousel-potition {
     position: relative;
     top: -7vh !important;
 }
 
-.yellow-arrow {
-    vertical-align: middle;
-    position: relative;
-    top: -179px;
-    right: -34px;
+.carousel-control:hover {
+  opacity: 0;
+}
+
+.glyphicon {
+  font-size: 30px;
+  color: $yellow;
+  opacity: 1;
+  top: 44% !important;
+}
+
+.carousel-control {
+  background-image: none !important;
+  opacity: 1;
+  text-shadow: none;
+  .glyphicon-chevron-left {
+    left: 32%;
+  }
+  .glyphicon-chevron-right {
+    right: 32%;
+  }
 }
 
 .wrapper-cards {
   background: asset-url('swimmer-bg.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
   background-size: cover;
-  height: 124vh;
+  height: 140vh;
   background-blend-mode: overlay;
   width: 100vw;
   z-index: -1;
   position: absolute;
   top: 0px;
   text-align: center;
+
+  .form-title {
+    top: 9vh;
+    padding-left: 12px;
+    letter-spacing: 3px;
+
+  }
+
+  .export-to-google{
+    height: 73px;
+    width: 104vw;
+    position: relative;
+    top: 31px;
+    right: 15%;
+    a {
+      text-decoration: none;
+    }
+
+    .export-text {
+      color: $yellow;
+      position: absolute;
+      bottom: 10.5%;
+      right: 23%;
+      font-size: 25px;
+      text-align: right;
+      text-decoration: none;
+    }
+
+    .yellow-arrow {
+    }
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 81%;
+  }
+}
+
+
+#go-back4 {
+  position: relative;
+  top: 20%;
+  right: 41%;
 }
