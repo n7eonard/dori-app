@@ -40,6 +40,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:google_oauth2]
 
+  has_many :programs
+
   geocoded_by :ip_address,
   :latitude => :lat, :longitude => :lon
   after_validation :geocode
