@@ -39,14 +39,14 @@
       line-height: 16px;
       text-align: center;
       letter-spacing: 0px;
+      margin: 0px;
+      width: 220px;
     }
   }
   .addresses-piscines {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 15vh;
+    top: 35vh;
+    margin-top: 30px;
     .form-group {
       display: flex;
       flex-direction: column;
@@ -101,7 +101,7 @@
 
 #go-forward3 {
   position: relative;
-  top: 50px;
+  top: 100px;
   right: 10vh;
 }
 
@@ -118,9 +118,7 @@
     font-family: "Roboto", sans-serif;
     margin: 0px;
     position: relative;
-    top: 2px;
-    left: 238px;
-    letter-spacing: 4px;
-    padding-right: 10px;
+    top: 3px;
+    left: 75%;
   }
 }

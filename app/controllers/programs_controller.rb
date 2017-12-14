@@ -25,9 +25,6 @@ class ProgramsController < ApplicationController
     redirect_to edit_program_path(@program)
   end
 
-
-
-
   def edit
     @program = Program.find(params[:id])
   end
@@ -35,13 +32,6 @@ class ProgramsController < ApplicationController
   def update
     @program = Program.find(params[:id])
     @program.update(program_params)
-
-    # @info = params[:program]
-    # @info.each do |key, value|
-    #   day = key.split('_').first
-    #   @program.cards_builder[day] << {key.split('_').last.to_sym => value}
-    # end
-
     @program.cards_builder.each do |key, value|
       if ["1_lundi","2_mardi","3_mercredi","4_jeudi","5_vendredi","6_samedi","7_dimanche"].include? key
         start_key = key + "_start"
@@ -58,19 +48,15 @@ class ProgramsController < ApplicationController
         @program.cards_builder[key][:training] = training
       end
     end
-
-    # pool_address.each do |pool|
-    #   << pool[0]
-    # end
-
-    # i = 0
-    # while i < address.length
-    #   @pool_near = Pool.near(address[i], 0.7)
-    #   i += 1
-    # end
-   #  @pool_near = Pool.near(address, 0.7)
     @program.save
     redirect_to program_cards_path(@program)
+  end
+
+  def destroy
+    delete_to_google
+    @program = Program.where(:user_id == current_user.id)
+    @program.destroy_all
+    redirect_to profile_path
   end
 
   def send_to_google
@@ -84,7 +70,6 @@ class ProgramsController < ApplicationController
     @program = Program.where(:user_id == current_user.id).last
     @google = GoogleCalendarWrapper.new(current_user)
     @google.delete_calendar(@program)
-    redirect_to profile_path
   end
 
   private

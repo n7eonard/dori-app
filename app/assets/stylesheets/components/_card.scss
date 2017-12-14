@@ -5,15 +5,15 @@
 
  #card-new {
     background: white;
-    padding: 20px;
+    padding: 0px 20px 25px 20px;
     border-radius: 4px;
     -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-left: 27px;
-    margin-right: 27px;
-    margin-bottom: 75px;
-    margin-top: 27px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 107px;
+    margin-top: 2px;
     border: 5px solid $yellow;
 }
 
@@ -43,10 +43,11 @@
 
 
 .card-title {
-  color: #2979ff;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: center;
+    color: #2979ff;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7px;
 
 }
 
@@ -74,8 +75,33 @@
 .export-text {
     color: #ffe074;
     position: relative;
-    top: 69px;
-    right: 78px;
+    top: -112px;
+    right: 45px;
     font-size: 27px;
     text-align: right;
+    text-decoration: none;
+}
+
+.carousel-potition {
+    position: relative;
+    top: -7vh !important;
+}
+
+.yellow-arrow {
+    vertical-align: middle;
+    position: relative;
+    top: -179px;
+    right: -34px;
+}
+
+.wrapper-cards {
+  background: asset-url('swimmer-bg.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
+  background-size: cover;
+  height: 124vh;
+  background-blend-mode: overlay;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  text-align: center;
 }
