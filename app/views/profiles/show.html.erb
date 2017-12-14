@@ -47,12 +47,25 @@
       data-markers="<%= @markers.to_json %>">
       </div>
     <div class="space-between"></div>
-       <div class="pool-card-lg-1">
-        <div class="card-status">OPEN</div>
-              <h3><%= @pool_near_me[0].name.downcase.capitalize %></h3>
-              <p><i class="fa fa-map-marker" aria-hidden="true"></i>
- <%= @pool_near_me[0].address %></p>
-        </div>
+      <div class="pool-card-lg-1">
+        <% if @pool_near_me[0].open == true %>
+          <div class="card-status">
+            <p class="status-open">Ouvert</p>
+          </div>
+        <% else %>
+          <div class="card-status">
+            <p class="status-close">Fermée</p>
+          </div>
+        <% end %>
+        <h3>
+          <%= @pool_near_me[0].name.downcase.capitalize %>
+        </h3>
+        <p>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <%= @pool_near_me[0].address %>
+          <%= @distance_from_user.round(2) %>Km
+        </p>
+      </div>
 
         <div class="pool-card-lg-2">
           <div class="card-status">CLOSED</div>
