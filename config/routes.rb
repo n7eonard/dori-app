@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :pools, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :trainings, only: [:new, :create]
 
-  resources :programs, only: [:new, :create, :edit, :update] do
+  resources :programs, only: [:new, :create, :edit, :update, :destroy] do
     get :send_to_google
     get :delete_to_google
     resources :cards, only: [:index, :show, :new, :create, :edit, :update] do
