@@ -33,6 +33,9 @@ body {
   position: absolute;
   bottom: 3vh;
   left: 47vw;
+  img {
+    width: 26px;
+  }
 }
 
 .dori-home1-content {
@@ -108,11 +111,15 @@ body {
     top: 4vh;
     img {
       transform: scaleY(-1);
+      width: 26px;
     }
   }
   .button-scroll-down-2 {
     position: absolute;
     bottom: 4vh;
+    img {
+      width: 26px;
+    }
   }
   .dori-home2-content {
     position: relative;
@@ -167,7 +174,7 @@ body {
       }
       p {
         color: $white;
-        font-weight: lighter;
+        font-weight: normal;
         margin: 0px;
         padding: 0px 44px;
         height: 22vh;
@@ -199,6 +206,7 @@ body {
     left: 47vw;
     img {
       transform: scaleY(-1);
+      width: 26px;
     }
   }
 }
@@ -301,7 +309,8 @@ h4 {
 
 p {
   color: #EBEBF3;
-  font-weight: lighter;
+  font-weight: normal;
+  text-shadow: 0px 1px 5px rgba(0, 54, 191, 0.4);
 }
 
 .btn-start {

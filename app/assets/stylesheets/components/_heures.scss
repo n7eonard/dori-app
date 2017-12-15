@@ -40,14 +40,14 @@
   width: 80vw;
   .form-control {
     background: none;
-    border: 1px solid #F5F5F5;
+    border: 2px solid $white;
     border-radius: 5px;
     margin: 10px 11px;
     width: 250px;
-    color: #F5F5F5;
+    color: $whiter;
     /* text-align: center; */
     display: flex;
-    font-weight: lighter;
+    font-weight: normal;
     &:focus {
       box-shadow: 1px 1px 3px rgba(37, 138, 174, 0.2),
       -1px -1px 3px rgba(37, 138, 174, 0.2);

@@ -9,29 +9,32 @@
     border-radius: 4px;
     -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-left: 35px;
     margin-right: 35px;
     margin-bottom: 50px;
-    border: 5px solid $yellow;
+    background-image: linear-gradient(to bottom right, rgb(0, 53, 189) 5%, rgb(56, 145, 251) 89%);
+    background-size: cover;
+    border: 2px solid $white;
 }
 
 .blue-content {
-  color: rgb(4, 23, 94);
+  color: $white;
   font-size: 16px;
   font-weight: 400;
-  text-align: justify;
+  text-align: center;
+  text-shadow: none;
 }
 
 #training_content {
-  height: 150px;
+  height: 106px;
   overflow: scroll;
   p {
-    color: rgb(4, 23, 94);
+    color: $white;
     text-align: justify;
     font-size: 16px;
     font-weight: 300;
     height: 156px;
+    text-shadow: none;
   }
 }
 
@@ -43,7 +46,7 @@
 
 
 .card-title {
-    color: #2979ff;
+    color: $whiter;
     font-size: 21px;
     font-weight: bold;
     text-align: center;
@@ -52,7 +55,7 @@
 }
 
 #program_day {
-  color: #2979ff;
+  color: $whiter;
   font-weight: 550;
 }
 
