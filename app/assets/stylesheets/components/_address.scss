@@ -10,7 +10,7 @@
   input {
     font-family: "Roboto", sans-serif !important;
     font-size: 20px;
-    font-size: lighter;
+    font-size: normal;
     color: $white;
     text-align: center;
     letter-spacing: 0px;
@@ -43,7 +43,7 @@
     p {
       font-size: 14px;
       font-family: "Roboto", sans-serif;
-      font-size: lighter;
+      font-size: normal;
       line-height: 16px;
       text-align: center;
       letter-spacing: 0px;
@@ -69,7 +69,7 @@
       textarea {
         font-size: 20px;
         font-family: "Roboto", sans-serif;
-        font-size: lighter;
+        font-size: normal;
         color: $white;
         text-align: center;
         letter-spacing: 0px;
@@ -77,14 +77,14 @@
       }
       .form-control {
         background: none;
-        border: 1px solid #F5F5F5;
+        border: 2px solid $white;
         border-radius: 5px;
         margin-bottom: 21px;
         width: 250px;
-        color: #F5F5F5;
+        color: $whiter;
         /* text-align: center; */
         display: flex;
-        font-weight: lighter;
+        font-weight: normal;
         height: 42px;
       }
     }

@@ -50,11 +50,11 @@
   h2 {
     font-family: "Roboto", sans-serif;
     font-size: 19px;
-    font-weight: lighter;
-    color: #F5F5F5;
+    font-weight: normal;
+    color: $whiter;
     text-transform: uppercase;
     letter-spacing: 3px;
-    border: 1px solid #F5F5F5;
+    border: 2px solid $white;
     padding: 10px;
     width: 220px;
     text-align: center;
