@@ -109,6 +109,7 @@ body {
   .button-scroll-up-1 {
     position: absolute;
     top: 4vh;
+    z-index: 5;
     img {
       transform: scaleY(-1);
       width: 26px;
@@ -204,6 +205,7 @@ body {
     position: absolute;
     top: 4vh;
     left: 47vw;
+    z-index: 5;
     img {
       transform: scaleY(-1);
       width: 26px;
