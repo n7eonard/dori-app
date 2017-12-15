@@ -9,8 +9,17 @@
   width: 100vw;
 
   .row {
-    top: 16%;
-    margin: 0px;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 43%;
+  }
+
+  .col-xs-offset-2 {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
   }
 }
 
