@@ -3,6 +3,10 @@
   background-size: cover;
   height: 100vh;
   background-blend-mode: overlay;
+  z-index: -5;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
 
   .row {
     top: 16%;
