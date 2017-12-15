@@ -1,17 +1,41 @@
 /* Main navbar */
 .navbar-wagon {
+    // height: 55px;
+    // position: absolute;
+    // right: 12px;
+    // /* top: 0px; */
+    // // width: 55px;
+    // color: white;
+    // font-size: 15px;
+    // margin-top: 15px;
+    // font-style: lighter;
+    // /* font-weight: lighter; */
+    justify-content: space-between;
+    width: 100vw;
     height: 55px;
     position: absolute;
-    right: 12px;
-    /* top: 0px; */
-    // width: 55px;
+    display: flex;
     color: white;
     font-size: 15px;
-    margin-top: 15px;
-    font-style: lighter;
-    /* font-weight: lighter; */
+    align-items: center;
 }
 
+.connected-menu {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  a:first-child {
+    padding-right: 25px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+  }
+}
 
 /* User Avatar */
 .navbar-wagon .avatar {
@@ -25,12 +49,16 @@
 
 /* Right section */
 .connection {
-  margin-top: 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 24px;
   a {
     text-decoration: none;
     color: white;
-    font-size: 17px;
-    margin-right: 20px;
+    font-size: 15px;
 
   }
 }
