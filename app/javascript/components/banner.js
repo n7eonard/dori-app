@@ -6,7 +6,7 @@ function bindSweetAlertButtonDemo() {
     document.addEventListener('DOMContentLoaded', () => {
       swal({
         // title: "Synchronisation réalisée avec succès !",
-        title: "Merci a tout ceux du wagon pour ces 2 mois !",
+        title: "Programme synchronisé avec succès !",
         icon: "success",
         button: "J'ai compris!",
         timer: 5000,
