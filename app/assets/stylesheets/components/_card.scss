@@ -15,6 +15,9 @@
     background-image: linear-gradient(to bottom right, rgb(0, 53, 189) 5%, rgb(56, 145, 251) 89%);
     background-size: cover;
     border: 2px solid $white;
+    @media (min-width: 710px) {
+      width: 400px;
+    }
 }
 
 .blue-content {
@@ -112,6 +115,12 @@
   top: 0px;
   text-align: center;
 
+  @media (min-width: 710px) {
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .form-title {
     top: 9vh;
     padding-left: 12px;
@@ -125,8 +134,18 @@
     position: relative;
     top: 0px;
     right: 15%;
+    @media (min-width: 710px) {
+      display: flex;
+      flex-direction: column;
+    }
     a {
       text-decoration: none;
+    }
+    img {
+      @media (min-width: 710px) {
+        position: relative;
+        left: 170px;
+      }
     }
 
     .export-text {
@@ -159,4 +178,9 @@
 
 .cardscapsule {
   margin-top: 228px;
+  @media (min-width: 710px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

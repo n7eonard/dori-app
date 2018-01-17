@@ -17,6 +17,15 @@ body {
   position: absolute;
   top: 0px;
   text-align: center;
+  @media (min-width: 710px) {
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -5;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+  }
   // &:before {
   //   content: '';
   //   position: absolute;
@@ -32,7 +41,11 @@ body {
 .button-scroll-1 {
   position: absolute;
   bottom: 3vh;
-  left: 47vw;
+  /* left: 47vw; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     width: 26px;
   }
@@ -41,7 +54,11 @@ body {
 .dori-home1-content {
   position: relative;
   top: 48vh;
-
+  @media (min-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .dori-title {
     h1 {
@@ -56,12 +73,18 @@ body {
 
   .dori-description {
     p {
-    padding: 0px 42px;
-    margin: 0px;
-    margin-top: -7px;
-    line-height: 21px;
-    font-size: 17px;
-    letter-spacing: 1.3px;
+      padding: 0px 42px;
+      margin: 0px;
+      margin-top: -7px;
+      line-height: 21px;
+      font-size: 17px;
+      letter-spacing: 1.3px;
+      @media (min-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+      }
     }
   }
 
@@ -106,6 +129,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (min-width: 710px) {
+    background: asset-url('swimmer-bg2-computer.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .button-scroll-up-1 {
     position: absolute;
     top: 4vh;
@@ -129,6 +158,12 @@ body {
       margin: 0px;
       padding: 0px;
       height: 408px;
+      @media (min-width: 710px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
       p {
         color: $white;
         font-weight: bold;
@@ -139,6 +174,13 @@ body {
         position: relative;
         bottom: 30px;
         margin: 0px;
+        @media (min-width: 710px) {
+          line-height: 31px;
+          font-size: 26px;
+          letter-spacing: 3px;
+          width: 570px;
+          bottom: unset;
+        }
       }
 
     }
@@ -157,9 +199,23 @@ body {
   position: absolute;
   top: 0px;
   text-align: center;
+  @media (min-width: 710px) {
+    background: asset-url('swimmer-bg3-computer.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 700px;
+  }
   .dori-home3-content {
     position: relative;
     top: 52vh;
+    @media (min-width: 710px) {
+      width: 700px;
+      top: 70vh;
+    }
     .dori-testimonial {
       .open-quotes {
         position: absolute;
@@ -172,6 +228,12 @@ body {
         right: 30px;
         bottom: 4px;
         opacity: 0.5;
+        @media (min-width: 710px) {
+          position: relative;
+          left: 280px;
+          bottom: 26px;
+          opacity: 0.5;
+        }
       }
       p {
         color: $white;
@@ -180,12 +242,23 @@ body {
         padding: 0px 44px;
         height: 22vh;
         overflow: scroll;
+        @media (min-width: 710px) {
+          height: unset;
+        }
       }
       .action-slider {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 10px;
+        @media (min-width: 710px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* padding-top: 10px; */
+          position: relative;
+          bottom: 37px;
+        }
         .round-selection {
           border: 1px solid white;
           width: 13px;

@@ -28,6 +28,9 @@
   position: absolute;
   top: 15px;
   left: 24px;
+  @media (min-width: 710px) {
+    left: 27%;
+  }
   a:first-child {
     padding-right: 25px;
   }
@@ -56,6 +59,9 @@
   position: absolute;
   top: 15px;
   right: 24px;
+  @media (min-width: 710px) {
+    right: 27%;
+  }
   a {
     text-decoration: none;
     color: white;

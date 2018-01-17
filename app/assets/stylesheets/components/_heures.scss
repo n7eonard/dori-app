@@ -7,6 +7,11 @@
   z-index: -5;
   position: absolute;
   top: 0px;
+  @media (min-width: 710px) {
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   .form-title {
     color: $white;
@@ -17,6 +22,10 @@
     letter-spacing: 7px;
     position: relative;
     top: 10vh;
+    @media (min-width: 710px) {
+      top: unset;
+      margin-top: 80px;
+    }
   }
 }
 
@@ -33,11 +42,17 @@
     top: 12vh;
     height: 100%;
     margin-top: 50px;
+    @media (min-width: 701px) {
+      margin-bottom: 50px;
+    }
   }
 }
 .container-form-heures {
   display: flex;
   width: 80vw;
+  @media (min-width: 701px) {
+    width: unset;
+  }
   .form-control {
     background: none;
     border: 2px solid $white;
@@ -93,4 +108,14 @@
 #go-forward3 {
   position: absolute;
   top: 71vh;
+  @media (min-width: 710px) {
+    right: 0%;
+  }
+}
+
+#go-back2 {
+  top: 75px;
+  @media (min-width: 710px) {
+    top: 43px;
+  }
 }
