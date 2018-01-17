@@ -12,9 +12,10 @@
         Accueil
       <% end %>
 
-
-      <%= link_to profile_path do %>
-        <%= t(".profile", default: "Profil") %>
+      <% if Program.where(user_id: current_user.id).exists? %>
+        <%= link_to profile_path do %>
+          <%= t(".profile", default: "Profil") %>
+        <% end %>
       <% end %>
     </div>
 

@@ -1,12 +1,17 @@
 #div-adresses {
   background: asset-url('swimmer-bg.jpg'), linear-gradient(#2502d3, #006fff 75%);
   background-size: cover;
-  height: 160vh;
+  height: 100%;
   background-blend-mode: overlay;
   width: 100vw;
   z-index: -5;
   position: absolute;
   top: 0px;
+  @media (min-width: 710px) {
+    background-size: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   input {
     font-family: "Roboto", sans-serif !important;
     font-size: 20px;
@@ -104,7 +109,18 @@
 #go-back3 {
   position: absolute;
   top: 29vh;
-  left: 0px;
+  right: 83vw;
+  @media (min-width: 710px) {
+    position: absolute;
+    top: 194px;
+    right: unset;
+  }
+  h2 {
+    @media (min-width: 710px) {
+      position: relative;
+      top: 15px;
+    }
+  }
 }
 
 #go-forward3 {
@@ -119,7 +135,9 @@
   right: 112px;
   margin: 0px;
   padding: 0px;
-  /* width: 0px; */
+  @media (min-width: 710px) {
+    right: 31px;
+  }
   input {
     font-size: 20px;
     font-weight: normal;
@@ -128,5 +146,10 @@
     position: relative;
     top: 3px;
     left: 75%;
+    @media (min-width: 710px) {
+      left: 234px;
+      position: relative;
+      top: 1px;
+    }
   }
 }

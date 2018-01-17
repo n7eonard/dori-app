@@ -7,6 +7,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
   const markers = JSON.parse(mapElement.dataset.markers);
   map.addMarkers(markers);
+  map.setOptions({ scrollwheel: false });
   if (markers.length === 0) {
     map.setZoom(2);
   } else if (markers.length === 1) {
