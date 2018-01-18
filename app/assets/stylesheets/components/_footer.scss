@@ -10,13 +10,10 @@
   padding-top: 10px;
   border-top: 2px solid $white;
   @media (min-width: 710px) {
-    width: 733px;
-    margin: 0px;
-    position: relative;
-    right: 16px;
+    position: unset;
     justify-content: center;
-    top: 0px;
-    height: 63px;
+    height: 64px;
+    margin: 0px;
   }
   .dori-special-text {
     h2 {

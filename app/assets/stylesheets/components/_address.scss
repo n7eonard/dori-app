@@ -8,6 +8,7 @@
   position: absolute;
   top: 0px;
   @media (min-width: 710px) {
+    background: asset-url('swimmer-bg1-computer.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
     background-size: initial;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,11 +124,6 @@
   }
 }
 
-#go-forward3 {
-  position: relative;
-  top: 100px;
-  right: 10vh;
-}
 
 #go-forward4 {
   position: relative;
