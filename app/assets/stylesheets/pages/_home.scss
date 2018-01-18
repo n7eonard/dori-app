@@ -18,6 +18,7 @@ body {
   top: 0px;
   text-align: center;
   @media (min-width: 710px) {
+    background: asset-url('swimmer-bg1-computer.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
     background-size: initial;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,7 +131,7 @@ body {
   align-items: center;
   justify-content: center;
   @media (min-width: 710px) {
-    background: asset-url('swimmer-bg2-computer.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+    background: asset-url('swimmer-bg1-computer.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
     background-size: initial;
     background-position: center;
     background-repeat: no-repeat;
@@ -200,7 +201,7 @@ body {
   top: 0px;
   text-align: center;
   @media (min-width: 710px) {
-    background: asset-url('swimmer-bg3-computer.jpg'), linear-gradient(to bottom, #2502d3 10%, #006fff 93%);
+    background: asset-url('swimmer-bg1-computer.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
     background-size: initial;
     background-position: center;
     background-repeat: no-repeat;

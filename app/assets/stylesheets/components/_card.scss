@@ -116,6 +116,7 @@
   text-align: center;
 
   @media (min-width: 710px) {
+    background: asset-url('swimmer-bg1-computer.jpg'), linear-gradient(to bottom, #2502d3, #006fff 75%);
     background-size: initial;
     background-position: center;
     background-repeat: no-repeat;
@@ -137,14 +138,14 @@
     @media (min-width: 710px) {
       display: flex;
       flex-direction: column;
+      height: 110px;
     }
     a {
       text-decoration: none;
     }
     img {
       @media (min-width: 710px) {
-        position: relative;
-        left: 170px;
+        display: none;
       }
     }
 
@@ -156,6 +157,15 @@
       font-size: 25px;
       text-align: right;
       text-decoration: none;
+      @media (min-width: 710px) {
+        color: #FFE074;
+        position: relative;
+        bottom: 36px;
+        left: 12%;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+      }
     }
 
     .yellow-arrow {
